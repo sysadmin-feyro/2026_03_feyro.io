@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 import useAnalytics from "@/hooks/useAnalytics";
@@ -38,11 +38,6 @@ const HeroSection = () => {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center lg:justify-start">
           <div className="animate-fade-in text-center lg:text-left max-w-3xl">
-            <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-white/12 bg-white/8 px-3 py-2 text-[11px] font-medium uppercase tracking-[0.08em] text-white/86 backdrop-blur sm:mb-8 sm:px-4 sm:text-sm sm:normal-case sm:tracking-normal">
-              <Sparkles className="w-4 h-4 text-accent-glow" />
-              Digitale Präsenz für Unternehmen mit Anspruch
-            </div>
-
             <h1 id="hero-heading" className="font-display text-[2.55rem] font-bold leading-[0.98] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.4rem]">
               Neue Websites,
               <span className="block text-white/76">die nicht nur</span>
