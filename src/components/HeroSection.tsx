@@ -36,8 +36,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(5,12,24,0.18)_62%,rgba(5,12,24,0.34)_100%)]"></div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center lg:justify-start">
-          <div className="animate-fade-in text-center lg:text-left max-w-3xl">
+        <div className="flex justify-start">
+          <div className="animate-fade-in text-left max-w-3xl">
             <h1 id="hero-heading" className="font-display text-[2.55rem] font-bold leading-[0.98] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.4rem]">
               Neue Websites,
               <span className="block text-white/76">die nicht nur</span>
@@ -46,7 +46,7 @@ const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="mx-auto mb-8 mt-5 max-w-3xl px-1 text-[15px] leading-relaxed text-white/78 sm:mb-10 sm:mt-6 sm:px-2 sm:text-xl lg:mx-0 lg:px-0">
+            <p className="mb-8 mt-5 max-w-3xl text-[15px] leading-relaxed text-white/78 sm:mb-10 sm:mt-6 sm:text-xl">
               feyro.io entwickelt neue Websites auf Basis bestehender Seiten oder Inhalte.
               Das Ergebnis ist ein klarer, moderner Auftritt, der Vertrauen schafft,
               professionell wirkt und dein Unternehmen digital auf ein neues Niveau hebt.
@@ -82,7 +82,7 @@ const HeroSection = () => {
             </Button>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3 lg:justify-start" role="list" aria-label="Vertrauensindikatoren">
+            <div className="flex flex-wrap justify-start gap-2.5 sm:gap-3" role="list" aria-label="Vertrauensindikatoren">
               <div className="rounded-full border border-white/12 bg-white/8 px-3 py-2 text-xs text-white/82 sm:px-4 sm:text-sm" role="listitem">
                 Umsetzung in 7 Tagen
               </div>
