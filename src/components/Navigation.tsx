@@ -30,7 +30,7 @@ const Navigation = () => {
               <img
                 src="/feyro-logo-white.svg"
                 alt="feyro.io"
-                className="h-7 w-auto sm:h-8"
+                className="h-5 w-auto sm:h-6"
               />
             </a>
           </div>
