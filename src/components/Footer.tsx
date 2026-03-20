@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <span className="text-2xl font-bold text-primary">feyro.io</span>
+              <img src="/feyro-logo-white.svg" alt="feyro.io" className="h-8 w-auto" />
               <p className="text-sm text-background/70 mt-2">
                 KI trifft Klarheit – Webdesign neu gedacht
               </p>

@@ -25,16 +25,14 @@ const Navigation = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 px-3 pt-3 sm:px-6">
         <div className="mx-auto max-w-7xl rounded-[1.75rem] border border-slate-800 bg-slate-950 px-3 shadow-[0_20px_70px_rgba(5,12,24,0.42)] sm:rounded-full sm:px-6">
           <div className="flex h-14 items-center justify-between gap-3 sm:h-16 sm:gap-4">
-          <div className="flex shrink-0 items-center gap-2.5 sm:gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-sky-400/40 bg-sky-500/15 text-xs font-bold text-white sm:h-10 sm:w-10 sm:text-sm">
-              F
-            </div>
-            <div className="leading-tight">
-              <span className="block font-display text-lg font-bold text-white sm:text-xl">feyro.io</span>
-              <span className="hidden text-[10px] uppercase tracking-[0.24em] text-slate-300 sm:block">
-                Digital Presence Studio
-              </span>
-            </div>
+          <div className="flex shrink-0 items-center">
+            <a href="#hero" aria-label="feyro.io – zur Startseite">
+              <img
+                src="/feyro-logo-white.svg"
+                alt="feyro.io"
+                className="h-7 w-auto sm:h-8"
+              />
+            </a>
           </div>
 
           <div className="hidden md:block">
