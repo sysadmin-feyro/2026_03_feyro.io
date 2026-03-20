@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import heroBg from "@/assets/hero-bg.png";
 import useAnalytics from "@/hooks/useAnalytics";
 
 const HeroSection = () => {
@@ -11,7 +12,10 @@ const HeroSection = () => {
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-hero px-0 pt-20 text-white sm:pt-24"
       aria-labelledby="hero-heading"
     >
-      <div className="absolute inset-0 z-0 bg-[linear-gradient(135deg,#050c18_0%,#0a1628_40%,#0c1a35_70%,#060e1e_100%)]"></div>
+      <div className="absolute inset-0 z-0">
+        <img src={heroBg} alt="" className="h-full w-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,12,24,0.82)_0%,rgba(5,12,24,0.55)_60%,rgba(5,12,24,0.2)_100%)]"></div>
+      </div>
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute left-[6%] top-24 h-40 w-40 rounded-full bg-primary/16 blur-3xl sm:h-64 sm:w-64"></div>
