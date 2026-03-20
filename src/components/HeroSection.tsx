@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Shield, Zap, Orbit, MoveRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 import useAnalytics from "@/hooks/useAnalytics";
@@ -36,8 +36,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(5,12,24,0.18)_62%,rgba(5,12,24,0.34)_100%)]"></div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-end gap-10 sm:gap-12 lg:grid-cols-[1.18fr_0.82fr]">
-          <div className="animate-fade-in text-center lg:text-left">
+        <div className="flex justify-center lg:justify-start">
+          <div className="animate-fade-in text-center lg:text-left max-w-3xl">
             <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-white/12 bg-white/8 px-3 py-2 text-[11px] font-medium uppercase tracking-[0.08em] text-white/86 backdrop-blur sm:mb-8 sm:px-4 sm:text-sm sm:normal-case sm:tracking-normal">
               <Sparkles className="w-4 h-4 text-accent-glow" />
               Digitale Präsenz für Unternehmen mit Anspruch
@@ -100,60 +100,6 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="animate-slide-up px-1 sm:px-0">
-            <div className="rounded-[1.6rem] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.08))] p-3 shadow-[0_24px_56px_rgba(4,11,24,0.22)] backdrop-blur-xl sm:rounded-[2rem] sm:p-4">
-              <div className="rounded-[1.35rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.1),rgba(255,255,255,0.04))] p-4 sm:rounded-[1.6rem] sm:p-6">
-                <div className="mb-6 flex items-center justify-between sm:mb-8">
-                  <div>
-                    <p className="text-[10px] uppercase tracking-[0.24em] text-white/48 sm:text-xs sm:tracking-[0.28em]">Projektfokus</p>
-                    <p className="mt-2 font-display text-xl font-bold text-white sm:text-2xl">Klar. Modern. Vertrauenswürdig.</p>
-                  </div>
-                  <div className="rounded-full border border-white/12 bg-white/8 p-2.5 text-accent-glow sm:p-3">
-                    <Orbit className="h-4 w-4 sm:h-5 sm:w-5" />
-                  </div>
-                </div>
-
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="rounded-[1.15rem] border border-white/10 bg-[hsl(0_0%_100%_/_0.06)] p-4 sm:rounded-[1.4rem]">
-                    <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-white">
-                      <Shield className="h-4 w-4 text-primary-glow" />
-                      Neue Website, klare Wirkung
-                    </div>
-                    <p className="text-sm leading-relaxed text-white/65">
-                      Wir gestalten eine moderne Seite, die professionell aussieht und deine bestehende Präsenz sinnvoll weiterentwickelt.
-                    </p>
-                  </div>
-                  <div className="rounded-[1.15rem] border border-white/10 bg-[hsl(0_0%_100%_/_0.06)] p-4 sm:rounded-[1.4rem]">
-                    <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-white">
-                      <Zap className="h-4 w-4 text-accent-glow" />
-                      Saubere Umsetzung in 7 Tagen
-                    </div>
-                    <p className="text-sm leading-relaxed text-white/65">
-                      Design, Technik, SEO und DSGVO greifen von Anfang an zusammen statt erst später ergänzt zu werden.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8">
-                  <div className="rounded-[1.05rem] border border-white/10 bg-black/10 p-3.5 sm:rounded-[1.25rem] sm:p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-white/40">Design</p>
-                    <p className="mt-2 text-2xl font-display font-bold text-white sm:text-3xl">01</p>
-                    <p className="mt-1 text-sm text-white/60">Markant und klar</p>
-                  </div>
-                  <div className="rounded-[1.05rem] border border-white/10 bg-black/10 p-3.5 sm:rounded-[1.25rem] sm:p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-white/40">Delivery</p>
-                    <p className="mt-2 text-2xl font-display font-bold text-white sm:text-3xl">7</p>
-                    <p className="mt-1 text-sm text-white/60">Tage bis Launch</p>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-sm text-white/62 sm:mt-8 sm:pt-5">
-                  <span>Digitaler Erstkontakt mit Substanz</span>
-                  <MoveRight className="h-4 w-4" />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
