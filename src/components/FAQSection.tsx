@@ -16,7 +16,7 @@ const FAQSection = () => {
     },
     {
       question: "Was kostet eine neue Website bei feyro.io?",
-      answer: "Website-Relaunches starten bei 449 € (zzgl. MwSt., einmalig). Für Neuentwicklungen erstellen wir ein individuelles Angebot auf Basis des Projektumfangs. Der KI-Strategie Workshop kostet 349 € und ist auf Folgeprojekte anrechenbar. Wartung & Betrieb sind ab 29 €/Monat erhältlich.",
+      answer: "Unsere Preise richten sich nach dem Projektumfang und werden individuell auf Basis eines Erstgesprächs kalkuliert. Alle Leistungen – Relaunch, KI-Workshop und Wartung – sind als transparente Festpreisangebote strukturiert, ohne versteckte Kosten. Sprechen Sie uns an.",
       link: "#pricing"
     },
     {

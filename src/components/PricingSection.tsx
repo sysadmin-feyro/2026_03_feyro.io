@@ -7,9 +7,7 @@ const PricingSection = () => {
     {
       icon: RefreshCw,
       name: "Website-Relaunch",
-      price: "449",
-      currency: "€",
-      period: "einmalig",
+      period: "Einmalleistung",
       description: "Bestehende Website komplett modernisieren – neues Design, saubere Technik, DSGVO-konform. In der Regel in 7 Werktagen live.",
       features: [
         "Kompletter Website-Relaunch",
@@ -28,9 +26,7 @@ const PricingSection = () => {
     {
       icon: Bot,
       name: "KI-Strategie Workshop",
-      price: "349",
-      currency: "€",
-      period: "einmalig",
+      period: "Einmalleistung",
       description: "90-minütiger strukturierter Workshop: Analyse Ihrer aktuellen Prozesse, Identifikation von Automatisierungspotenzialen, konkreter Maßnahmenplan.",
       features: [
         "90 Min. strukturiertes Strategie-Gespräch",
@@ -49,9 +45,7 @@ const PricingSection = () => {
     {
       icon: Wrench,
       name: "Wartung & Betrieb",
-      price: "29",
-      currency: "€",
-      period: "pro Monat",
+      period: "Monatliche Pauschale",
       description: "Laufender technischer Betrieb ohne Eigenaufwand: Updates, Backups, Monitoring und Content-Anpassungen als monatlicher Festpreis.",
       features: [
         "Regelmäßige Sicherheits- & Dependency-Updates",
@@ -120,29 +114,12 @@ const PricingSection = () => {
                     {plan.name}
                   </h3>
 
-                  {/* Price */}
+                  {/* Price on request */}
                   <div className="mb-6">
-                    <div className="flex items-baseline gap-2">
-                      <span className={`text-5xl font-bold ${
-                        plan.highlighted ? 'text-white' : 'text-primary'
-                      }`}>
-                        {plan.price}
-                      </span>
-                      <span className={`text-2xl font-semibold ${
-                        plan.highlighted ? 'text-white/90' : 'text-foreground'
-                      }`}>
-                        {plan.currency}
-                      </span>
-                    </div>
-                    <p className={`text-sm mt-1 ${
+                    <p className={`text-sm font-semibold ${
                       plan.highlighted ? 'text-white/80' : 'text-muted-foreground'
                     }`}>
                       {plan.period}
-                    </p>
-                    <p className={`text-xs mt-0.5 ${
-                      plan.highlighted ? 'text-white/60' : 'text-muted-foreground/70'
-                    }`}>
-                      zzgl. 19% MwSt.
                     </p>
                   </div>
 
@@ -178,7 +155,7 @@ const PricingSection = () => {
                       const contactSection = document.getElementById('contact');
                       contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }}
-                    aria-label={`${plan.cta} – ${plan.name}`}
+                    aria-label={plan.cta}
                   >
                     {plan.cta}
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
@@ -198,7 +175,7 @@ const PricingSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                <span>Alle Preise zzgl. 19% MwSt.</span>
+                <span>Individuelle Festpreisangebote nach Erstgespräch</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
@@ -206,7 +183,7 @@ const PricingSection = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                <span>Neue Website auf Anfrage (individuelles Angebot)</span>
+                <span>Alle Leistungen klar definiert und dokumentiert</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
