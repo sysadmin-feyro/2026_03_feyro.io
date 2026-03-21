@@ -24,15 +24,14 @@ const HeroSection = () => {
           className="animate-fade-in font-display text-5xl font-bold leading-tight tracking-tight text-slate-900 sm:text-6xl md:text-7xl"
           style={{ animationDelay: "0.1s" }}
         >
-          KI statt{" "}
+          Websites, die{" "}
           <span className="bg-gradient-to-r from-violet-600 to-purple-500 bg-clip-text text-transparent">
-            Chaos.
+            überzeugen.
           </span>
           <br />
-          Deine Website,
-          <br />
+          Prozesse, die{" "}
           <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-            neu gedacht.
+            skalieren.
           </span>
         </h1>
 
@@ -41,11 +40,12 @@ const HeroSection = () => {
           className="mx-auto mb-10 mt-6 max-w-2xl animate-fade-in text-base leading-relaxed text-slate-600 sm:text-lg"
           style={{ animationDelay: "0.2s" }}
         >
-          Mit feyro.io bekommst du keinen Baukasten, sondern einen strukturierten,{" "}
+          feyro.io entwickelt{" "}
           <strong className="font-semibold text-primary">
-            KI-gestützten Website-Relaunch
-          </strong>{" "}
-          – DSGVO-konform, suchmaschinenoptimiert und modern.
+            individuelle Websites
+          </strong>
+          , begleitet KI-Transformationen und automatisiert digitale Prozesse –
+          vollständig DSGVO-konform, gehostet in Deutschland, ohne US-Cloud-Abhängigkeiten.
         </p>
 
         {/* CTA Buttons */}
@@ -65,9 +65,9 @@ const HeroSection = () => {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            aria-label="Kostenlose Website-Analyse starten"
+            aria-label="Kostenloses Erstgespräch vereinbaren"
           >
-            Kostenlose Website-Analyse starten
+            Kostenloses Erstgespräch
             <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
           </Button>
           <Button
@@ -80,9 +80,9 @@ const HeroSection = () => {
                 .getElementById("services")
                 ?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            aria-label="Mehr erfahren"
+            aria-label="Leistungen ansehen"
           >
-            Mehr erfahren
+            Leistungen ansehen
           </Button>
         </div>
 
@@ -99,11 +99,11 @@ const HeroSection = () => {
           </div>
           <div className="flex items-center gap-2" role="listitem">
             <Zap className="h-4 w-4 text-primary" aria-hidden="true" />
-            KI-gestützte Optimierung
+            Hosting in Deutschland
           </div>
           <div className="flex items-center gap-2" role="listitem">
             <Sparkles className="h-4 w-4 text-primary" aria-hidden="true" />
-            Keine Baukästen
+            Keine US-Cloud
           </div>
         </div>
       </div>

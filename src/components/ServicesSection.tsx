@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { 
-  RefreshCw, 
-  Bot, 
-  Shield, 
-  Search, 
-  Gauge, 
-  Cookie,
+import {
+  Globe,
+  RefreshCw,
+  Bot,
+  Shield,
+  BarChart2,
+  Wrench,
   ArrowRight,
   CheckCircle
 } from "lucide-react";
@@ -14,70 +14,72 @@ import ScrollAnimation from "./ScrollAnimation";
 const ServicesSection = () => {
   const services = [
     {
+      icon: Globe,
+      title: "Website-Neuentwicklung",
+      description: "Individuelle Webpräsenz von Grund auf – technisch sauber, performant und ohne Baukasten-Kompromisse. Entwickelt auf Basis moderner Web-Technologien, optimiert für Suchmaschinen und vollständig DSGVO-konform.",
+      features: [
+        "Maßgeschneidertes Design ohne Templates",
+        "Mobile-First & Core Web Vitals optimiert",
+        "Strukturierte Daten & On-Page-SEO",
+        "DSGVO-konformes Tracking mit Matomo"
+      ],
+      highlighted: false
+    },
+    {
       icon: RefreshCw,
       title: "Website-Relaunch",
-      description: "Wir entwickeln eine neue Website auf Basis deiner bestehenden Website – mit modernem Design, klarer Struktur und optimierter Technik.",
+      description: "Bestehende Website modernisieren ohne bei null anzufangen. Wir analysieren Ihre aktuelle Präsenz, identifizieren Schwachstellen und entwickeln eine technisch überlegene Nachfolgelösung – in der Regel in 7 Werktagen live.",
       features: [
-        "Responsive Design für alle Geräte",
-        "Moderne, benutzerfreundliche Oberfläche",
-        "Performance-Optimierung",
-        "Barrierefreie Gestaltung"
+        "KI-gestützte Ist-Analyse & Audit",
+        "Übernahme bestehender Inhalte & Domain",
+        "Performance- & Conversion-Optimierung",
+        "30 Tage Support nach Go-Live"
       ],
       highlighted: true
     },
     {
       icon: Bot,
-      title: "KI-Analyse & Optimierung",
-      description: "Intelligente Bewertung deiner aktuellen Website mit KI-gestützten Verbesserungsvorschlägen.",
+      title: "KI-Beratung & Prozessautomatisierung",
+      description: "Digitale Prozesse intelligent gestalten: Wir analysieren Ihre Abläufe, identifizieren Automatisierungspotenziale und implementieren KI-gestützte Lösungen – praxisnah, skalierbar und ohne Vendor-Lock-in bei US-Anbietern.",
       features: [
-        "Automated Content-Audit",
-        "UX/UI Optimierungsvorschläge",
-        "Conversion-Rate Analyse",
-        "Competitor Benchmarking"
-      ]
+        "KI-Strategie Workshop (90 Min.)",
+        "Prozessanalyse & Automatisierungs-Roadmap",
+        "Implementierung & Schulung",
+        "Ausschließlich EU-konforme KI-Tools"
+      ],
+      highlighted: false
     },
     {
       icon: Shield,
-      title: "DSGVO & Cookie-Consent",
-      description: "Vollständige Rechtssicherheit mit professionellem Cookie-Banner und Datenschutz-Compliance.",
+      title: "DSGVO & Datenschutz-Compliance",
+      description: "Rechtssicherheit ist kein Optional-Feature. Wir implementieren vollständige Datenschutz-Compliance: von der technischen Umsetzung bis zur Dokumentation – ohne Abhängigkeit von US-Diensten wie Google Analytics oder Hotjar.",
       features: [
-        "Rechtssicherer Cookie-Banner",
-        "Consent Mode v2 Integration",
-        "Datenschutzerklärung erstellen",
-        "DSGVO-konforme Umsetzung"
+        "Rechtssicherer Cookie-Consent (Consent Mode v2)",
+        "Datenschutzerklärung & Impressum",
+        "Technische Dokumentation & Nachweise",
+        "Regelmäßige Compliance-Reviews"
       ]
     },
     {
-      icon: Search,
-      title: "SEO & SEA Ready",
-      description: "Optimale Vorbereitung für Suchmaschinen mit strukturierten Daten und Meta-Optimierung.",
+      icon: BarChart2,
+      title: "SEO & digitale Sichtbarkeit",
+      description: "Nachhaltige Suchmaschinenoptimierung auf technischer und inhaltlicher Ebene. Kein Black-Hat, kein Baukasten-SEO – strukturierte Daten, saubere Architektur und messbare Ergebnisse.",
       features: [
-        "On-Page SEO Optimierung",
-        "Strukturierte Daten (Schema.org)",
-        "Meta-Tags & Open Graph",
-        "Google Analytics 4 Setup"
+        "Technisches SEO-Audit & On-Page-Optimierung",
+        "Schema.org & strukturierte Daten",
+        "Pagespeed & Core Web Vitals",
+        "DSGVO-konformes Analytics (Matomo / Plausible)"
       ]
     },
     {
-      icon: Gauge,
-      title: "Performance-Optimierung",
-      description: "Maximale Ladegeschwindigkeit und optimale Core Web Vitals für bessere Rankings.",
+      icon: Wrench,
+      title: "Wartung & technischer Betrieb",
+      description: "Laufender Betrieb ohne Eigenaufwand: Sicherheits-Updates, Backups, Monitoring und Content-Anpassungen – alles in einem monatlichen Festpreis ohne Überraschungen.",
       features: [
-        "Core Web Vitals Optimierung",
-        "Bildkomprimierung & -optimierung",
-        "Code-Splitting & Lazy Loading",
-        "CDN-Integration"
-      ]
-    },
-    {
-      icon: Cookie,
-      title: "Consent Management",
-      description: "Professionelle Cookie-Verwaltung mit allen rechtlichen Anforderungen und technischer Integration.",
-      features: [
-        "Granulare Cookie-Kategorien",
-        "Benutzerfreundliche Interfaces",
-        "Dokumentation & Nachweise",
-        "Automatische Updates"
+        "Regelmäßige Sicherheits- & Dependency-Updates",
+        "Automatisierte Backups auf deutschen Servern",
+        "Uptime-Monitoring & Incident-Response",
+        "Content-Anpassungen bis 1 Std./Monat inklusive"
       ]
     }
   ];
@@ -91,8 +93,8 @@ const ServicesSection = () => {
             Unsere <span className="text-primary">Leistungen</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            Von der KI-gestützten Analyse bis zur neuen Website auf Basis deiner bisherigen Website -
-            wir bieten alles aus einer Hand für deine professionelle Webpräsenz.
+            Von der individuellen Website über den strukturierten Relaunch bis zur KI-gestützten Prozessautomatisierung –
+            alles aus einer Hand, vollständig DSGVO-konform.
           </p>
         </ScrollAnimation>
 
@@ -101,23 +103,23 @@ const ServicesSection = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <ScrollAnimation 
-                key={index} 
+              <ScrollAnimation
+                key={index}
                 delay={index * 0.1}
                 className="h-full"
               >
-              <div 
+              <div
                 className={`h-full group relative p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-2 ${
-                  service.highlighted 
-                    ? 'bg-gradient-brand text-white border-transparent shadow-brand hover:shadow-glow' 
+                  service.highlighted
+                    ? 'bg-gradient-to-br from-blue-600 via-violet-600 to-pink-500 text-white border-transparent shadow-brand hover:shadow-glow'
                     : 'bg-card border-border hover:border-primary/30 shadow-card hover:shadow-brand'
                 }`}
                 role="listitem"
               >
                   {service.highlighted && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                        Beliebteste Option
+                      <span className="bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Meist gebucht
                       </span>
                     </div>
                   )}
@@ -134,13 +136,13 @@ const ServicesSection = () => {
                     {service.title}
                   </h3>
 
-                  <p className={`mb-6 leading-relaxed ${
+                  <p className={`mb-6 leading-relaxed text-sm ${
                     service.highlighted ? 'text-white/90' : 'text-muted-foreground'
                   }`}>
                     {service.description}
                   </p>
 
-                  <ul className="space-y-3" aria-label={`Features für ${service.title}`}>
+                  <ul className="space-y-3" aria-label={`Details zu ${service.title}`}>
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <CheckCircle className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
@@ -164,27 +166,27 @@ const ServicesSection = () => {
         <ScrollAnimation delay={0.5}>
           <div className="text-center bg-secondary/50 rounded-2xl p-12">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Bereit für deinen Website-Relaunch?
+              Unverbindliches Erstgespräch vereinbaren
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Lass uns gemeinsam analysieren, wie aus deiner bestehenden Website eine neue, stärkere Website werden kann.
-              Kostenlose Erstberatung inklusive.
+              Wir analysieren Ihre aktuelle Situation und zeigen konkret auf, wo digitale Optimierung
+              den größten Hebel hat – kostenlos und ohne Verkaufsdruck.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="hero" 
-                size="xl" 
+              <Button
+                variant="hero"
+                size="xl"
                 className="group"
                 onClick={() => {
                   const contactSection = document.getElementById('contact');
                   contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
               >
-                Kostenlose Website-Analyse
+                Jetzt Kontakt aufnehmen
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="xl"
                 onClick={() => {
                   const pricingSection = document.getElementById('pricing');

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight, RefreshCw, Settings } from "lucide-react";
+import { Check, ArrowRight, RefreshCw, Bot, Wrench } from "lucide-react";
 import ScrollAnimation from "./ScrollAnimation";
 
 const PricingSection = () => {
@@ -10,41 +10,62 @@ const PricingSection = () => {
       price: "449",
       currency: "€",
       period: "einmalig",
-      description: "Deine bestehende Website wird komplett überarbeitet und modernisiert.",
+      description: "Bestehende Website komplett modernisieren – neues Design, saubere Technik, DSGVO-konform. In der Regel in 7 Werktagen live.",
       features: [
         "Kompletter Website-Relaunch",
         "Modernes, responsives Design",
-        "DSGVO-konformer Cookie-Banner",
-        "SEO-Optimierung & Meta-Tags",
-        "Performance-Optimierung",
-        "Mobile-First Ansatz",
-        "SSL-Zertifikat Setup",
-        "30 Tage Support nach Launch"
+        "DSGVO-konformer Cookie-Consent",
+        "On-Page-SEO & strukturierte Daten",
+        "Performance-Optimierung (Core Web Vitals)",
+        "Mobile-First Entwicklung",
+        "SSL-Zertifikat & Hosting-Setup",
+        "30 Tage Support nach Go-Live"
       ],
       highlighted: true,
-      cta: "Jetzt Relaunch starten",
+      cta: "Relaunch anfragen",
       badge: "Einmalzahlung"
     },
     {
-      icon: Settings,
-      name: "Wartung & Service",
+      icon: Bot,
+      name: "KI-Strategie Workshop",
+      price: "349",
+      currency: "€",
+      period: "einmalig",
+      description: "90-minütiger strukturierter Workshop: Analyse Ihrer aktuellen Prozesse, Identifikation von Automatisierungspotenzialen, konkreter Maßnahmenplan.",
+      features: [
+        "90 Min. strukturiertes Strategie-Gespräch",
+        "Ist-Analyse digitaler Prozesse",
+        "Automatisierungs-Roadmap",
+        "Tool-Empfehlungen (ausschließlich EU-konform)",
+        "Schriftliche Zusammenfassung & Maßnahmenplan",
+        "Anrechenbar auf Folgeprojekte",
+        "Remote via Video-Call",
+        "Auf Wunsch mit Folgetermin"
+      ],
+      highlighted: false,
+      cta: "Workshop buchen",
+      badge: "Neu"
+    },
+    {
+      icon: Wrench,
+      name: "Wartung & Betrieb",
       price: "29",
       currency: "€",
       period: "pro Monat",
-      description: "Laufende Pflege und technischer Support für deine Website.",
+      description: "Laufender technischer Betrieb ohne Eigenaufwand: Updates, Backups, Monitoring und Content-Anpassungen als monatlicher Festpreis.",
       features: [
-        "Regelmäßige Updates & Backups",
+        "Regelmäßige Sicherheits- & Dependency-Updates",
+        "Automatisierte Backups auf deutschen Servern",
+        "Uptime-Monitoring & Incident-Response",
         "Technischer Support per E-Mail",
-        "Sicherheits-Monitoring",
-        "Content-Anpassungen (bis 1h/Monat)",
-        "Performance-Überwachung",
-        "Uptime-Monitoring",
+        "Content-Anpassungen bis 1 Std./Monat",
         "Monatlicher Status-Report",
+        "Keine Mindestlaufzeit",
         "Jederzeit kündbar"
       ],
       highlighted: false,
-      cta: "Service beauftragen",
-      badge: "Optional"
+      cta: "Wartung beauftragen",
+      badge: "Monatlich"
     }
   ];
 
@@ -57,12 +78,13 @@ const PricingSection = () => {
             Transparente <span className="text-primary">Preise</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            Keine versteckten Kosten, keine Überraschungen. Faire Preise für hochwertige Arbeit.
+            Festpreise ohne versteckte Kosten. Alle Leistungen sind klar definiert –
+            keine Überraschungen auf der Rechnung.
           </p>
         </ScrollAnimation>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16" role="list" aria-label="Preispakete">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16" role="list" aria-label="Preispakete">
           {plans.map((plan, index) => {
             const Icon = plan.icon;
             return (
@@ -125,14 +147,14 @@ const PricingSection = () => {
                   </div>
 
                   {/* Description */}
-                  <p className={`mb-6 leading-relaxed ${
+                  <p className={`mb-6 leading-relaxed text-sm ${
                     plan.highlighted ? 'text-white/90' : 'text-muted-foreground'
                   }`}>
                     {plan.description}
                   </p>
 
                   {/* Features */}
-                  <ul className="space-y-3 mb-8" aria-label={`Features für ${plan.name}`}>
+                  <ul className="space-y-3 mb-8" aria-label={`Leistungsumfang ${plan.name}`}>
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
@@ -156,7 +178,7 @@ const PricingSection = () => {
                       const contactSection = document.getElementById('contact');
                       contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }}
-                    aria-label={`${plan.cta} - ${plan.name} für ${plan.price}${plan.currency} ${plan.period}`}
+                    aria-label={`${plan.cta} – ${plan.name}`}
                   >
                     {plan.cta}
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
@@ -171,12 +193,12 @@ const PricingSection = () => {
         <ScrollAnimation delay={0.3}>
           <div className="bg-card rounded-2xl border border-border p-8 max-w-3xl mx-auto">
             <h3 className="text-xl font-bold text-foreground mb-4 text-center">
-              Was ist im Relaunch-Preis enthalten?
+              Individuelle Projekte auf Anfrage
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                <span>Alle Preise zzgl. MwSt.</span>
+                <span>Alle Preise zzgl. 19% MwSt.</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
@@ -184,11 +206,11 @@ const PricingSection = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                <span>Kostenlose Erstberatung</span>
+                <span>Neue Website auf Anfrage (individuelles Angebot)</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                <span>Flexible Zahlungsoptionen</span>
+                <span>KI-Workshop anrechenbar auf Folgeprojekte</span>
               </div>
             </div>
           </div>

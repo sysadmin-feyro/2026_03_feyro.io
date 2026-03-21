@@ -1,13 +1,13 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     company: [
-      { name: "Über uns", href: "#about" },
+      { name: "Über feyro.io", href: "#about" },
       { name: "Leistungen", href: "#services" },
-      { name: "Projekte", href: "#projects" },
+      { name: "Ablauf", href: "#process" },
       { name: "Kontakt", href: "#contact" }
     ],
     legal: [
@@ -17,10 +17,10 @@ const Footer = () => {
       { name: "Cookie-Einstellungen", href: "#" }
     ],
     services: [
+      { name: "Website-Neuentwicklung", href: "#services" },
       { name: "Website-Relaunch", href: "#services" },
-      { name: "KI-Analyse", href: "#services" },
-      { name: "DSGVO-Compliance", href: "#services" },
-      { name: "SEO-Optimierung", href: "#services" }
+      { name: "KI-Beratung & Automatisierung", href: "#services" },
+      { name: "Wartung & Betrieb", href: "#services" }
     ]
   };
 
@@ -32,33 +32,25 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <img src="/feyro-logo-white.svg" alt="feyro.io" className="h-8 w-auto" />
-              <p className="text-sm text-background/70 mt-2">
-                KI trifft Klarheit – Webdesign neu gedacht
-              </p>
+              <span className="font-display text-2xl font-bold text-background">feyro</span>
+              <p className="text-sm text-background/60 mt-1">feyro.io</p>
             </div>
-            
-            <p className="text-background/80 mb-6 leading-relaxed">
-              Professionelle Website-Relaunches mit KI-Unterstützung, 
-              DSGVO-Konformität und technischer Exzellenz.
+
+            <p className="text-background/80 mb-6 leading-relaxed text-sm">
+              Individuelle Webentwicklung, KI-Beratung und Prozessautomatisierung –
+              vollständig DSGVO-konform, ohne US-Cloud-Abhängigkeiten, aus Deutschland.
             </p>
 
             <address className="not-italic space-y-3">
               <div className="flex items-center gap-3 text-background/80">
-                <Mail className="w-4 h-4 text-primary" aria-hidden="true" />
-                <a href="mailto:hi@feyro.io" className="hover:text-background transition-colors">
+                <Mail className="w-4 h-4 text-primary flex-shrink-0" aria-hidden="true" />
+                <a href="mailto:hi@feyro.io" className="hover:text-background transition-colors text-sm">
                   hi@feyro.io
                 </a>
               </div>
               <div className="flex items-center gap-3 text-background/80">
-                <Phone className="w-4 h-4 text-primary" aria-hidden="true" />
-                <a href="tel:+491234567890" className="hover:text-background transition-colors">
-                  +49 (0) 123 456 789
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-background/80">
-                <MapPin className="w-4 h-4 text-primary" aria-hidden="true" />
-                <span>Deutschland</span>
+                <MapPin className="w-4 h-4 text-primary flex-shrink-0" aria-hidden="true" />
+                <span className="text-sm">Deutschland · Remote</span>
               </div>
             </address>
           </div>
@@ -69,9 +61,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={link.href}
-                    className="text-background/80 hover:text-background transition-colors"
+                    className="text-background/80 hover:text-background transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -86,9 +78,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={link.href}
-                    className="text-background/80 hover:text-background transition-colors"
+                    className="text-background/80 hover:text-background transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -103,9 +95,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.legal.map((link, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={link.href}
-                    className="text-background/80 hover:text-background transition-colors"
+                    className="text-background/80 hover:text-background transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -119,28 +111,25 @@ const Footer = () => {
         <div className="py-8 border-t border-background/20">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-background/60 text-sm text-center sm:text-left">
-              © {currentYear} feyro.io. Alle Rechte vorbehalten.
+              © {currentYear} feyro.io · Alle Rechte vorbehalten · Hosting: Deutschland
             </p>
-            
+
             <nav className="flex items-center gap-6 text-sm" aria-label="Rechtliche Schnelllinks">
-              <a 
-                href="/impressum" 
+              <a
+                href="/impressum"
                 className="text-background/80 hover:text-background transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-foreground rounded"
               >
                 Impressum
               </a>
-              <a 
-                href="/datenschutz" 
+              <a
+                href="/datenschutz"
                 className="text-background/80 hover:text-background transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-foreground rounded"
               >
                 Datenschutz
               </a>
-              <button 
+              <button
                 className="text-background/80 hover:text-background transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-foreground rounded"
-                onClick={() => {
-                  // This would open cookie settings if cookie banner is implemented
-                  console.log('Open cookie settings');
-                }}
+                onClick={() => console.log('Open cookie settings')}
                 aria-label="Cookie-Einstellungen öffnen"
               >
                 Cookie-Einstellungen

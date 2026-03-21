@@ -1,4 +1,4 @@
-import { Shield, Lock, Award, MapPin, Check } from "lucide-react";
+import { Shield, Server, Flag, Ban, Users } from "lucide-react";
 import ScrollAnimation from "./ScrollAnimation";
 
 const TrustBadges = () => {
@@ -6,27 +6,27 @@ const TrustBadges = () => {
     {
       icon: Shield,
       title: "DSGVO-konform",
-      description: "100% Datenschutz-Compliance"
+      description: "Vollständige Datenschutz-Compliance nach EU-Recht"
     },
     {
-      icon: Lock,
-      title: "SSL-verschlüsselt",
-      description: "Sichere Datenübertragung"
+      icon: Server,
+      title: "Hosting in Deutschland",
+      description: "Ausschließlich deutsche und europäische Server"
     },
     {
-      icon: Award,
+      icon: Flag,
       title: "Made in Germany",
-      description: "Deutsche Qualität & Support"
+      description: "Entwicklung, Beratung und Support aus Deutschland"
     },
     {
-      icon: MapPin,
-      title: "Hosting in der EU",
-      description: "Server in Deutschland"
+      icon: Ban,
+      title: "Keine US-Dienste",
+      description: "Keine Abhängigkeit von US-Cloud-Anbietern"
     },
     {
-      icon: Check,
-      title: "Keine Baukästen",
-      description: "Individuell programmiert"
+      icon: Users,
+      title: "Direkter Ansprechpartner",
+      description: "Kein Callcenter – persönliche Projektbegleitung"
     }
   ];
 
@@ -36,12 +36,12 @@ const TrustBadges = () => {
         <ScrollAnimation>
           <div className="mb-5 text-center sm:mb-6">
             <p className="text-xs font-semibold uppercase tracking-[0.34em] text-muted-foreground">
-              Vertrauen in der Umsetzung
+              Unsere Standards
             </p>
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-5">
             {badges.map((badge, index) => (
-              <div 
+              <div
                 key={index}
                 className="rounded-[1.15rem] border border-border/70 bg-gradient-panel p-4 text-left shadow-card transition-all hover:-translate-y-1 hover:shadow-brand sm:rounded-[1.4rem] sm:p-5"
               >
