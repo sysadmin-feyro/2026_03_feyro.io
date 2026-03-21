@@ -108,12 +108,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 animate-bounce sm:block">
-        <div className="flex h-10 w-6 justify-center rounded-full border border-slate-300">
-          <div className="mt-2 h-3 w-1 animate-pulse rounded-full bg-slate-400" />
-        </div>
-      </div>
     </section>
   );
 };
