@@ -28,12 +28,12 @@ const ServicesSection = () => {
     {
       icon: RefreshCw,
       title: "Website-Relaunch",
-      description: "Bestehende Website modernisieren ohne bei null anzufangen. Wir analysieren Ihre aktuelle Präsenz, identifizieren Schwachstellen und entwickeln eine technisch überlegene Nachfolgelösung – in der Regel in 7 Werktagen live.",
+      description: "Wir entwickeln eine neue Website auf Basis Ihrer bestehenden Website. Inhalte, Domain und vorhandene Stärken werden übernommen, Struktur, Design und Technik dagegen konsequent neu aufgebaut.",
       features: [
         "KI-gestützte Ist-Analyse & Audit",
         "Übernahme bestehender Inhalte & Domain",
-        "Performance- & Conversion-Optimierung",
-        "30 Tage Support nach Go-Live"
+        "Neue Seitenstruktur, neue Gestaltung, saubere Technik",
+        "In der Regel in 7 Werktagen live"
       ],
       highlighted: true
     },
@@ -93,8 +93,8 @@ const ServicesSection = () => {
             Unsere <span className="text-primary">Leistungen</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            Von der individuellen Website über den strukturierten Relaunch bis zur KI-gestützten Prozessautomatisierung –
-            alles aus einer Hand, vollständig DSGVO-konform.
+            Von der neuen Website auf Basis Ihrer bestehenden Seite bis zur laufenden Wartung:
+            alles aus einer Hand, technisch sauber und vollständig DSGVO-konform.
           </p>
         </ScrollAnimation>
 
@@ -169,8 +169,8 @@ const ServicesSection = () => {
               Unverbindliches Erstgespräch vereinbaren
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Wir analysieren Ihre aktuelle Situation und zeigen konkret auf, wo digitale Optimierung
-              den größten Hebel hat – kostenlos und ohne Verkaufsdruck.
+              Wir analysieren Ihre aktuelle Website und zeigen konkret, wie daraus eine neue,
+              stärkere Website entstehen kann - kostenlos, strukturiert und ohne Verkaufsdruck.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

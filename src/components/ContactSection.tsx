@@ -163,11 +163,11 @@ const ContactSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 px-2">
-            Lass uns deine Website auf das <span className="text-primary">nächste Level</span> bringen
+            Lassen Sie uns Ihre Website <span className="text-primary">neu aufsetzen</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            Bereit für einen professionellen Website-Relaunch? Kontaktiere uns für eine 
-            kostenlose Analyse und ein unverbindliches Gespräch.
+            Sie erhalten eine kostenlose Ersteinschätzung, eine klare Empfehlung zum weiteren Vorgehen
+            und auf Wunsch ein Festpreisangebot für die Umsetzung.
           </p>
         </div>
 
@@ -175,7 +175,7 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="bg-card rounded-2xl p-8 shadow-card">
             <h3 className="text-2xl font-bold text-foreground mb-6">
-              Kostenlose Website-Analyse anfragen
+              Kostenlose Ersteinschätzung anfragen
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -268,7 +268,7 @@ const ContactSection = () => {
                   "Wird gesendet..."
                 ) : (
                   <>
-                    Kostenlose Analyse anfordern
+                    Kostenlose Ersteinschätzung anfordern
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </>
                 )}
@@ -313,14 +313,14 @@ const ContactSection = () => {
             {/* Benefits */}
             <div className="bg-gradient-brand rounded-2xl p-8 text-white">
               <h3 className="text-xl font-bold mb-6">
-                Was du bekommst
+                Was Sie bekommen
               </h3>
               <div className="space-y-4">
                 {[
                   "Kostenlose Website-Analyse innerhalb von 48h",
-                  "Unverbindliches Beratungsgespräch",
-                  "Individuelle Optimierungsvorschläge",
-                  "Transparente Kostenübersicht",
+                  "Unverbindliches Erstgespräch",
+                  "Konkrete Empfehlung für neue Website oder Relaunch",
+                  "Transparente Kostenübersicht ab 749€",
                   "Direkter Draht ohne Callcenter"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">

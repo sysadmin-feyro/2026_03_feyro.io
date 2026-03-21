@@ -48,7 +48,7 @@ const TestimonialsSection = () => {
             Das sagen unsere <span className="text-primary">Kunden</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Echte Erfahrungen von Unternehmen, die mit uns ihre digitale Präsenz transformiert haben.
+            Stimmen aus Projekten, bei denen die Website wieder verständlich, modern und nutzbar werden sollte.
           </p>
         </ScrollAnimation>
 
@@ -108,20 +108,20 @@ const TestimonialsSection = () => {
           <div className="bg-primary/5 rounded-2xl border border-primary/20 p-4 sm:p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
               <div>
-                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">50+</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Erfolgreiche Projekte</div>
+                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">7</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Werktage bis Launch</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">4.9★</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Kundenbewertung</div>
+                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">749€</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Relaunch ab</div>
               </div>
               <div>
                 <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">100%</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">DSGVO-konform</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">DSGVO-konforme Basis</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">14 Tage</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Ø Projektdauer</div>
+                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">59€</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Wartung pro Monat</div>
               </div>
             </div>
           </div>

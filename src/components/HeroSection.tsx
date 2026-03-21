@@ -18,34 +18,26 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
-        {/* Headline */}
         <h1
           id="hero-heading"
           className="animate-fade-in font-display text-5xl font-bold leading-tight tracking-tight text-slate-900 sm:text-6xl md:text-7xl"
           style={{ animationDelay: "0.1s" }}
         >
-          Websites, die{" "}
-          <span className="bg-gradient-to-r from-violet-600 to-purple-500 bg-clip-text text-transparent">
-            überzeugen.
-          </span>
+          Neue Website
           <br />
-          Prozesse, die{" "}
-          <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-            skalieren.
+          <span className="bg-gradient-to-r from-violet-600 to-primary bg-clip-text text-transparent">
+            auf Basis Ihrer bestehenden Website.
           </span>
         </h1>
 
-        {/* Subtitle */}
         <p
-          className="mx-auto mb-10 mt-6 max-w-2xl animate-fade-in text-base leading-relaxed text-slate-600 sm:text-lg"
+          className="mx-auto mb-10 mt-6 max-w-3xl animate-fade-in text-base leading-relaxed text-slate-600 sm:text-lg"
           style={{ animationDelay: "0.2s" }}
         >
-          feyro.io entwickelt{" "}
-          <strong className="font-semibold text-primary">
-            individuelle Websites
-          </strong>
-          , begleitet KI-Transformationen und automatisiert digitale Prozesse –
-          vollständig DSGVO-konform, gehostet in Deutschland, ohne US-Cloud-Abhängigkeiten.
+          Wir entwickeln eine neue, moderne Website auf Basis Ihrer bisherigen Seite oder Inhalte:
+          in der Regel in <strong className="font-semibold text-slate-900">7 Werktagen live</strong>,
+          <strong className="font-semibold text-primary"> ab 749€</strong>, technisch sauber umgesetzt,
+          DSGVO-konform und mit Hosting in Deutschland.
         </p>
 
         {/* CTA Buttons */}
@@ -67,7 +59,7 @@ const HeroSection = () => {
             }}
             aria-label="Kostenloses Erstgespräch vereinbaren"
           >
-            Kostenloses Erstgespräch
+            Kostenlose Analyse anfragen
             <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
           </Button>
           <Button
@@ -95,15 +87,15 @@ const HeroSection = () => {
         >
           <div className="flex items-center gap-2" role="listitem">
             <ShieldCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-            100% DSGVO-konform
+            7 Werktage bis Go-Live
           </div>
           <div className="flex items-center gap-2" role="listitem">
             <Zap className="h-4 w-4 text-primary" aria-hidden="true" />
-            Hosting in Deutschland
+            749€ Festpreis für den Relaunch
           </div>
           <div className="flex items-center gap-2" role="listitem">
             <Sparkles className="h-4 w-4 text-primary" aria-hidden="true" />
-            Keine US-Cloud
+            DSGVO-konform & Hosting in Deutschland
           </div>
         </div>
       </div>

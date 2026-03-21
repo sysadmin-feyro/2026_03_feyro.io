@@ -7,10 +7,12 @@ const PricingSection = () => {
     {
       icon: RefreshCw,
       name: "Website-Relaunch",
+      price: "749",
+      currency: "€",
       period: "Einmalleistung",
-      description: "Bestehende Website komplett modernisieren – neues Design, saubere Technik, DSGVO-konform. In der Regel in 7 Werktagen live.",
+      description: "Neue Website auf Basis Ihrer bestehenden Website - mit neuem Design, sauberer Technik und DSGVO-konformer Umsetzung.",
       features: [
-        "Kompletter Website-Relaunch",
+        "Neue Website auf Basis der alten Website",
         "Modernes, responsives Design",
         "DSGVO-konformer Cookie-Consent",
         "On-Page-SEO & strukturierte Daten",
@@ -44,9 +46,11 @@ const PricingSection = () => {
     },
     {
       icon: Wrench,
-      name: "Wartung & Betrieb",
-      period: "Monatliche Pauschale",
-      description: "Laufender technischer Betrieb ohne Eigenaufwand: Updates, Backups, Monitoring und Content-Anpassungen als monatlicher Festpreis.",
+      name: "Wartung & Service",
+      price: "59",
+      currency: "€",
+      period: "pro Monat",
+      description: "Laufender technischer Betrieb ohne Eigenaufwand: Updates, Backups, Monitoring und kleine Inhaltsanpassungen als monatlicher Festpreis.",
       features: [
         "Regelmäßige Sicherheits- & Dependency-Updates",
         "Automatisierte Backups auf deutschen Servern",
@@ -114,13 +118,34 @@ const PricingSection = () => {
                     {plan.name}
                   </h3>
 
-                  {/* Price on request */}
                   <div className="mb-6">
-                    <p className={`text-sm font-semibold ${
-                      plan.highlighted ? 'text-white/80' : 'text-muted-foreground'
-                    }`}>
-                      {plan.period}
-                    </p>
+                    {"price" in plan ? (
+                      <>
+                        <div className="flex items-baseline gap-2">
+                          <span className={`text-5xl font-bold ${
+                            plan.highlighted ? 'text-white' : 'text-primary'
+                          }`}>
+                            {plan.price}
+                          </span>
+                          <span className={`text-2xl font-semibold ${
+                            plan.highlighted ? 'text-white/90' : 'text-foreground'
+                          }`}>
+                            {plan.currency}
+                          </span>
+                        </div>
+                        <p className={`mt-1 text-sm font-semibold ${
+                          plan.highlighted ? 'text-white/80' : 'text-muted-foreground'
+                        }`}>
+                          {plan.period}
+                        </p>
+                      </>
+                    ) : (
+                      <p className={`text-sm font-semibold ${
+                        plan.highlighted ? 'text-white/80' : 'text-muted-foreground'
+                      }`}>
+                        {plan.period}
+                      </p>
+                    )}
                   </div>
 
                   {/* Description */}
@@ -170,16 +195,16 @@ const PricingSection = () => {
         <ScrollAnimation delay={0.3}>
           <div className="bg-card rounded-2xl border border-border p-8 max-w-3xl mx-auto">
             <h3 className="text-xl font-bold text-foreground mb-4 text-center">
-              Individuelle Projekte auf Anfrage
+              Klare Preise, klarer Leistungsumfang
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                <span>Individuelle Festpreisangebote nach Erstgespräch</span>
+                <span>Website-Relaunch ab 749€ als Festpreis</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                <span>Keine versteckten Kosten</span>
+                <span>Wartung & Service für 59€ pro Monat</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
@@ -187,7 +212,7 @@ const PricingSection = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                <span>KI-Workshop anrechenbar auf Folgeprojekte</span>
+                <span>Keine versteckten Kosten oder Pflichtpakete</span>
               </div>
             </div>
           </div>

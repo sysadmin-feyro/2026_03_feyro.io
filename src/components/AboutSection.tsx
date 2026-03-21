@@ -33,7 +33,7 @@ const AboutSection = () => {
               feyro.io ist kein klassisches Webdesign-Studio.
               Wir sind ein{" "}
               <span className="text-primary font-semibold">digitaler Infrastrukturpartner</span>{" "}
-              für Unternehmen, die ihren Online-Auftritt und ihre Prozesse professionell aufgestellt haben wollen.
+              für Unternehmen, die ihren Online-Auftritt professionell erneuern und digitale Prozesse sauber aufstellen wollen.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -42,14 +42,14 @@ const AboutSection = () => {
                 <p className="text-muted-foreground">
                   <span className="font-semibold text-foreground">Ein Ansprechpartner:</span>{" "}
                   Hinter feyro.io steht ein erfahrener Entwickler und Digitalstratege mit einem
-                  Netzwerk aus spezialisierten Freelancern – je nach Projektanforderung skalierbar.
+                  kleinen Netzwerk aus spezialisierten Freelancern - je nach Projektanforderung gezielt ergänzt.
                 </p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-accent rounded-full mt-3 flex-shrink-0"></div>
                 <p className="text-muted-foreground">
                   <span className="font-semibold text-foreground">Kein Agentur-Overhead:</span>{" "}
-                  Remote-First bedeutet für uns: schlanke Strukturen, faire Preise und maximale
+                  Remote-First bedeutet für uns: schlanke Strukturen, klare Kommunikation und maximale
                   Fokussierung auf das Projektergebnis statt auf Selbstvermarktung.
                 </p>
               </div>
@@ -57,7 +57,7 @@ const AboutSection = () => {
                 <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                 <p className="text-muted-foreground">
                   <span className="font-semibold text-foreground">Deutschland, 100%:</span>{" "}
-                  Entwicklung, Hosting, Kommunikation und rechtliche Grundlagen – alles findet
+                  Entwicklung, Hosting, Kommunikation und rechtliche Grundlagen - alles findet
                   im deutschen und europäischen Rechtsraum statt.
                 </p>
               </div>
@@ -69,9 +69,8 @@ const AboutSection = () => {
                 Lean by Design
               </h3>
               <p className="text-muted-foreground">
-                „Ein Team ohne Overhead ist kein Nachteil – es ist ein Geschäftsmodell.
-                Wir bringen die richtigen Spezialisten an den Tisch, wenn sie gebraucht werden.
-                Nicht vorher, nicht pauschal."
+                Kurze Wege, klare Verantwortung und keine unnötigen Schleifen:
+                So bleibt die Umsetzung schnell, nachvollziehbar und wirtschaftlich sinnvoll.
               </p>
             </div>
           </div>
@@ -115,9 +114,8 @@ const AboutSection = () => {
                 Was uns unterscheidet
               </h3>
               <p className="opacity-90 leading-relaxed">
-                Während Agenturen auf Masse und Retainer setzen, fokussieren wir uns auf
-                klare Projektziele, messbare Ergebnisse und langfristige Partnerschaft ohne
-                künstliche Abhängigkeiten.
+                Wir verkaufen keine Paket-Show. Wir entwickeln konkrete Ergebnisse:
+                eine bessere Website, eine klare technische Basis und einen Betrieb, der langfristig funktioniert.
               </p>
             </div>
           </div>

@@ -16,12 +16,12 @@ const FAQSection = () => {
     },
     {
       question: "Was kostet eine neue Website bei feyro.io?",
-      answer: "Unsere Preise richten sich nach dem Projektumfang und werden individuell auf Basis eines Erstgesprächs kalkuliert. Alle Leistungen – Relaunch, KI-Workshop und Wartung – sind als transparente Festpreisangebote strukturiert, ohne versteckte Kosten. Sprechen Sie uns an.",
+      answer: "Der Website-Relaunch startet bei 749€ als Festpreis. Wartung und Service kosten 59€ pro Monat. Wenn zusätzliche Anforderungen hinzukommen, erhalten Sie vorab ein klares Angebot ohne versteckte Kosten.",
       link: "#pricing"
     },
     {
       question: "Was ist der KI-Strategie Workshop?",
-      answer: "Ein 90-minütiges strukturiertes Gespräch, in dem wir Ihre aktuellen digitalen Prozesse analysieren, Automatisierungspotenziale identifizieren und einen konkreten Maßnahmenplan erstellen. Das Ergebnis ist ein schriftliches Dokument mit priorisierten Handlungsempfehlungen. Der Workshop findet remote statt und ist auf Folgeprojekte anrechenbar.",
+      answer: "Ein 90-minütiges strukturiertes Gespräch, in dem wir Ihre aktuellen digitalen Prozesse analysieren, Automatisierungspotenziale identifizieren und einen konkreten Maßnahmenplan erstellen. Das Ergebnis ist ein schriftliches Dokument mit priorisierten Handlungsempfehlungen. Der Workshop findet remote statt und ist ein separates Zusatzangebot.",
       link: "#pricing"
     },
     {
