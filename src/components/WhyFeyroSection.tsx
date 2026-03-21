@@ -81,7 +81,7 @@ const WhyFeyroSection = () => {
         </div>
 
         <div className="mt-10 sm:mt-16">
-          <div className="mx-auto max-w-5xl rounded-[1.5rem] bg-[hsl(220_40%_11%)] p-6 text-white shadow-[0_30px_80px_rgba(9,17,32,0.18)] sm:rounded-[2rem] sm:p-10">
+          <div className="mx-auto max-w-5xl rounded-[1.5rem] bg-gradient-to-r from-blue-600 via-violet-600 to-pink-500 p-6 text-white shadow-[0_30px_80px_rgba(9,17,32,0.18)] sm:rounded-[2rem] sm:p-10">
             <div className="grid gap-5 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <h3 className="font-display text-xl font-bold sm:text-3xl">
                 Wir verkaufen keine nette Website. Wir entwickeln digitalen Eindruck.

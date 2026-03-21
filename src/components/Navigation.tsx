@@ -26,12 +26,8 @@ const Navigation = () => {
         <div className="mx-auto max-w-7xl rounded-[1.75rem] border border-slate-800 bg-slate-950 px-3 shadow-[0_20px_70px_rgba(5,12,24,0.42)] sm:rounded-full sm:px-6">
           <div className="flex h-14 items-center justify-between gap-3 sm:h-16 sm:gap-4">
           <div className="flex shrink-0 items-center">
-            <a href="#hero" aria-label="feyro.io – zur Startseite">
-              <img
-                src="/feyro-logo-white.svg"
-                alt="feyro.io"
-                className="h-5 w-auto sm:h-6"
-              />
+            <a href="#hero" aria-label="feyro.io – zur Startseite" className="font-display text-xl font-bold tracking-tight text-white sm:text-2xl">
+              feyro
             </a>
           </div>
 

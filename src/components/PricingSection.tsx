@@ -117,6 +117,11 @@ const PricingSection = () => {
                     }`}>
                       {plan.period}
                     </p>
+                    <p className={`text-xs mt-0.5 ${
+                      plan.highlighted ? 'text-white/60' : 'text-muted-foreground/70'
+                    }`}>
+                      zzgl. 19% MwSt.
+                    </p>
                   </div>
 
                   {/* Description */}

@@ -1,98 +1,117 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import heroBg from "@/assets/hero-bg.png";
+import { ArrowRight, ShieldCheck, Zap, Sparkles } from "lucide-react";
 import useAnalytics from "@/hooks/useAnalytics";
 
 const HeroSection = () => {
   const { trackCTAClick } = useAnalytics();
-  
+
   return (
-    <section 
-      id="hero" 
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-hero px-0 pt-20 text-white sm:pt-24"
+    <section
+      id="hero"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 px-4 pt-20 sm:pt-24"
       aria-labelledby="hero-heading"
     >
-      <div className="absolute inset-0 z-0">
-        <img src={heroBg} alt="" className="h-full w-full object-cover object-center" aria-hidden="true" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,12,24,0.82)_0%,rgba(5,12,24,0.55)_60%,rgba(5,12,24,0.2)_100%)]"></div>
+      {/* Subtle background glow blobs */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute left-1/4 top-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/6 blur-3xl" />
+        <div className="absolute right-1/4 bottom-1/3 h-80 w-80 rounded-full bg-violet-400/8 blur-3xl" />
       </div>
 
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute left-[6%] top-24 h-40 w-40 rounded-full bg-primary/16 blur-3xl sm:h-64 sm:w-64"></div>
-        <div className="absolute right-[10%] top-24 h-36 w-36 rounded-full bg-accent-glow/14 blur-3xl sm:h-56 sm:w-56"></div>
-        <div className="absolute bottom-[16%] left-[18%] hidden h-2 w-2 rounded-full bg-white/70 animate-float sm:block"></div>
-        <div className="absolute right-[18%] top-[30%] hidden h-3 w-3 rounded-full bg-accent-glow/70 animate-float sm:block" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute left-[50%] top-[18%] hidden h-px w-40 -translate-x-1/2 bg-gradient-to-r from-transparent via-white/35 to-transparent sm:block"></div>
-      </div>
+      <div className="relative z-10 mx-auto max-w-4xl text-center">
+        {/* Headline */}
+        <h1
+          id="hero-heading"
+          className="animate-fade-in font-display text-5xl font-bold leading-tight tracking-tight text-slate-900 sm:text-6xl md:text-7xl"
+          style={{ animationDelay: "0.1s" }}
+        >
+          KI statt{" "}
+          <span className="bg-gradient-to-r from-violet-600 to-purple-500 bg-clip-text text-transparent">
+            Chaos.
+          </span>
+          <br />
+          Deine Website,
+          <br />
+          <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+            neu gedacht.
+          </span>
+        </h1>
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(5,12,24,0.18)_62%,rgba(5,12,24,0.34)_100%)]"></div>
+        {/* Subtitle */}
+        <p
+          className="mx-auto mb-10 mt-6 max-w-2xl animate-fade-in text-base leading-relaxed text-slate-600 sm:text-lg"
+          style={{ animationDelay: "0.2s" }}
+        >
+          Mit feyro.io bekommst du keinen Baukasten, sondern einen strukturierten,{" "}
+          <strong className="font-semibold text-primary">
+            KI-gestützten Website-Relaunch
+          </strong>{" "}
+          – DSGVO-konform, suchmaschinenoptimiert und modern.
+        </p>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-start">
-          <div className="animate-fade-in text-left max-w-3xl">
-            <h1 id="hero-heading" className="font-display text-[2.55rem] font-bold leading-[0.98] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.4rem]">
-              Neue Websites,
-              <span className="block text-white/76">die nicht nur</span>
-              <span className="block bg-gradient-to-r from-white via-primary-glow to-accent-glow bg-clip-text text-transparent">
-                modern aussehen.
-              </span>
-            </h1>
+        {/* CTA Buttons */}
+        <div
+          className="mb-12 flex animate-fade-in flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
+          style={{ animationDelay: "0.3s" }}
+          role="group"
+          aria-label="Call-to-Action Buttons"
+        >
+          <Button
+            variant="hero"
+            size="xl"
+            className="w-full rounded-full px-8 py-4 text-base font-semibold shadow-[0_8px_30px_rgba(16,119,212,0.25)] sm:w-auto sm:text-lg"
+            onClick={() => {
+              trackCTAClick("hero_cta_primary", "hero_section");
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            aria-label="Kostenlose Website-Analyse starten"
+          >
+            Kostenlose Website-Analyse starten
+            <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+          </Button>
+          <Button
+            variant="outline"
+            size="xl"
+            className="w-full rounded-full border-slate-200 bg-white px-8 py-4 text-base font-semibold text-slate-700 hover:bg-slate-50 sm:w-auto sm:text-lg"
+            onClick={() => {
+              trackCTAClick("hero_cta_secondary", "hero_section");
+              document
+                .getElementById("services")
+                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            aria-label="Mehr erfahren"
+          >
+            Mehr erfahren
+          </Button>
+        </div>
 
-            <p className="mb-8 mt-5 max-w-3xl text-[15px] leading-relaxed text-white/78 sm:mb-10 sm:mt-6 sm:text-xl">
-              feyro.io entwickelt neue Websites auf Basis bestehender Seiten oder Inhalte.
-              Das Ergebnis ist ein klarer, moderner Auftritt, der Vertrauen schafft,
-              professionell wirkt und dein Unternehmen digital auf ein neues Niveau hebt.
-            </p>
-
-            <div className="mb-10 flex flex-col items-stretch gap-3 sm:mb-12 sm:items-center sm:gap-4 sm:flex-row lg:items-start" role="group" aria-label="Call-to-Action Buttons">
-            <Button 
-              variant="hero" 
-              size="xl" 
-              className="group h-12 rounded-full px-6 text-base shadow-[0_18px_40px_rgba(16,119,212,0.28)] sm:h-14 sm:px-8 sm:text-lg"
-              onClick={() => {
-                trackCTAClick("hero_cta_primary", "hero_section");
-                const contactSection = document.getElementById('contact');
-                contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }}
-              aria-label="Zur kostenlosen Website-Analyse navigieren"
-            >
-              Projekt anfragen
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="xl"
-              className="h-12 rounded-full border-white/18 bg-white/8 px-6 text-base text-white hover:bg-white/12 hover:text-white sm:h-14 sm:px-8 sm:text-lg"
-              onClick={() => {
-                trackCTAClick("hero_cta_secondary", "hero_section");
-                const servicesSection = document.getElementById('services');
-                servicesSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }}
-              aria-label="Zu den Leistungen navigieren"
-            >
-              Leistungen ansehen
-            </Button>
-            </div>
-
-            <div className="flex flex-wrap justify-start gap-2.5 sm:gap-3" role="list" aria-label="Vertrauensindikatoren">
-              <div className="rounded-full border border-white/12 bg-white/8 px-3 py-2 text-xs text-white/82 sm:px-4 sm:text-sm" role="listitem">
-                Umsetzung in 7 Tagen
-              </div>
-              <div className="rounded-full border border-white/12 bg-white/8 px-3 py-2 text-xs text-white/82 sm:px-4 sm:text-sm" role="listitem">
-                DSGVO-konform aufgebaut
-              </div>
-              <div className="rounded-full border border-white/12 bg-white/8 px-3 py-2 text-xs text-white/82 sm:px-4 sm:text-sm" role="listitem">
-                Neue Website statt Flickwerk
-              </div>
-            </div>
+        {/* Trust Badges */}
+        <div
+          className="flex animate-fade-in flex-wrap items-center justify-center gap-6 text-sm text-slate-500"
+          style={{ animationDelay: "0.4s" }}
+          role="list"
+          aria-label="Vertrauensindikatoren"
+        >
+          <div className="flex items-center gap-2" role="listitem">
+            <ShieldCheck className="h-4 w-4 text-primary" aria-hidden="true" />
+            100% DSGVO-konform
           </div>
-
+          <div className="flex items-center gap-2" role="listitem">
+            <Zap className="h-4 w-4 text-primary" aria-hidden="true" />
+            KI-gestützte Optimierung
+          </div>
+          <div className="flex items-center gap-2" role="listitem">
+            <Sparkles className="h-4 w-4 text-primary" aria-hidden="true" />
+            Keine Baukästen
+          </div>
         </div>
       </div>
 
-      <div className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 transform animate-bounce sm:block">
-        <div className="flex h-10 w-6 justify-center rounded-full border border-white/25">
-          <div className="mt-2 h-3 w-1 animate-pulse rounded-full bg-white/70"></div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 animate-bounce sm:block">
+        <div className="flex h-10 w-6 justify-center rounded-full border border-slate-300">
+          <div className="mt-2 h-3 w-1 animate-pulse rounded-full bg-slate-400" />
         </div>
       </div>
     </section>
