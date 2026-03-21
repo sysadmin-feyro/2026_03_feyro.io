@@ -7,12 +7,12 @@ const PricingSection = () => {
     {
       icon: RefreshCw,
       name: "Website-Relaunch",
-      price: "749",
+      price: "449",
       currency: "€",
       period: "einmalig",
-      description: "Wir erstellen eine neue Website auf Basis deiner bestehenden Website.",
+      description: "Deine bestehende Website wird komplett überarbeitet und modernisiert.",
       features: [
-        "Neue Website auf Basis der alten Website",
+        "Kompletter Website-Relaunch",
         "Modernes, responsives Design",
         "DSGVO-konformer Cookie-Banner",
         "SEO-Optimierung & Meta-Tags",
@@ -28,7 +28,7 @@ const PricingSection = () => {
     {
       icon: Settings,
       name: "Wartung & Service",
-      price: "59",
+      price: "29",
       currency: "€",
       period: "pro Monat",
       description: "Laufende Pflege und technischer Support für deine Website.",
@@ -70,7 +70,7 @@ const PricingSection = () => {
                 <div
                   className={`h-full relative p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-2 ${
                     plan.highlighted
-                      ? 'bg-gradient-brand text-white border-transparent shadow-brand hover:shadow-glow'
+                      ? 'bg-gradient-to-br from-blue-600 via-violet-600 to-pink-500 text-white border-transparent shadow-brand hover:shadow-glow'
                       : 'bg-card border-border hover:border-primary/30 shadow-card hover:shadow-brand'
                   }`}
                   role="listitem"
@@ -78,8 +78,8 @@ const PricingSection = () => {
                   {/* Badge */}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className={`px-4 py-1 rounded-full text-sm font-semibold ${
-                      plan.highlighted 
-                        ? 'bg-accent text-white' 
+                      plan.highlighted
+                        ? 'bg-pink-500 text-white'
                         : 'bg-secondary text-foreground'
                     }`}>
                       {plan.badge}
@@ -151,7 +151,7 @@ const PricingSection = () => {
                   <Button
                     variant={plan.highlighted ? "secondary" : "hero"}
                     size="lg"
-                    className="w-full group"
+                    className={`w-full group ${!plan.highlighted ? 'bg-gradient-to-r from-blue-600 via-violet-600 to-pink-500 text-white hover:opacity-90 border-0' : ''}`}
                     onClick={() => {
                       const contactSection = document.getElementById('contact');
                       contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
