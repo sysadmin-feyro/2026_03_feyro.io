@@ -7,7 +7,6 @@ const TrustBadges = lazy(() => import("@/components/TrustBadges"));
 const WhyFeyroSection = lazy(() => import("@/components/WhyFeyroSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const ProcessSection = lazy(() => import("@/components/ProcessSection"));
-const PricingSection = lazy(() => import("@/components/PricingSection"));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
 const FAQSection = lazy(() => import("@/components/FAQSection"));
 const AboutSection = lazy(() => import("@/components/AboutSection"));
@@ -31,7 +30,6 @@ const Index = () => {
         <WhyFeyroSection />
         <ServicesSection />
         <ProcessSection />
-        <PricingSection />
         <TestimonialsSection />
         <FAQSection />
         <AboutSection />
