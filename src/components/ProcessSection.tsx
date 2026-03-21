@@ -81,7 +81,7 @@ const ProcessSection = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line - Desktop */}
-          <div className="hidden lg:block absolute left-0 right-0 top-20 h-1 bg-gradient-brand opacity-20"></div>
+          <div className="hidden lg:block absolute left-0 right-0 top-20 h-1 bg-gradient-brand opacity-15"></div>
 
           {/* Steps */}
           <div className="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-5 lg:gap-8" role="list" aria-label="Prozessschritte">
@@ -91,7 +91,7 @@ const ProcessSection = () => {
                 <div key={index} className="relative" role="listitem">
                   {/* Timeline Connector - Mobile */}
                   {index < steps.length - 1 && (
-                    <div className="lg:hidden absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-brand opacity-20"></div>
+                    <div className="lg:hidden absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-brand opacity-15"></div>
                   )}
 
                   {/* Step Card */}
@@ -99,7 +99,7 @@ const ProcessSection = () => {
                     {/* Icon Circle */}
                     <div className="flex justify-center lg:mb-8 mb-6">
                       <div className="relative">
-                        <div className="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center shadow-brand group-hover:shadow-glow transition-all duration-300 group-hover:scale-110 z-10 relative">
+                        <div className="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center shadow-brand transition-all duration-300 group-hover:scale-105 z-10 relative">
                           <Icon className="w-8 h-8 text-white" aria-hidden="true" />
                         </div>
                         {/* Step Number */}
@@ -110,7 +110,7 @@ const ProcessSection = () => {
                     </div>
 
                     {/* Content Card */}
-                    <div className="bg-card rounded-xl border border-border p-6 shadow-card hover:shadow-brand transition-all duration-300 group-hover:-translate-y-2">
+                    <div className="bg-card rounded-xl border border-border p-6 shadow-card hover:shadow-brand transition-all duration-300 group-hover:-translate-y-1">
                       {/* Duration Badge */}
                       <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs font-semibold mb-4">
                         ⏱ {step.duration}
@@ -144,7 +144,7 @@ const ProcessSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center bg-secondary/50 rounded-2xl p-8">
+        <div className="mt-16 rounded-2xl border border-border bg-gradient-panel p-8 text-center shadow-card">
           <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 px-2">
             Klare Schritte statt unklarer Projektphasen
           </h3>

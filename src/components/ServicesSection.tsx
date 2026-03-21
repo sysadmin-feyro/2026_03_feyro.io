@@ -54,7 +54,7 @@ const ServicesSection = () => {
         {/* Header */}
         <ScrollAnimation className="text-center mb-16">
           <h2 id="services-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Unsere <span className="text-primary">Leistungen</span>
+            Unsere <span className="bg-gradient-brand bg-clip-text text-transparent">Leistungen</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
             Drei klare Leistungsbereiche: neue Websites, Relaunches bestehender Auftritte
@@ -75,16 +75,16 @@ const ServicesSection = () => {
               <div
                 className={`h-full group relative p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-2 ${
                   service.highlighted
-                    ? 'bg-gradient-to-br from-blue-600 via-violet-600 to-pink-500 text-white border-transparent shadow-brand hover:shadow-glow'
+                    ? 'bg-gradient-brand text-white border-transparent shadow-brand'
                     : 'bg-card border-border hover:border-primary/30 shadow-card hover:shadow-brand'
                 }`}
                 role="listitem"
               >
                   {service.highlighted && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Kernangebot
-                      </span>
+                        <span className="rounded-full border border-white/20 bg-white/14 px-4 py-1 text-sm font-semibold text-white backdrop-blur-sm">
+                          Kernangebot
+                        </span>
                     </div>
                   )}
 
@@ -128,7 +128,7 @@ const ServicesSection = () => {
 
         {/* CTA Section */}
         <ScrollAnimation delay={0.5}>
-          <div className="text-center bg-secondary/50 rounded-2xl p-12">
+          <div className="text-center rounded-2xl border border-border bg-gradient-panel p-12 shadow-card">
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Lassen Sie uns Ihr Vorhaben einordnen
             </h3>

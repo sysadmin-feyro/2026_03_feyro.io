@@ -67,7 +67,7 @@ const WhyFeyroSection = () => {
                 key={index}
                 className="group rounded-[1.3rem] border border-border/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.88),rgba(255,255,255,0.7))] p-5 shadow-card transition-all duration-300 hover:-translate-y-2 hover:shadow-brand sm:rounded-[1.8rem] sm:p-8"
               >
-                <div className={`mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary ${feature.color} group-hover:scale-110 transition-transform duration-300 sm:mb-6 sm:h-14 sm:w-14`}>
+                <div className={`mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(248,246,255,0.88))] ${feature.color} group-hover:scale-110 transition-transform duration-300 sm:mb-6 sm:h-14 sm:w-14`}>
                   <Icon className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
                 <h3 className="mb-3 font-display text-xl font-bold text-foreground sm:mb-4 sm:text-2xl">
@@ -82,7 +82,7 @@ const WhyFeyroSection = () => {
         </div>
 
         <div className="mt-10 sm:mt-16">
-          <div className="mx-auto max-w-5xl rounded-[1.5rem] bg-gradient-to-r from-blue-600 via-violet-600 to-pink-500 p-6 text-white shadow-[0_30px_80px_rgba(9,17,32,0.18)] sm:rounded-[2rem] sm:p-10">
+          <div className="mx-auto max-w-5xl rounded-[1.5rem] bg-gradient-brand p-6 text-white shadow-brand sm:rounded-[2rem] sm:p-10">
             <div className="grid gap-5 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <h3 className="font-display text-xl font-bold sm:text-3xl">
                 Wir entwickeln keine austauschbaren Standardlösungen. Wir entwickeln digitale Infrastruktur.

@@ -26,7 +26,7 @@ const Navigation = () => {
         <div className="mx-auto max-w-7xl rounded-[1.75rem] border border-slate-200/80 bg-white/90 px-3 shadow-[0_8px_32px_rgba(16,30,80,0.10)] backdrop-blur-md sm:rounded-full sm:px-6">
           <div className="flex h-14 items-center justify-between gap-3 sm:h-16 sm:gap-4">
           <div className="flex shrink-0 items-center">
-            <a href="#hero" aria-label="feyro.io – zur Startseite" className="font-display text-xl font-bold tracking-tight bg-gradient-to-r from-violet-600 to-purple-500 bg-clip-text text-transparent sm:text-2xl">
+            <a href="#hero" aria-label="feyro.io – zur Startseite" className="font-display text-xl font-bold tracking-tight bg-gradient-brand bg-clip-text text-transparent sm:text-2xl">
               feyro
             </a>
           </div>
@@ -49,7 +49,7 @@ const Navigation = () => {
             <Button 
               variant="hero"
               size="lg"
-              className="rounded-full border border-sky-300/20 bg-sky-500 px-6 text-white shadow-[0_16px_38px_rgba(14,110,194,0.32)] hover:bg-sky-400"
+              className="rounded-full px-6"
               onClick={() => {
                 const contactSection = document.getElementById('contact');
                 contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });

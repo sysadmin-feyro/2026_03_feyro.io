@@ -17,13 +17,13 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 33% 11%;
 
-    --primary: 206 90% 45%;
+    --primary: 256 78% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 198 96% 62%;
+    --primary-glow: 263 88% 70%;
 
-    --accent: 179 87% 36%;
+    --accent: 330 86% 62%;
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 184 87% 58%;
+    --accent-glow: 323 92% 72%;
 
     --secondary: 210 33% 95%;
     --secondary-foreground: 222 33% 11%;
@@ -36,18 +36,18 @@ All colors MUST be HSL.
 
     --border: 214 27% 88%;
     --input: 214 27% 88%;
-    --ring: 206 90% 45%;
+    --ring: 256 78% 58%;
 
     --radius: 1rem;
 
-    --gradient-brand: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent-glow)) 100%);
-    --gradient-subtle: radial-gradient(circle at top left, hsl(var(--primary) / 0.08), transparent 35%), linear-gradient(180deg, hsl(var(--background)), hsl(210 33% 96%));
-    --gradient-hero: radial-gradient(circle at 20% 20%, hsl(var(--accent-glow) / 0.35), transparent 26%), radial-gradient(circle at 85% 18%, hsl(var(--primary-glow) / 0.4), transparent 24%), linear-gradient(135deg, hsl(222 53% 10%) 0%, hsl(214 61% 16%) 46%, hsl(195 67% 18%) 100%);
-    --gradient-panel: linear-gradient(180deg, hsl(0 0% 100% / 0.84), hsl(0 0% 100% / 0.66));
+    --gradient-brand: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-subtle: radial-gradient(circle at top left, hsl(var(--primary) / 0.07), transparent 34%), radial-gradient(circle at top right, hsl(var(--accent) / 0.05), transparent 28%), linear-gradient(180deg, hsl(var(--background)), hsl(250 35% 97%));
+    --gradient-hero: radial-gradient(circle at 18% 18%, hsl(var(--accent-glow) / 0.24), transparent 24%), radial-gradient(circle at 82% 16%, hsl(var(--primary-glow) / 0.28), transparent 22%), linear-gradient(180deg, hsl(252 45% 99%) 0%, hsl(248 42% 97%) 100%);
+    --gradient-panel: linear-gradient(180deg, hsl(0 0% 100% / 0.92), hsl(210 30% 99% / 0.82));
 
-    --shadow-brand: 0 24px 60px -22px hsl(210 70% 22% / 0.36);
-    --shadow-glow: 0 0 80px hsl(var(--primary-glow) / 0.28);
-    --shadow-card: 0 14px 40px hsl(220 30% 18% / 0.08);
+    --shadow-brand: 0 22px 54px -24px hsl(261 54% 33% / 0.32);
+    --shadow-glow: 0 0 64px hsl(var(--accent-glow) / 0.20);
+    --shadow-card: 0 14px 34px hsl(220 24% 18% / 0.07);
 
     --sidebar-background: 0 0% 98%;
 
@@ -114,8 +114,8 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     font-family: "Manrope", system-ui, sans-serif;
     background-image:
-      radial-gradient(circle at top left, hsl(var(--primary) / 0.06), transparent 20%),
-      radial-gradient(circle at top right, hsl(var(--accent-glow) / 0.08), transparent 24%);
+      radial-gradient(circle at top left, hsl(var(--primary) / 0.05), transparent 20%),
+      radial-gradient(circle at top right, hsl(var(--accent-glow) / 0.06), transparent 24%);
     min-height: 100vh;
   }
 

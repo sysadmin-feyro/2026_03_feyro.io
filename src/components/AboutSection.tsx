@@ -63,7 +63,7 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="bg-primary/10 border border-primary/20 rounded-xl p-6">
+            <div className="rounded-xl border border-border bg-gradient-panel p-6 shadow-card">
               <h3 className="text-lg font-semibold text-primary mb-3 flex items-center gap-2">
                 <Users className="w-5 h-5" aria-hidden="true" />
                 Lean by Design
@@ -109,7 +109,7 @@ const AboutSection = () => {
             })}
 
             {/* Differentiator Box */}
-            <div className="bg-gradient-to-br from-blue-600 via-violet-600 to-pink-500 rounded-xl p-8 text-white">
+            <div className="rounded-xl bg-gradient-brand p-8 text-white shadow-brand">
               <h3 className="text-xl font-bold mb-4">
                 Was uns unterscheidet
               </h3>

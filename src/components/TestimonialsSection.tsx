@@ -105,7 +105,7 @@ const TestimonialsSection = () => {
 
         {/* Stats Bar */}
         <ScrollAnimation delay={0.4} className="mt-12 sm:mt-16">
-          <div className="bg-primary/5 rounded-2xl border border-primary/20 p-4 sm:p-8">
+          <div className="rounded-2xl border border-border bg-gradient-panel p-4 shadow-card sm:p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
               <div>
                 <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">7</div>

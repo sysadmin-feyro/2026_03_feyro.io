@@ -158,7 +158,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-secondary/30">
+    <section id="contact" className="bg-gradient-subtle py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -311,7 +311,7 @@ const ContactSection = () => {
             </div>
 
             {/* Benefits */}
-            <div className="bg-gradient-brand rounded-2xl p-8 text-white">
+            <div className="rounded-2xl bg-gradient-brand p-8 text-white shadow-brand">
               <h3 className="text-xl font-bold mb-6">
                 Was Sie bekommen
               </h3>
