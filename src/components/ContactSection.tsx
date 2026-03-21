@@ -163,20 +163,20 @@ const ContactSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 px-2">
-            Lassen Sie uns Ihre Website <span className="text-primary">neu aufsetzen</span>
+            Lassen Sie uns über Ihr <span className="text-primary">Vorhaben</span> sprechen
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            Sie erhalten eine kostenlose Ersteinschätzung, eine klare Empfehlung zum weiteren Vorgehen
-            und auf Wunsch ein Festpreisangebot für die Umsetzung.
+            Sie erhalten eine erste fachliche Einordnung, eine klare Empfehlung zum weiteren Vorgehen
+            und einen direkten Austausch ohne Agentur-Umwege.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div className="bg-card rounded-2xl p-8 shadow-card">
-            <h3 className="text-2xl font-bold text-foreground mb-6">
-              Kostenlose Ersteinschätzung anfragen
-            </h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+              Projekt anfragen
+              </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -231,7 +231,7 @@ const ContactSection = () => {
                 <Textarea
                   id="message"
                   rows={5}
-                  placeholder="Erzähle uns von deinem Projekt und deinen Zielen..."
+                  placeholder="Beschreiben Sie kurz, ob es um eine neue Website, einen Relaunch oder KI- und Automatisierungsthemen geht..."
                   value={formData.message}
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                   required
@@ -268,7 +268,7 @@ const ContactSection = () => {
                   "Wird gesendet..."
                 ) : (
                   <>
-                    Kostenlose Ersteinschätzung anfordern
+                    Anfrage senden
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </>
                 )}
@@ -317,10 +317,10 @@ const ContactSection = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  "Kostenlose Website-Analyse innerhalb von 48h",
+                  "Erste fachliche Einordnung innerhalb kurzer Zeit",
                   "Unverbindliches Erstgespräch",
-                  "Konkrete Empfehlung für neue Website oder Relaunch",
-                  "Transparente Kostenübersicht ab 749€",
+                  "Konkrete Empfehlung für Neuentwicklung, Relaunch oder Mandat",
+                  "Direkter Austausch zu technischem und strategischem Bedarf",
                   "Direkter Draht ohne Callcenter"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
@@ -337,7 +337,7 @@ const ContactSection = () => {
                 Schnelle Antwort garantiert
               </h4>
               <p className="text-muted-foreground text-sm">
-                Wir melden uns innerhalb von 24 Stunden bei dir. Versprochen.
+                Wir melden uns in der Regel innerhalb von 24 Stunden zurück.
               </p>
             </div>
           </div>

@@ -17,10 +17,10 @@ const Footer = () => {
       { name: "Cookie-Einstellungen", href: "#" }
     ],
     services: [
-      { name: "Neue Website", href: "#services" },
+      { name: "Website-Neuentwicklung", href: "#services" },
       { name: "Website-Relaunch", href: "#services" },
       { name: "KI-Beratung & Automatisierung", href: "#services" },
-      { name: "Wartung & Service", href: "#services" }
+      { name: "Projekt anfragen", href: "#contact" }
     ]
   };
 
@@ -37,8 +37,8 @@ const Footer = () => {
             </div>
 
             <p className="text-background/80 mb-6 leading-relaxed text-sm">
-              Neue Websites auf Basis bestehender Seiten, DSGVO-konforme Webentwicklung
-              und technischer Betrieb aus Deutschland.
+              Website-Neuentwicklung, Website-Relaunch und Beratungsmandate für KI
+              sowie Prozessautomatisierung aus Deutschland.
             </p>
 
             <address className="not-italic space-y-3">

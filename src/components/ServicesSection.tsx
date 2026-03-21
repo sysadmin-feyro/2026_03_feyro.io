@@ -3,9 +3,6 @@ import {
   Globe,
   RefreshCw,
   Bot,
-  Shield,
-  BarChart2,
-  Wrench,
   ArrowRight,
   CheckCircle
 } from "lucide-react";
@@ -16,71 +13,38 @@ const ServicesSection = () => {
     {
       icon: Globe,
       title: "Website-Neuentwicklung",
-      description: "Individuelle Webpräsenz von Grund auf – technisch sauber, performant und ohne Baukasten-Kompromisse. Entwickelt auf Basis moderner Web-Technologien, optimiert für Suchmaschinen und vollständig DSGVO-konform.",
+      description: "Individuelle Webpräsenzen von Grund auf: klar strukturiert, technisch sauber entwickelt und auf Ihr Unternehmen zugeschnitten.",
       features: [
-        "Maßgeschneidertes Design ohne Templates",
-        "Mobile-First & Core Web Vitals optimiert",
-        "Strukturierte Daten & On-Page-SEO",
-        "DSGVO-konformes Tracking mit Matomo"
+        "Individuelle Konzeption und Gestaltung",
+        "Saubere technische Entwicklung ohne Baukasten",
+        "Mobile-First, Performance und SEO-Basis",
+        "DSGVO-konforme Umsetzung mit Hosting in Europa"
       ],
       highlighted: false
     },
     {
       icon: RefreshCw,
       title: "Website-Relaunch",
-      description: "Wir entwickeln eine neue Website auf Basis Ihrer bestehenden Website. Inhalte, Domain und vorhandene Stärken werden übernommen, Struktur, Design und Technik dagegen konsequent neu aufgebaut.",
+      description: "Bestehende Websites neu denken und technisch neu aufsetzen: Inhalte, Struktur und digitale Wirkung werden gezielt überarbeitet.",
       features: [
-        "KI-gestützte Ist-Analyse & Audit",
-        "Übernahme bestehender Inhalte & Domain",
-        "Neue Seitenstruktur, neue Gestaltung, saubere Technik",
-        "In der Regel in 7 Werktagen live"
+        "Analyse der bestehenden Website und Inhalte",
+        "Neue Struktur, neue Gestaltung, neue technische Basis",
+        "Migration bestehender Inhalte und Domains",
+        "Sauberer Go-Live mit klarer Begleitung"
       ],
       highlighted: true
     },
     {
       icon: Bot,
-      title: "KI-Beratung & Prozessautomatisierung",
-      description: "Digitale Prozesse intelligent gestalten: Wir analysieren Ihre Abläufe, identifizieren Automatisierungspotenziale und implementieren KI-gestützte Lösungen – praxisnah, skalierbar und ohne Vendor-Lock-in bei US-Anbietern.",
+      title: "Beratungsmandat für KI & Automatisierung",
+      description: "Wir analysieren Prozesse, identifizieren sinnvolle Automatisierungspotenziale und begleiten Unternehmen bei der Einführung praxistauglicher KI-Lösungen.",
       features: [
-        "KI-Strategie Workshop (90 Min.)",
-        "Prozessanalyse & Automatisierungs-Roadmap",
-        "Implementierung & Schulung",
-        "Ausschließlich EU-konforme KI-Tools"
+        "Analyse bestehender Prozesse und Engpässe",
+        "Einordnung von KI-Anwendungsfällen für Ihr Unternehmen",
+        "Roadmap für Automatisierung und Einführung",
+        "Begleitung bei Umsetzung, Tool-Auswahl und Schulung"
       ],
       highlighted: false
-    },
-    {
-      icon: Shield,
-      title: "DSGVO & Datenschutz-Compliance",
-      description: "Rechtssicherheit ist kein Optional-Feature. Wir implementieren vollständige Datenschutz-Compliance: von der technischen Umsetzung bis zur Dokumentation – ohne Abhängigkeit von US-Diensten wie Google Analytics oder Hotjar.",
-      features: [
-        "Rechtssicherer Cookie-Consent (Consent Mode v2)",
-        "Datenschutzerklärung & Impressum",
-        "Technische Dokumentation & Nachweise",
-        "Regelmäßige Compliance-Reviews"
-      ]
-    },
-    {
-      icon: BarChart2,
-      title: "SEO & digitale Sichtbarkeit",
-      description: "Nachhaltige Suchmaschinenoptimierung auf technischer und inhaltlicher Ebene. Kein Black-Hat, kein Baukasten-SEO – strukturierte Daten, saubere Architektur und messbare Ergebnisse.",
-      features: [
-        "Technisches SEO-Audit & On-Page-Optimierung",
-        "Schema.org & strukturierte Daten",
-        "Pagespeed & Core Web Vitals",
-        "DSGVO-konformes Analytics (Matomo / Plausible)"
-      ]
-    },
-    {
-      icon: Wrench,
-      title: "Wartung & technischer Betrieb",
-      description: "Laufender Betrieb ohne Eigenaufwand: Sicherheits-Updates, Backups, Monitoring und Content-Anpassungen – alles in einem monatlichen Festpreis ohne Überraschungen.",
-      features: [
-        "Regelmäßige Sicherheits- & Dependency-Updates",
-        "Automatisierte Backups auf deutschen Servern",
-        "Uptime-Monitoring & Incident-Response",
-        "Content-Anpassungen bis 1 Std./Monat inklusive"
-      ]
     }
   ];
 
@@ -93,13 +57,13 @@ const ServicesSection = () => {
             Unsere <span className="text-primary">Leistungen</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            Von der neuen Website auf Basis Ihrer bestehenden Seite bis zur laufenden Wartung:
-            alles aus einer Hand, technisch sauber und vollständig DSGVO-konform.
+            Drei klare Leistungsbereiche: neue Websites, Relaunches bestehender Auftritte
+            und Beratungsmandate für KI sowie Prozessautomatisierung.
           </p>
         </ScrollAnimation>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" role="list" aria-label="Unsere Leistungen">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16" role="list" aria-label="Unsere Leistungen">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -119,7 +83,7 @@ const ServicesSection = () => {
                   {service.highlighted && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Meist gebucht
+                        Kernangebot
                       </span>
                     </div>
                   )}
@@ -166,11 +130,11 @@ const ServicesSection = () => {
         <ScrollAnimation delay={0.5}>
           <div className="text-center bg-secondary/50 rounded-2xl p-12">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Unverbindliches Erstgespräch vereinbaren
+              Lassen Sie uns Ihr Vorhaben einordnen
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Wir analysieren Ihre aktuelle Website und zeigen konkret, wie daraus eine neue,
-              stärkere Website entstehen kann - kostenlos, strukturiert und ohne Verkaufsdruck.
+              Im Erstgespräch klären wir, ob für Sie eher eine Neuentwicklung, ein Relaunch
+              oder ein Beratungsmandat für KI und Automatisierung sinnvoll ist.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -182,18 +146,18 @@ const ServicesSection = () => {
                   contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
               >
-                Jetzt Kontakt aufnehmen
+                Projekt anfragen
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
                 variant="outline"
                 size="xl"
                 onClick={() => {
-                  const pricingSection = document.getElementById('pricing');
-                  pricingSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  const processSection = document.getElementById('process');
+                  processSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
               >
-                Preise ansehen
+                Arbeitsweise ansehen
               </Button>
             </div>
           </div>

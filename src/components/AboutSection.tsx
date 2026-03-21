@@ -15,7 +15,7 @@ const AboutSection = () => {
     {
       icon: Laptop,
       title: "Remote-First, Deutschland-basiert",
-      description: "Kein Büro, kein Overhead, kein aufgeblähtes Agenturmodell. Das hält unsere Struktur schlank und unsere Preise fair."
+      description: "Kein Büro, kein Overhead, kein aufgeblähtes Agenturmodell. Das hält unsere Struktur schlank und Entscheidungen schnell."
     }
   ];
 
@@ -115,7 +115,7 @@ const AboutSection = () => {
               </h3>
               <p className="opacity-90 leading-relaxed">
                 Wir verkaufen keine Paket-Show. Wir entwickeln konkrete Ergebnisse:
-                eine bessere Website, eine klare technische Basis und einen Betrieb, der langfristig funktioniert.
+                eine tragfähige Website, eine saubere technische Basis oder ein Mandat, das Prozesse wirklich verbessert.
               </p>
             </div>
           </div>

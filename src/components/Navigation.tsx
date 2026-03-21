@@ -9,7 +9,7 @@ const Navigation = () => {
     { name: "Start", href: "#hero" },
     { name: "Leistungen", href: "#services" },
     { name: "Ablauf", href: "#process" },
-    { name: "Preise", href: "#pricing" },
+    { name: "FAQ", href: "#faq" },
     { name: "Kontakt", href: "#contact" },
   ];
 

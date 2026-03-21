@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShieldCheck, Zap, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, Bot, Sparkles } from "lucide-react";
 import useAnalytics from "@/hooks/useAnalytics";
 
 const HeroSection = () => {
@@ -20,13 +20,13 @@ const HeroSection = () => {
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <h1
           id="hero-heading"
-          className="animate-fade-in font-display text-5xl font-bold leading-tight tracking-tight text-slate-900 sm:text-6xl md:text-7xl"
+          className="animate-fade-in font-display text-5xl font-bold leading-[0.98] tracking-tight text-slate-900 sm:text-6xl md:text-7xl"
           style={{ animationDelay: "0.1s" }}
         >
-          Neue Website
+          Websites, Relaunches
           <br />
           <span className="bg-gradient-to-r from-violet-600 to-primary bg-clip-text text-transparent">
-            auf Basis Ihrer bestehenden Website.
+            und KI-gestützte Prozessautomatisierung
           </span>
         </h1>
 
@@ -34,10 +34,9 @@ const HeroSection = () => {
           className="mx-auto mb-10 mt-6 max-w-3xl animate-fade-in text-base leading-relaxed text-slate-600 sm:text-lg"
           style={{ animationDelay: "0.2s" }}
         >
-          Wir entwickeln eine neue, moderne Website auf Basis Ihrer bisherigen Seite oder Inhalte:
-          in der Regel in <strong className="font-semibold text-slate-900">7 Werktagen live</strong>,
-          <strong className="font-semibold text-primary"> ab 749€</strong>, technisch sauber umgesetzt,
-          DSGVO-konform und mit Hosting in Deutschland.
+          feyro.io entwickelt neue Websites, modernisiert bestehende Auftritte und begleitet
+          Unternehmen bei KI- und Automatisierungsvorhaben. Technisch sauber, DSGVO-konform
+          und mit direktem Ansprechpartner aus Deutschland.
         </p>
 
         {/* CTA Buttons */}
@@ -57,9 +56,9 @@ const HeroSection = () => {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            aria-label="Kostenloses Erstgespräch vereinbaren"
+            aria-label="Projekt anfragen"
           >
-            Kostenlose Analyse anfragen
+            Projekt anfragen
             <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
           </Button>
           <Button
@@ -87,11 +86,11 @@ const HeroSection = () => {
         >
           <div className="flex items-center gap-2" role="listitem">
             <ShieldCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-            7 Werktage bis Go-Live
+            Neue Website & Relaunch
           </div>
           <div className="flex items-center gap-2" role="listitem">
-            <Zap className="h-4 w-4 text-primary" aria-hidden="true" />
-            749€ Festpreis für den Relaunch
+            <Bot className="h-4 w-4 text-primary" aria-hidden="true" />
+            KI-Beratung & Automatisierung
           </div>
           <div className="flex items-center gap-2" role="listitem">
             <Sparkles className="h-4 w-4 text-primary" aria-hidden="true" />

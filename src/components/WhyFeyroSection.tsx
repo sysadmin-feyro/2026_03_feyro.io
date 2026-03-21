@@ -85,7 +85,7 @@ const WhyFeyroSection = () => {
           <div className="mx-auto max-w-5xl rounded-[1.5rem] bg-gradient-to-r from-blue-600 via-violet-600 to-pink-500 p-6 text-white shadow-[0_30px_80px_rgba(9,17,32,0.18)] sm:rounded-[2rem] sm:p-10">
             <div className="grid gap-5 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <h3 className="font-display text-xl font-bold sm:text-3xl">
-                Wir erstellen keine 99€-Websites. Wir entwickeln digitale Infrastruktur.
+                Wir entwickeln keine austauschbaren Standardlösungen. Wir entwickeln digitale Infrastruktur.
               </h3>
               <p className="text-sm leading-relaxed text-white/80 sm:text-lg">
                 Keine Baukasten-Lösung, kein austauschbares Template, keine Abhängigkeit von US-Cloud-Diensten.

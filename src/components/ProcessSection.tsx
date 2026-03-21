@@ -5,61 +5,61 @@ const ProcessSection = () => {
     {
       icon: MessageSquare,
       title: "Erstgespräch & Analyse",
-      duration: "Tag 1",
-      description: "Wir analysieren deine aktuelle Website, verstehen deine Ziele und definieren den Projektumfang. Kostenlose Erstanalyse inklusive.",
+      duration: "Schritt 1",
+      description: "Wir erfassen Ihr Vorhaben, analysieren den Status quo und ordnen ein, welche Form der Zusammenarbeit sinnvoll ist.",
       details: [
-        "Website-Audit & Performance-Check",
-        "Zielgruppen-Analyse",
-        "Wettbewerbs-Vergleich",
-        "Unverbindliches Angebot"
+        "Ziele, Kontext und Rahmenbedingungen",
+        "Einordnung zwischen Neuentwicklung, Relaunch oder Beratungsmandat",
+        "Sichtung bestehender Systeme, Inhalte oder Prozesse",
+        "Empfehlung für das weitere Vorgehen"
       ]
     },
     {
       icon: Lightbulb,
-      title: "Konzept & Design",
-      duration: "Tag 2",
-      description: "Auf Basis der Analyse entwickeln wir ein maßgeschneidertes Konzept mit modernem Design und klarer Struktur.",
+      title: "Konzept & Priorisierung",
+      duration: "Schritt 2",
+      description: "Auf Basis der Analyse definieren wir Struktur, Schwerpunkte und eine realistische Umsetzungslogik.",
       details: [
-        "Sitemap & Informationsarchitektur",
-        "Wireframes & Design-Entwürfe",
-        "Corporate Design Integration",
-        "Content-Strategie"
+        "Informationsarchitektur oder Prozessbild",
+        "Inhaltliche und technische Prioritäten",
+        "Design- oder Automatisierungskonzept",
+        "Klare Abgrenzung des Leistungsumfangs"
       ]
     },
     {
       icon: Code,
       title: "Entwicklung & Umsetzung",
-      duration: "Tag 3-5",
-      description: "Programmierung der Website mit modernsten Technologien, DSGVO-Konformität und SEO-Optimierung von Anfang an.",
+      duration: "Schritt 3",
+      description: "Wir setzen Websites, Relaunches oder ausgewählte Automatisierungen strukturiert und nachvollziehbar um.",
       details: [
-        "Frontend-Entwicklung (React/Vite)",
-        "DSGVO-konforme Integration",
-        "SEO-Optimierung & Meta-Tags",
-        "Performance-Tuning"
+        "Technische Entwicklung oder Implementierung",
+        "DSGVO-konforme Basis und saubere Integrationen",
+        "Enge Abstimmung an den relevanten Punkten",
+        "Dokumentierte Entscheidungen statt Black Box"
       ]
     },
     {
       icon: TestTube,
       title: "Testing & Optimierung",
-      duration: "Tag 6",
-      description: "Ausführliche Tests auf allen Geräten, Browser-Kompatibilität und finale Optimierungen für maximale Performance.",
+      duration: "Schritt 4",
+      description: "Vor Auslieferung prüfen wir Struktur, Technik und Nutzbarkeit und schärfen die letzten Details.",
       details: [
-        "Cross-Browser Testing",
-        "Mobile Responsiveness",
-        "Core Web Vitals Check",
-        "Letzte Anpassungen"
+        "Qualitätssicherung und technische Prüfung",
+        "Responsiveness, Performance und Inhalt",
+        "Feedbackschleife für letzte Anpassungen",
+        "Saubere Vorbereitung für den Rollout"
       ]
     },
     {
       icon: Rocket,
-      title: "Launch & Support",
-      duration: "Tag 7",
-      description: "Deine Website geht live! Wir unterstützen dich beim Launch und stehen dir auch danach für Fragen zur Verfügung.",
+      title: "Rollout & Begleitung",
+      duration: "Schritt 5",
+      description: "Nach der Umsetzung begleiten wir Go-Live, Übergabe oder nächste Ausbaustufen verlässlich weiter.",
       details: [
-        "Domain-Setup & SSL",
-        "Live-Schaltung",
-        "Analytics-Integration",
-        "30 Tage Support inklusive"
+        "Go-Live, Übergabe oder Mandatsfortsetzung",
+        "Dokumentation und Orientierung für den Betrieb",
+        "Begleitung bei nächsten Entscheidungen",
+        "Langfristig anschlussfähige technische Basis"
       ]
     }
   ];
@@ -70,11 +70,11 @@ const ProcessSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 id="process-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Dein Weg zur <span className="text-primary">neuen Website</span>
+            So läuft die <span className="text-primary">Zusammenarbeit</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            Transparenter Prozess von der ersten Idee bis zum erfolgreichen Launch. 
-            Projektdauer: <span className="text-primary font-semibold">7 Tage</span>
+            Ein klarer Ablauf für neue Websites, Relaunches und Beratungsmandate für KI
+            sowie Prozessautomatisierung.
           </p>
         </div>
 
@@ -146,11 +146,11 @@ const ProcessSection = () => {
         {/* Bottom CTA */}
         <div className="mt-16 text-center bg-secondary/50 rounded-2xl p-8">
           <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 px-2">
-            Gesamtdauer: 7 Tage vom Erstgespräch bis zum Launch
+            Klare Schritte statt unklarer Projektphasen
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Jedes Projekt ist individuell. Die Zeitangaben sind Richtwerte und können je nach 
-            Projektumfang variieren. Wir informieren dich transparent über jeden Schritt.
+            Umfang und Dauer richten sich nach Aufgabe und Tiefe des Vorhabens. Entscheidend ist,
+            dass Sie jederzeit wissen, woran gearbeitet wird und was als Nächstes folgt.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">

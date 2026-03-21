@@ -10,19 +10,24 @@ import SEOHead from "./SEOHead";
 const FAQSection = () => {
   const faqs = [
     {
-      question: "Wie lange dauert ein Website-Relaunch?",
-      answer: "Ein typischer Relaunch dauert 7 Werktage: von der Analyse bis zum Go-Live. Der genaue Zeitplan hängt vom Umfang der Inhalte und der Verfügbarkeit von Feedback ab. Wir kommunizieren transparent und halten fixe Meilensteine ein.",
+      question: "Welche Leistungen bietet feyro.io an?",
+      answer: "feyro.io bietet drei Kernleistungen an: Website-Neuentwicklung, Website-Relaunch und Beratungsmandate für KI sowie Prozessautomatisierung in Unternehmen.",
+      link: "#services"
+    },
+    {
+      question: "Wie läuft ein Erstgespräch ab?",
+      answer: "Im Erstgespräch schauen wir auf Ihr Vorhaben, den aktuellen Stand und die Ziele. Danach erhalten Sie eine fachliche Einordnung, welche Form der Zusammenarbeit sinnvoll ist und wie die nächsten Schritte aussehen können.",
       link: "#process"
     },
     {
-      question: "Was kostet eine neue Website bei feyro.io?",
-      answer: "Der Website-Relaunch startet bei 749€ als Festpreis. Wartung und Service kosten 59€ pro Monat. Wenn zusätzliche Anforderungen hinzukommen, erhalten Sie vorab ein klares Angebot ohne versteckte Kosten.",
-      link: "#pricing"
+      question: "Übernehmen Sie auch komplette Website-Neuentwicklungen?",
+      answer: "Ja. Neben Relaunches entwickeln wir auch neue Websites von Grund auf, wenn noch keine tragfähige bestehende Website vorhanden ist oder ein kompletter Neustart sinnvoller ist.",
+      link: "#services"
     },
     {
-      question: "Was ist der KI-Strategie Workshop?",
-      answer: "Ein 90-minütiges strukturiertes Gespräch, in dem wir Ihre aktuellen digitalen Prozesse analysieren, Automatisierungspotenziale identifizieren und einen konkreten Maßnahmenplan erstellen. Das Ergebnis ist ein schriftliches Dokument mit priorisierten Handlungsempfehlungen. Der Workshop findet remote statt und ist ein separates Zusatzangebot.",
-      link: "#pricing"
+      question: "Wie unterstuetzen Sie bei KI und Prozessautomatisierung?",
+      answer: "Wir analysieren bestehende Abläufe, identifizieren sinnvolle Automatisierungspotenziale und begleiten Unternehmen bei der Auswahl, Einführung und Umsetzung passender KI-gestützter Lösungen.",
+      link: "#services"
     },
     {
       question: "Warum keine US-Dienste wie Google Analytics oder AWS?",
@@ -35,8 +40,8 @@ const FAQSection = () => {
       link: "#services"
     },
     {
-      question: "Kann ich meine bestehende Domain behalten?",
-      answer: "Ja. Wir übernehmen Ihre bestehende Domain und kümmern uns um die technische Migration. Falls Sie noch keine Domain haben, helfen wir bei der Auswahl und Registrierung bei einem deutschen Anbieter.",
+      question: "Kann ich meine bestehende Domain und Inhalte behalten?",
+      answer: "Ja. Bei Relaunches prüfen wir, welche Inhalte, Strukturen oder Systeme sinnvoll übernommen werden können. Domains und bestehende Inhalte können in den neuen Auftritt integriert werden.",
       link: "#contact"
     },
     {
@@ -115,7 +120,7 @@ const FAQSection = () => {
             className="text-primary font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded px-2 py-1"
             aria-label="Zum Kontaktformular navigieren"
           >
-            Kontakt aufnehmen →
+            Projekt anfragen →
           </button>
         </ScrollAnimation>
       </div>

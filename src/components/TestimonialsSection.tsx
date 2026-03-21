@@ -48,7 +48,7 @@ const TestimonialsSection = () => {
             Das sagen unsere <span className="text-primary">Kunden</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Stimmen aus Projekten, bei denen die Website wieder verständlich, modern und nutzbar werden sollte.
+            Stimmen aus Projekten, in denen digitale Auftritte klarer, moderner und wirksamer werden sollten.
           </p>
         </ScrollAnimation>
 
@@ -109,19 +109,19 @@ const TestimonialsSection = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
               <div>
                 <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">7</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Werktage bis Launch</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Tage für schnelle Relaunchs möglich</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">749€</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Relaunch ab</div>
+                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">3</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">klare Leistungsbereiche</div>
               </div>
               <div>
                 <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">100%</div>
                 <div className="text-xs sm:text-sm text-muted-foreground">DSGVO-konforme Basis</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">59€</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Wartung pro Monat</div>
+                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">1</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">direkter Ansprechpartner</div>
               </div>
             </div>
           </div>
