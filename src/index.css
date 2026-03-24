@@ -148,4 +148,30 @@ All colors MUST be HSL.
     background: hsl(var(--primary) / 0.18);
     color: hsl(var(--foreground));
   }
+
+  .hero-orb {
+    animation: hero-drift 14s ease-in-out infinite;
+  }
+
+  .hero-orb-delay {
+    animation-delay: -6s;
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--primary) / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+  }
+}
+
+@keyframes hero-drift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -22px, 0) scale(1.04);
+  }
 }

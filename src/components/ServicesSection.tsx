@@ -82,7 +82,7 @@ const ServicesSection = () => {
               >
                   {service.highlighted && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span className="rounded-full border border-white/20 bg-white/14 px-4 py-1 text-sm font-semibold text-white backdrop-blur-sm">
+                        <span className="rounded-full border border-white/70 bg-white px-4 py-1 text-sm font-semibold text-primary shadow-card">
                           Kernangebot
                         </span>
                     </div>
