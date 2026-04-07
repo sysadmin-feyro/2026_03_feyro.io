@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CookieConsent from "react-cookie-consent";
 import { Button } from "@/components/ui/button";
 import CookieSettings from "./CookieSettings";
@@ -10,12 +10,18 @@ import {
 const CookieBanner = () => {
   const [showSettings, setShowSettings] = useState(false);
 
+  useEffect(() => {
+    const handler = () => setShowSettings(true);
+    window.addEventListener("feyro-open-cookie-settings", handler);
+    return () => window.removeEventListener("feyro-open-cookie-settings", handler);
+  }, []);
+
   const handleAcceptAll = () => {
-    applyConsentPreferences({ analytics: true, marketing: true });
+    applyConsentPreferences({ analytics: true });
   };
 
   const handleDeclineAll = () => {
-    applyConsentPreferences({ analytics: false, marketing: false });
+    applyConsentPreferences({ analytics: false });
   };
 
   return (

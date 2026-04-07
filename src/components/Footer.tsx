@@ -129,7 +129,7 @@ const Footer = () => {
               </a>
               <button
                 className="text-background/80 hover:text-background transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-foreground rounded"
-                onClick={() => console.log('Open cookie settings')}
+                onClick={() => window.dispatchEvent(new CustomEvent("feyro-open-cookie-settings"))}
                 aria-label="Cookie-Einstellungen öffnen"
               >
                 Cookie-Einstellungen

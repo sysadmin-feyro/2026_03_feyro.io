@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { Shield, TrendingUp, Target } from "lucide-react";
+import { Shield, TrendingUp } from "lucide-react";
 import {
   applyConsentPreferences,
   readConsentPreferences,
@@ -24,33 +24,26 @@ interface CookieSettingsProps {
 
 const CookieSettings = ({ open, onOpenChange }: CookieSettingsProps) => {
   const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
-  const [marketingEnabled, setMarketingEnabled] = useState(false);
 
   useEffect(() => {
-    const { analytics, marketing } = readConsentPreferences();
+    const { analytics } = readConsentPreferences();
     setAnalyticsEnabled(analytics);
-    setMarketingEnabled(marketing);
   }, [open]);
 
   const handleSave = () => {
-    applyConsentPreferences({
-      analytics: analyticsEnabled,
-      marketing: marketingEnabled,
-    });
+    applyConsentPreferences({ analytics: analyticsEnabled });
     onOpenChange(false);
   };
 
   const handleAcceptAll = () => {
     setAnalyticsEnabled(true);
-    setMarketingEnabled(true);
-    applyConsentPreferences({ analytics: true, marketing: true });
+    applyConsentPreferences({ analytics: true });
     onOpenChange(false);
   };
 
   const handleDeclineAll = () => {
     setAnalyticsEnabled(false);
-    setMarketingEnabled(false);
-    applyConsentPreferences({ analytics: false, marketing: false });
+    applyConsentPreferences({ analytics: false });
     onOpenChange(false);
   };
 
@@ -67,19 +60,10 @@ const CookieSettings = ({ open, onOpenChange }: CookieSettingsProps) => {
       id: "analytics",
       icon: TrendingUp,
       title: "Analyse & Performance",
-      description: "Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym sammeln und melden.",
+      description: "Helfen uns zu verstehen, wie Besucher mit der Website interagieren. Wir nutzen dafür Matomo – selbst gehostet in Deutschland, ohne US-Dienste.",
       enabled: analyticsEnabled,
       locked: false,
       onChange: setAnalyticsEnabled,
-    },
-    {
-      id: "marketing",
-      icon: Target,
-      title: "Marketing & Personalisierung",
-      description: "Diese Cookies werden verwendet, um Werbeanzeigen relevanter für dich und deine Interessen zu machen.",
-      enabled: marketingEnabled,
-      locked: false,
-      onChange: setMarketingEnabled,
     },
   ];
 
@@ -89,9 +73,9 @@ const CookieSettings = ({ open, onOpenChange }: CookieSettingsProps) => {
         <DialogHeader>
           <DialogTitle className="text-2xl">Cookie-Einstellungen</DialogTitle>
           <DialogDescription>
-            Wir verwenden Cookies, um Inhalte und Anzeigen zu personalisieren, Funktionen 
-            für soziale Medien anzubieten und unseren Traffic zu analysieren. Du kannst 
-            deine Einstellungen jederzeit ändern.
+            Wir verwenden Cookies ausschließlich für technisch notwendige Funktionen und
+            zur anonymen Analyse des Website-Traffics via Matomo (selbst gehostet in Deutschland).
+            Keine Weitergabe an Dritte, keine US-Dienste.
           </DialogDescription>
         </DialogHeader>
 
@@ -113,7 +97,7 @@ const CookieSettings = ({ open, onOpenChange }: CookieSettingsProps) => {
                         <Switch
                           id={category.id}
                           checked={category.enabled}
-                          onCheckedChange={category.onChange}
+                          onCheckedChange={category.onChange ?? (() => {})}
                           disabled={category.locked}
                         />
                       </div>
@@ -123,7 +107,7 @@ const CookieSettings = ({ open, onOpenChange }: CookieSettingsProps) => {
                     </div>
                   </div>
                 </div>
-                {category.id !== "marketing" && <Separator />}
+                {category.id !== "analytics" && <Separator />}
               </div>
             );
           })}

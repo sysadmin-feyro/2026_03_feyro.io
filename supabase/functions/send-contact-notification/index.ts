@@ -61,9 +61,9 @@ const handler = async (req: Request): Promise<Response> => {
     };
 
     const emailResponse = await resend.emails.send({
-      from: "Feyro Website <onboarding@resend.dev>",
+      from: "feyro.io Kontaktformular <onboarding@resend.dev>",
       to: ["hi@feyro.io"],
-      subject: `Neue Kontaktanfrage von ${safeData.name}`,
+      subject: `[feyro.io] Neue Kontaktanfrage von ${safeData.name}`,
       html: `
         <h2>Neue Kontaktanfrage über feyro.io</h2>
         

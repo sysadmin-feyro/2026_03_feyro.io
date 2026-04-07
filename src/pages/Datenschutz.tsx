@@ -128,7 +128,25 @@ const Datenschutz = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">6. Supabase</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">6. Webanalyse mit Matomo</h2>
+            <p className="text-muted-foreground mb-4">
+              Diese Website nutzt Matomo (ehemals Piwik), eine Open-Source-Software zur statistischen
+              Auswertung von Besucherzugriffen. Matomo wird auf unserem eigenen Server in Deutschland
+              betrieben. Es werden keine Daten an Dritte weitergegeben.
+            </p>
+            <p className="text-muted-foreground mb-4">
+              Die Verarbeitung erfolgt nur nach Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
+              Matomo verwendet Cookies, die auf Ihrem Computer gespeichert werden und die uns eine Analyse
+              der Benutzung der Website ermöglichen. Die so erzeugten Informationen werden ausschließlich
+              auf unserem Server gespeichert und nicht an Dritte weitergegeben.
+            </p>
+            <p className="text-muted-foreground mb-4">
+              Sie können die Analyse jederzeit durch Änderung Ihrer Cookie-Einstellungen widerrufen.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-foreground mb-4">7. Supabase</h2>
             <p className="text-muted-foreground mb-4">
               Wir nutzen Supabase für die Speicherung und Verarbeitung von Kontaktanfragen. Supabase
               ist ein Dienst der Supabase Inc., der DSGVO-konform betrieben wird.

@@ -15,7 +15,7 @@ const AboutSection = () => {
     {
       icon: Laptop,
       title: "Remote-First, Deutschland-basiert",
-      description: "Kein Büro, kein Overhead, kein aufgeblähtes Agenturmodell. Das hält unsere Struktur schlank und Entscheidungen schnell."
+      description: "Kein Büro, kein Overhead. Schlanke Struktur mit einem festen Ansprechpartner und einem Netzwerk aus spezialisierten Freelancern – je nach Projektbedarf gezielt eingesetzt."
     }
   ];
 
