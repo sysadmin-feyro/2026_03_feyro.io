@@ -79,7 +79,7 @@ const CookieBanner = () => {
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-base sm:text-lg">🍪 Wir verwenden Cookies</h3>
           <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-            Wir nutzen Cookies, um deine Erfahrung zu verbessern und unseren Traffic zu analysieren. 
+            Wir nutzen Cookies, um Ihre Erfahrung zu verbessern und unseren Traffic zu analysieren. 
             Weitere Infos in unserer{" "}
             <a href="/datenschutz" className="text-primary hover:underline">
               Datenschutzerklärung

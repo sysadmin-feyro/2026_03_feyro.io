@@ -1,122 +1,105 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend@2.0.0";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
-
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+// @deno-types="npm:@types/nodemailer"
+import nodemailer from "npm:nodemailer@6.9.13";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Input validation schema
 const ContactSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100, "Name too long"),
-  email: z.string().trim().email("Invalid email format").max(255, "Email too long"),
-  company: z.string().trim().max(100, "Company name too long").optional(),
-  website: z.string().trim().max(255, "Website too long").optional(),
-  message: z.string().trim().min(10, "Message too short").max(2000, "Message too long")
+  name: z.string().trim().min(1).max(100),
+  email: z.string().trim().email().max(255),
+  company: z.string().trim().max(100).optional(),
+  website: z.string().trim().max(255).optional(),
+  message: z.string().trim().min(10).max(2000),
+  _secret: z.string().optional(),
 });
 
-// HTML escape function to prevent XSS
-const escapeHtml = (str: string): string => {
-  return str.replace(/[&<>"']/g, (char) => {
-    const escapeMap: Record<string, string> = {
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      '"': '&quot;',
-      "'": '&#39;'
-    };
-    return escapeMap[char] || char;
-  });
-};
-
-const getErrorMessage = (error: unknown): string =>
-  error instanceof Error ? error.message : "Unknown error";
+const escapeHtml = (str: string): string =>
+  str.replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[char] ?? char));
 
 const handler = async (req: Request): Promise<Response> => {
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    // Parse and validate input data
     const rawData = await req.json();
-    const validatedData = ContactSchema.parse(rawData);
+    const data = ContactSchema.parse(rawData);
 
-    console.log("Sending contact notification for:", { 
-      name: validatedData.name, 
-      email: validatedData.email 
+    // Verify internal secret – reject direct external calls
+    const expectedSecret = Deno.env.get("NOTIFICATION_SECRET");
+    if (expectedSecret && data._secret !== expectedSecret) {
+      console.warn("Invalid or missing NOTIFICATION_SECRET – request rejected");
+      return new Response(JSON.stringify({ error: "Forbidden" }), {
+        status: 403,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+
+    const transporter = nodemailer.createTransport({
+      host: Deno.env.get("SMTP_HOST") ?? "smtp.ionos.de",
+      port: parseInt(Deno.env.get("SMTP_PORT") ?? "587"),
+      secure: false,
+      auth: {
+        user: Deno.env.get("SMTP_USER"),
+        pass: Deno.env.get("SMTP_PASS"),
+      },
     });
 
-    // Escape all user input for HTML output
-    const safeData = {
-      name: escapeHtml(validatedData.name),
-      email: escapeHtml(validatedData.email),
-      company: validatedData.company ? escapeHtml(validatedData.company) : undefined,
-      website: validatedData.website ? escapeHtml(validatedData.website) : undefined,
-      message: escapeHtml(validatedData.message).replace(/\n/g, '<br>')
+    const safe = {
+      name: escapeHtml(data.name),
+      email: escapeHtml(data.email),
+      company: data.company ? escapeHtml(data.company) : null,
+      website: data.website ? escapeHtml(data.website) : null,
+      message: escapeHtml(data.message).replace(/\n/g, "<br>"),
     };
 
-    const emailResponse = await resend.emails.send({
-      from: "feyro.io Kontaktformular <onboarding@resend.dev>",
-      to: ["hi@feyro.io"],
-      subject: `[feyro.io] Neue Kontaktanfrage von ${safeData.name}`,
+    await transporter.sendMail({
+      from: `"feyro.io Kontaktformular" <${Deno.env.get("SMTP_USER")}>`,
+      to: "hi@feyro.io",
+      subject: `[feyro.io] Neue Anfrage von ${safe.name}`,
       html: `
         <h2>Neue Kontaktanfrage über feyro.io</h2>
-        
         <h3>Kontaktdaten:</h3>
         <ul>
-          <li><strong>Name:</strong> ${safeData.name}</li>
-          <li><strong>E-Mail:</strong> ${safeData.email}</li>
-          ${safeData.company ? `<li><strong>Unternehmen:</strong> ${safeData.company}</li>` : ''}
-          ${safeData.website ? `<li><strong>Website:</strong> ${safeData.website}</li>` : ''}
+          <li><strong>Name:</strong> ${safe.name}</li>
+          <li><strong>E-Mail:</strong> ${safe.email}</li>
+          ${safe.company ? `<li><strong>Unternehmen:</strong> ${safe.company}</li>` : ""}
+          ${safe.website ? `<li><strong>Website:</strong> ${safe.website}</li>` : ""}
         </ul>
-        
         <h3>Nachricht:</h3>
-        <p>${safeData.message}</p>
-        
+        <p>${safe.message}</p>
         <hr>
-        <p style="color: #666; font-size: 12px;">
+        <p style="color:#666;font-size:12px;">
           Diese E-Mail wurde automatisch über das Kontaktformular auf feyro.io gesendet.
         </p>
       `,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Email sent successfully to hi@feyro.io");
 
-    return new Response(JSON.stringify(emailResponse), {
+    return new Response(JSON.stringify({ success: true }), {
       status: 200,
-      headers: {
-        "Content-Type": "application/json",
-        ...corsHeaders,
-      },
+      headers: { "Content-Type": "application/json", ...corsHeaders },
     });
   } catch (error: unknown) {
-    console.error("Error in send-contact-notification function:", error);
-    
-    // Handle validation errors specifically
+    console.error("Error in send-contact-notification:", error);
+
     if (error instanceof z.ZodError) {
       return new Response(
-        JSON.stringify({ 
-          error: "Validation failed", 
-          details: error.errors 
-        }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
+        JSON.stringify({ error: "Validation failed", details: error.errors }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
-    
+
     return new Response(
-      JSON.stringify({ error: getErrorMessage(error) }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
+      JSON.stringify({ error: error instanceof Error ? error.message : "Unknown error" }),
+      { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   }
 };

@@ -16,7 +16,8 @@ const contactFormSchema = z.object({
   company: z.string().trim().max(100, "Firmenname zu lang").optional(),
   website: z.string().trim().max(255, "Eingabe zu lang").optional().or(z.literal("")),
   message: z.string().trim().min(10, "Nachricht zu kurz (min. 10 Zeichen)").max(2000, "Nachricht zu lang (max. 2000 Zeichen)"),
-  privacy: z.boolean().refine(val => val === true, "Zustimmung erforderlich")
+  privacy: z.boolean().refine(val => val === true, "Zustimmung erforderlich"),
+  _hp: z.string().max(0, "Spam erkannt")
 });
 
 const ContactSection = () => {
@@ -26,7 +27,8 @@ const ContactSection = () => {
     company: "",
     website: "",
     message: "",
-    privacy: false
+    privacy: false,
+    _hp: ""
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,6 +53,7 @@ const ContactSection = () => {
           company: validatedData.company,
           website: validatedData.website,
           message: validatedData.message,
+          _hp: validatedData._hp,
           source: "feyro.io"
         }
       });
@@ -99,7 +102,7 @@ const ContactSection = () => {
       
       toast({
         title: "Nachricht gesendet! ✓",
-        description: "Wir melden uns innerhalb von 24 Stunden bei dir.",
+        description: "Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
       });
 
       // Reset form
@@ -109,7 +112,8 @@ const ContactSection = () => {
         company: "",
         website: "",
         message: "",
-        privacy: false
+        privacy: false,
+        _hp: ""
       });
 
     } catch (error) {
@@ -179,6 +183,19 @@ const ContactSection = () => {
               </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Honeypot field – hidden from humans, filled by bots */}
+              <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }}>
+                <label htmlFor="_hp">Bitte leer lassen</label>
+                <input
+                  id="_hp"
+                  name="_hp"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={formData._hp}
+                  onChange={(e) => setFormData(prev => ({ ...prev, _hp: e.target.value }))}
+                />
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="name">Name *</Label>
@@ -331,15 +348,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Response Time */}
-            <div className="bg-accent/10 border border-accent/20 rounded-xl p-6">
-              <h4 className="font-semibold text-accent mb-2">
-                Schnelle Antwort garantiert
-              </h4>
-              <p className="text-muted-foreground text-sm">
-                Wir melden uns in der Regel innerhalb von 24 Stunden zurück.
-              </p>
-            </div>
           </div>
         </div>
       </div>
