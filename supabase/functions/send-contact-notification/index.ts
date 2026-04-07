@@ -3,9 +3,20 @@ import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 // @deno-types="npm:@types/nodemailer"
 import nodemailer from "npm:nodemailer@6.9.13";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+const ALLOWED_ORIGINS = [
+  "https://feyro.io",
+  "https://www.feyro.io",
+  "http://localhost:5173",
+];
+
+const buildCorsHeaders = (origin: string | null): Record<string, string> => {
+  const allowOrigin = origin && ALLOWED_ORIGINS.includes(origin) ? origin : "https://feyro.io";
+  return {
+    "Access-Control-Allow-Origin": allowOrigin,
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Vary": "Origin",
+  };
 };
 
 const ContactSchema = z.object({
@@ -23,6 +34,8 @@ const escapeHtml = (str: string): string =>
   }[char] ?? char));
 
 const handler = async (req: Request): Promise<Response> => {
+  const corsHeaders = buildCorsHeaders(req.headers.get("origin"));
+
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
