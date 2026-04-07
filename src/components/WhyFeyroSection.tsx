@@ -85,12 +85,12 @@ const WhyFeyroSection = () => {
           <div className="mx-auto max-w-5xl rounded-[1.5rem] bg-gradient-brand p-6 text-white shadow-brand sm:rounded-[2rem] sm:p-10">
             <div className="grid gap-5 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <h3 className="font-display text-xl font-bold sm:text-3xl">
-                Wir entwickeln keine austauschbaren Standardlösungen. Wir entwickeln digitale Infrastruktur.
+                Für Unternehmen, die digital eigenständig sein wollen.
               </h3>
               <p className="text-sm leading-relaxed text-white/80 sm:text-lg">
-                Keine Baukasten-Lösung, kein austauschbares Template, keine Abhängigkeit von US-Cloud-Diensten.
-                feyro.io richtet sich an Unternehmen, die digital professionell aufgestellt sein wollen –
-                rechtssicher, performant und zukunftsfähig.
+                Sie behalten Code, Inhalte und Infrastruktur in eigener Hand. Keine Plattform-Abos,
+                keine Vendor-Lock-ins, keine Datenabflüsse Richtung USA. Eine Website, die Ihrem
+                Unternehmen gehört – nicht einem Anbieter.
               </p>
             </div>
           </div>

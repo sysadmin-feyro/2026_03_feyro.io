@@ -11,47 +11,37 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "Welche Leistungen bietet feyro.io an?",
-      answer: "feyro.io bietet drei Kernleistungen an: Website-Neuentwicklung, Website-Relaunch und Beratungsmandate für KI sowie Prozessautomatisierung in Unternehmen.",
+      answer: "Drei Kernleistungen: Website-Neuentwicklung, Website-Relaunch und Beratungsmandate für KI sowie Prozessautomatisierung. Wir empfehlen im Erstgespräch, was für Ihr Vorhaben sinnvoll ist.",
       link: "#services"
     },
     {
-      question: "Wie läuft ein Erstgespräch ab?",
-      answer: "Im Erstgespräch schauen wir auf Ihr Vorhaben, den aktuellen Stand und die Ziele. Danach erhalten Sie eine fachliche Einordnung, welche Form der Zusammenarbeit sinnvoll ist und wie die nächsten Schritte aussehen können.",
+      question: "Wie lange dauert ein typisches Projekt?",
+      answer: "Schnelle Relaunches einer überschaubaren Unternehmensseite sind in 1–2 Wochen möglich. Umfangreichere Neuentwicklungen mit individueller Konzeption liegen typischerweise bei 4–8 Wochen. Beratungsmandate laufen je nach Umfang über mehrere Wochen oder als laufendes Mandat. Eine konkrete Einordnung gibt es im Erstgespräch.",
       link: "#process"
     },
     {
-      question: "Übernehmen Sie auch komplette Website-Neuentwicklungen?",
-      answer: "Ja. Neben Relaunches entwickeln wir auch neue Websites von Grund auf, wenn noch keine tragfähige bestehende Website vorhanden ist oder ein kompletter Neustart sinnvoller ist.",
-      link: "#services"
-    },
-    {
-      question: "Wie unterstützen Sie bei KI und Prozessautomatisierung?",
-      answer: "Wir analysieren bestehende Abläufe, identifizieren sinnvolle Automatisierungspotenziale und begleiten Unternehmen bei der Auswahl, Einführung und Umsetzung passender KI-gestützter Lösungen.",
-      link: "#services"
+      question: "Wie läuft ein Erstgespräch ab?",
+      answer: "Wir schauen auf Ihr Vorhaben, den aktuellen Stand und die Ziele. Sie erhalten eine fachliche Einordnung, eine Empfehlung zur Form der Zusammenarbeit und die nächsten konkreten Schritte. Unverbindlich und ohne Verkaufsdruck.",
+      link: "#process"
     },
     {
       question: "Warum keine US-Dienste wie Google Analytics oder AWS?",
-      answer: "Aus rechtlicher und strategischer Überzeugung. US-Cloud-Dienste unterliegen dem CLOUD Act, der US-Behörden Zugriff auf Daten ermöglicht – unabhängig vom Serverstandort. Wir setzen ausschließlich auf deutsche und europäische Infrastruktur: Hosting bei Hetzner, Analytics mit Matomo, E-Mail über IONOS oder Proton – vollständig DSGVO-konform.",
+      answer: "Aus rechtlicher und strategischer Überzeugung. US-Cloud-Dienste unterliegen dem CLOUD Act, der US-Behörden Zugriff auf Daten ermöglicht – unabhängig vom Serverstandort. Wir setzen ausschließlich auf deutsche und europäische Infrastruktur: Hosting bei Hetzner, Analytics mit Matomo, E-Mail über IONOS – vollständig DSGVO-konform.",
       link: "#services"
     },
     {
       question: "Was bedeutet DSGVO-Konformität konkret?",
-      answer: "DSGVO-Konformität bedeutet technische und dokumentarische Vollständigkeit: rechtssicherer Cookie-Consent mit Consent Mode v2, korrekte Datenschutzerklärung, Impressum, sichere Kontaktformulare, keine Einbindung datenschutzwidriger Drittdienste und ein dokumentierter Nachweis der Maßnahmen. Das schützt Sie vor Abmahnungen und schafft Vertrauen bei Ihren Nutzern.",
+      answer: "Technische und dokumentarische Vollständigkeit: rechtssicherer Cookie-Consent, korrekte Datenschutzerklärung, Impressum, sichere Kontaktformulare, keine datenschutzwidrigen Drittdienste und ein dokumentierter Nachweis. Das schützt Sie vor Abmahnungen und schafft Vertrauen bei Ihren Nutzern.",
       link: "#services"
     },
     {
-      question: "Kann ich meine bestehende Domain und Inhalte behalten?",
-      answer: "Ja. Bei Relaunches prüfen wir, welche Inhalte, Strukturen oder Systeme sinnvoll übernommen werden können. Domains und bestehende Inhalte können in den neuen Auftritt integriert werden.",
-      link: "#contact"
+      question: "Warum keine Baukästen wie Wix, Squarespace oder WordPress?",
+      answer: "Baukästen schaffen Abhängigkeiten: von US-Plattform-Anbietern, von monatlichen Abogebühren, von eingeschränkten Anpassungsmöglichkeiten und Performance-Kompromissen. Unsere Websites werden individuell entwickelt – Code und Infrastruktur gehören vollständig Ihnen.",
+      link: "#about"
     },
     {
       question: "Wer steckt hinter feyro.io?",
       answer: "feyro.io ist ein Remote-First-Unternehmen mit Sitz in Deutschland. Ein erfahrener Entwickler und Digitalstratege als direkter Ansprechpartner – unterstützt durch ein Netzwerk aus spezialisierten Freelancern für Design, Copywriting und spezifische technische Anforderungen. Kein Callcenter, kein Overhead.",
-      link: "#about"
-    },
-    {
-      question: "Warum keine Baukästen wie Wix, Squarespace oder WordPress?",
-      answer: "Baukästen schaffen Abhängigkeiten: von Plattform-Anbietern (meist US-Unternehmen), von monatlichen Abogebühren, von eingeschränkten Anpassungsmöglichkeiten und von Performance-Kompromissen. Unsere Websites werden individuell entwickelt – damit gehören Ihnen sowohl der Code als auch die Infrastruktur vollständig.",
       link: "#about"
     }
   ];

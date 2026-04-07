@@ -1,4 +1,4 @@
-import { MessageSquare, Lightbulb, Code, TestTube, Rocket } from "lucide-react";
+import { MessageSquare, Lightbulb, Code, Rocket } from "lucide-react";
 
 const ProcessSection = () => {
   const steps = [
@@ -6,60 +6,44 @@ const ProcessSection = () => {
       icon: MessageSquare,
       title: "Erstgespräch & Analyse",
       duration: "Schritt 1",
-      description: "Wir erfassen Ihr Vorhaben, analysieren den Status quo und ordnen ein, welche Form der Zusammenarbeit sinnvoll ist.",
+      description: "Wir erfassen Ihr Vorhaben, sichten den Status quo und geben eine fachliche Empfehlung zum weiteren Vorgehen.",
       details: [
         "Ziele, Kontext und Rahmenbedingungen",
-        "Einordnung zwischen Neuentwicklung, Relaunch oder Beratungsmandat",
-        "Sichtung bestehender Systeme, Inhalte oder Prozesse",
-        "Empfehlung für das weitere Vorgehen"
+        "Sichtung bestehender Systeme oder Prozesse",
+        "Empfehlung: Neuentwicklung, Relaunch oder Mandat"
       ]
     },
     {
       icon: Lightbulb,
       title: "Konzept & Priorisierung",
       duration: "Schritt 2",
-      description: "Auf Basis der Analyse definieren wir Struktur, Schwerpunkte und eine realistische Umsetzungslogik.",
+      description: "Wir definieren Struktur, Schwerpunkte und eine realistische Umsetzungslogik mit klarem Leistungsumfang.",
       details: [
         "Informationsarchitektur oder Prozessbild",
-        "Inhaltliche und technische Prioritäten",
         "Design- oder Automatisierungskonzept",
         "Klare Abgrenzung des Leistungsumfangs"
       ]
     },
     {
       icon: Code,
-      title: "Entwicklung & Umsetzung",
+      title: "Entwicklung & Qualitätssicherung",
       duration: "Schritt 3",
-      description: "Wir setzen Websites, Relaunches oder ausgewählte Automatisierungen strukturiert und nachvollziehbar um.",
+      description: "Strukturierte Umsetzung mit dokumentierten Entscheidungen, regelmäßiger Abstimmung und finaler Qualitätsprüfung.",
       details: [
-        "Technische Entwicklung oder Implementierung",
-        "DSGVO-konforme Basis und saubere Integrationen",
-        "Enge Abstimmung an den relevanten Punkten",
-        "Dokumentierte Entscheidungen statt Black Box"
-      ]
-    },
-    {
-      icon: TestTube,
-      title: "Testing & Optimierung",
-      duration: "Schritt 4",
-      description: "Vor Auslieferung prüfen wir Struktur, Technik und Nutzbarkeit und schärfen die letzten Details.",
-      details: [
-        "Qualitätssicherung und technische Prüfung",
-        "Responsiveness, Performance und Inhalt",
-        "Feedbackschleife für letzte Anpassungen",
-        "Saubere Vorbereitung für den Rollout"
+        "Saubere technische Entwicklung",
+        "DSGVO-konforme Basis und Integrationen",
+        "Performance, Responsiveness und Feedbackschleife"
       ]
     },
     {
       icon: Rocket,
-      title: "Rollout & Begleitung",
-      duration: "Schritt 5",
-      description: "Nach der Umsetzung begleiten wir Go-Live, Übergabe oder nächste Ausbaustufen verlässlich weiter.",
+      title: "Go-Live & Begleitung",
+      duration: "Schritt 4",
+      description: "Nach Auslieferung begleiten wir Go-Live, Übergabe und nächste Ausbaustufen verlässlich weiter.",
       details: [
         "Go-Live, Übergabe oder Mandatsfortsetzung",
-        "Dokumentation und Orientierung für den Betrieb",
-        "Begleitung bei nächsten Entscheidungen",
-        "Langfristig anschlussfähige technische Basis"
+        "Dokumentation für den laufenden Betrieb",
+        "Begleitung bei kommenden Entscheidungen"
       ]
     }
   ];
@@ -84,7 +68,7 @@ const ProcessSection = () => {
           <div className="hidden lg:block absolute left-0 right-0 top-20 h-1 bg-gradient-brand opacity-15"></div>
 
           {/* Steps */}
-          <div className="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-5 lg:gap-8" role="list" aria-label="Prozessschritte">
+          <div className="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-8" role="list" aria-label="Prozessschritte">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (

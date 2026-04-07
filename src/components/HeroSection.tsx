@@ -25,7 +25,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mb-6 inline-flex items-center rounded-full border border-primary/15 bg-white/82 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-primary shadow-card backdrop-blur-sm"
         >
-          Website-Modernisierung für KMU
+          Ohne Baukasten · Ohne US-Cloud
         </motion.div>
 
         <motion.h1
