@@ -25,7 +25,7 @@ const FAQSection = () => {
       link: "#services"
     },
     {
-      question: "Wie unterstuetzen Sie bei KI und Prozessautomatisierung?",
+      question: "Wie unterstützen Sie bei KI und Prozessautomatisierung?",
       answer: "Wir analysieren bestehende Abläufe, identifizieren sinnvolle Automatisierungspotenziale und begleiten Unternehmen bei der Auswahl, Einführung und Umsetzung passender KI-gestützter Lösungen.",
       link: "#services"
     },

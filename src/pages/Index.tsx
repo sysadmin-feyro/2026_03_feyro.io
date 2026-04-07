@@ -6,7 +6,6 @@ import HeroSection from "@/components/HeroSection";
 const WhyFeyroSection = lazy(() => import("@/components/WhyFeyroSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const ProcessSection = lazy(() => import("@/components/ProcessSection"));
-const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
 const FAQSection = lazy(() => import("@/components/FAQSection"));
 const AboutSection = lazy(() => import("@/components/AboutSection"));
 const ContactSection = lazy(() => import("@/components/ContactSection"));
@@ -28,7 +27,6 @@ const Index = () => {
         <WhyFeyroSection />
         <ServicesSection />
         <ProcessSection />
-        <TestimonialsSection />
         <FAQSection />
         <AboutSection />
         <ContactSection />

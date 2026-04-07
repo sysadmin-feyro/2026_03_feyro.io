@@ -35,10 +35,10 @@ const HeroSection = () => {
           transition={{ duration: 0.68, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-[4.35rem]"
         >
-          Wir modernisieren veraltete
+          Eine Website, die wieder repräsentiert
           <br />
           <span className="bg-gradient-brand bg-clip-text text-transparent">
-            Unternehmens-Websites
+            wofür Sie stehen.
           </span>
         </motion.h1>
 
@@ -48,8 +48,8 @@ const HeroSection = () => {
           transition={{ duration: 0.68, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg lg:text-xl"
         >
-          Für kleine und mittelständische Betriebe in Deutschland. Neue Website ohne
-          internen Stress, mit klarem Ablauf, sauberer Technik und einem festen Ansprechpartner.
+          Für mittelständische Unternehmen in Deutschland: technisch sauber, rechtssicher
+          und ohne Baukasten. Ein Ansprechpartner, klarer Ablauf, fertig.
         </motion.p>
 
         <motion.div
@@ -70,9 +70,9 @@ const HeroSection = () => {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            aria-label="Kostenlose Website-Analyse anfordern"
+            aria-label="Erstgespräch vereinbaren"
           >
-            Kostenlose Website-Analyse anfordern
+            Erstgespräch vereinbaren
             <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
           </Button>
           <Button

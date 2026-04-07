@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Mail, Phone, MapPin, ArrowRight, CheckCircle } from "lucide-react";
+import { Mail, MapPin, ArrowRight, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
@@ -148,15 +148,9 @@ const ContactSection = () => {
       href: "mailto:hi@feyro.io"
     },
     {
-      icon: Phone,
-      title: "Telefon",
-      content: "+49 (0) 123 456 789",
-      href: "tel:+491234567890"
-    },
-    {
       icon: MapPin,
       title: "Standort",
-      content: "Deutschland",
+      content: "Deutschland · Remote",
       href: null
     }
   ];
