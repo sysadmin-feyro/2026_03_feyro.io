@@ -21,4 +21,12 @@ jobs:
             git pull
             npm install --prefer-offline
             npm run build
+            echo "--- Build output ---"
+            ls -la dist/
+            echo "--- nginx config (sites-enabled) ---"
+            cat /etc/nginx/sites-enabled/* 2>/dev/null || echo "keine sites-enabled configs"
+            echo "--- nginx config (conf.d) ---"
+            cat /etc/nginx/conf.d/*.conf 2>/dev/null || echo "keine conf.d configs"
+            echo "--- Document Root prüfen ---"
+            grep -r "root " /etc/nginx/sites-enabled/ /etc/nginx/conf.d/ 2>/dev/null || true
             echo "✅ Deploy erfolgreich: $(date)"
