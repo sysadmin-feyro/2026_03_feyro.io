@@ -9,17 +9,16 @@ import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import AGB from "./pages/AGB";
 import CookieBanner from "./components/CookieBanner";
-import GoogleAnalytics from "./components/GoogleAnalytics";
+import MatomoAnalytics from "./components/MatomoAnalytics";
 
 const queryClient = new QueryClient();
-const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      {measurementId ? <GoogleAnalytics measurementId={measurementId} /> : null}
+      <MatomoAnalytics />
       <CookieBanner />
       <BrowserRouter>
         <Routes>

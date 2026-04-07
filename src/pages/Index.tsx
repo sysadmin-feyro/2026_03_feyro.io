@@ -3,7 +3,6 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 
 // Lazy load below-the-fold sections for better performance
-const TrustBadges = lazy(() => import("@/components/TrustBadges"));
 const WhyFeyroSection = lazy(() => import("@/components/WhyFeyroSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const ProcessSection = lazy(() => import("@/components/ProcessSection"));
@@ -26,7 +25,6 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <Suspense fallback={<SectionLoader />}>
-        <TrustBadges />
         <WhyFeyroSection />
         <ServicesSection />
         <ProcessSection />
