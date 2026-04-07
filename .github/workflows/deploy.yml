@@ -20,6 +20,6 @@ jobs:
             cd /root/feyro_websites/2026_03_feyro_io
             git fetch origin
             git reset --hard origin/main
-            npm install --prefer-offline
+            npm install --legacy-peer-deps
             npm run build
             echo "✅ Deploy erfolgreich: $(date)"
