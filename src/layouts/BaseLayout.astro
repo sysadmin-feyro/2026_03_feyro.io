@@ -1,0 +1,145 @@
+---
+import "../index.css";
+import Providers from "../components/Providers";
+import MatomoAnalytics from "../components/MatomoAnalytics";
+import CookieBanner from "../components/CookieBanner";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = "Website-Modernisierung & Relaunch für KMU | feyro.io",
+  description = "Technisch saubere, rechtssichere Websites für mittelständische Unternehmen in Deutschland. Ohne Baukasten, ohne US-Cloud. Ein Ansprechpartner, klarer Ablauf.",
+  canonical = "https://feyro.io/",
+  ogImage = "https://feyro.io/og-image.jpg",
+  noindex = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <link rel="canonical" href={canonical} />
+    <meta name="author" content="feyro.io" />
+    <meta name="keywords" content="Website-Modernisierung, Website-Relaunch, KMU, Mittelstand, Deutschland, DSGVO, Webentwicklung" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="feyro.io" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <meta name="theme-color" content="#6d28d9" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "feyro.io",
+        "url": "https://feyro.io",
+        "logo": "https://feyro.io/feyro-logo.svg",
+        "description": "Technisch saubere, rechtssichere Websites für mittelständische Unternehmen in Deutschland.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "hi@feyro.io",
+          "availableLanguage": "German"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DE"
+        }
+      }
+    </script>
+
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "feyro.io",
+        "url": "https://feyro.io",
+        "email": "hi@feyro.io",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DE"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "priceRange": "€€"
+      }
+    </script>
+
+    <!-- Structured Data: Service Offers -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Leistungen feyro.io",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Website-Neuentwicklung",
+            "description": "Individuelle Website-Entwicklung ohne Baukasten – technisch sauber, DSGVO-konform."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Website-Relaunch",
+            "description": "Modernisierung veralteter Unternehmenswebsites – schneller, sicherer, repräsentativer."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "KI-Beratung & Automatisierung",
+            "description": "Einsatz von KI als messbares Werkzeug zur Prozessoptimierung für KMU."
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <slot />
+    <Providers client:load />
+    <MatomoAnalytics client:only="react" />
+    <CookieBanner client:only="react" />
+  </body>
+</html>

@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Seite nicht gefunden | feyro.io"
+  description="Diese Seite existiert nicht."
+  canonical="https://feyro.io/404"
+  noindex={true}
+>
+  <div class="min-h-screen flex flex-col items-center justify-center bg-background text-center px-4">
+    <h1 class="text-6xl font-display font-bold text-foreground mb-4">404</h1>
+    <p class="text-xl text-muted-foreground mb-8">Diese Seite existiert nicht.</p>
+    <a
+      href="/"
+      class="inline-flex items-center gap-2 bg-gradient-brand text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+    >
+      Zur Startseite
+    </a>
+  </div>
+</BaseLayout>

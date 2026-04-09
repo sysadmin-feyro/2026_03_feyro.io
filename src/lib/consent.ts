@@ -7,18 +7,24 @@ export interface ConsentPreferences {
 }
 
 export const readConsentPreferences = (): ConsentPreferences => ({
-  analytics: localStorage.getItem(ANALYTICS_CONSENT_KEY) === "true",
+  analytics:
+    typeof localStorage !== "undefined" &&
+    localStorage.getItem(ANALYTICS_CONSENT_KEY) === "true",
 });
 
 export const hasConsentChoice = (): boolean =>
+  typeof document !== "undefined" &&
   document.cookie.includes(`${COOKIE_CONSENT_NAME}=true`);
 
 export const isAnalyticsEnabled = (): boolean =>
-  hasConsentChoice() && readConsentPreferences().analytics;
+  typeof window !== "undefined" &&
+  hasConsentChoice() &&
+  readConsentPreferences().analytics;
 
 export const persistConsentPreferences = (
   preferences: ConsentPreferences,
 ): void => {
+  if (typeof localStorage === "undefined") return;
   localStorage.setItem(ANALYTICS_CONSENT_KEY, String(preferences.analytics));
   document.cookie = `${COOKIE_CONSENT_NAME}=true; path=/; max-age=31536000; SameSite=Lax; Secure`;
 };
