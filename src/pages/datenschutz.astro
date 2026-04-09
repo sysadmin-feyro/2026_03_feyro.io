@@ -4,10 +4,14 @@ import DatenschutzPage from "../components/pages/DatenschutzPage";
 ---
 
 <BaseLayout
-  title="Datenschutzerklärung | feyro.io"
-  description="Datenschutzerklärung von feyro.io gemäß DSGVO."
+  title="Datenschutzerklärung – DSGVO-konform | feyro.io"
+  description="Datenschutzerklärung von feyro.io gemäß DSGVO – Informationen zur Datenverarbeitung, Cookies und Ihren Rechten."
   canonical="https://feyro.io/datenschutz"
   noindex={true}
+  breadcrumbs={[
+    { name: "Startseite", url: "https://feyro.io/" },
+    { name: "Datenschutzerklärung", url: "https://feyro.io/datenschutz" }
+  ]}
 >
   <DatenschutzPage />
 </BaseLayout>

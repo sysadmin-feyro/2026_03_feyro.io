@@ -10,12 +10,44 @@ import FAQSection from "../components/FAQSection";
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
+
+const faqs = [
+  {
+    question: "Welche Leistungen bietet feyro.io an?",
+    answer: "Drei Kernleistungen: Website-Neuentwicklung, Website-Relaunch und Beratungsmandate für KI sowie Prozessautomatisierung. Wir empfehlen im Erstgespräch, was für Ihr Vorhaben sinnvoll ist."
+  },
+  {
+    question: "Wie lange dauert ein typisches Projekt?",
+    answer: "Schnelle Relaunches einer überschaubaren Unternehmensseite sind in 1–2 Wochen möglich. Umfangreichere Neuentwicklungen mit individueller Konzeption liegen typischerweise bei 4–8 Wochen. Beratungsmandate laufen je nach Umfang über mehrere Wochen oder als laufendes Mandat."
+  },
+  {
+    question: "Wie läuft ein Erstgespräch ab?",
+    answer: "Wir schauen auf Ihr Vorhaben, den aktuellen Stand und die Ziele. Sie erhalten eine fachliche Einordnung, eine Empfehlung zur Form der Zusammenarbeit und die nächsten konkreten Schritte. Unverbindlich und ohne Verkaufsdruck."
+  },
+  {
+    question: "Warum keine US-Dienste wie Google Analytics oder AWS?",
+    answer: "Aus rechtlicher und strategischer Überzeugung. US-Cloud-Dienste unterliegen dem CLOUD Act, der US-Behörden Zugriff auf Daten ermöglicht – unabhängig vom Serverstandort. Wir setzen ausschließlich auf deutsche und europäische Infrastruktur: Hosting bei Hetzner, Analytics mit Matomo, E-Mail über IONOS – vollständig DSGVO-konform."
+  },
+  {
+    question: "Was bedeutet DSGVO-Konformität konkret?",
+    answer: "Technische und dokumentarische Vollständigkeit: rechtssicherer Cookie-Consent, korrekte Datenschutzerklärung, Impressum, sichere Kontaktformulare, keine datenschutzwidrigen Drittdienste und ein dokumentierter Nachweis. Das schützt Sie vor Abmahnungen und schafft Vertrauen bei Ihren Nutzern."
+  },
+  {
+    question: "Warum keine Baukästen wie Wix, Squarespace oder WordPress?",
+    answer: "Baukästen schaffen Abhängigkeiten: von US-Plattform-Anbietern, von monatlichen Abogebühren, von eingeschränkten Anpassungsmöglichkeiten und Performance-Kompromissen. Unsere Websites werden individuell entwickelt – Code und Infrastruktur gehören vollständig Ihnen."
+  },
+  {
+    question: "Wer steckt hinter feyro.io?",
+    answer: "feyro.io ist ein Remote-First-Unternehmen mit Sitz in Deutschland. Ein erfahrener Entwickler und Digitalstratege als direkter Ansprechpartner – unterstützt durch ein Netzwerk aus spezialisierten Freelancern für Design, Copywriting und spezifische technische Anforderungen. Kein Callcenter, kein Overhead."
+  }
+];
 ---
 
 <BaseLayout
   title="Website-Modernisierung & Relaunch für KMU | feyro.io"
   description="Technisch saubere, rechtssichere Websites für mittelständische Unternehmen in Deutschland. Ohne Baukasten, ohne US-Cloud. Ein Ansprechpartner, klarer Ablauf, fertig."
   canonical="https://feyro.io/"
+  faqSchema={faqs}
 >
   <div class="min-h-screen pb-20 lg:pb-0">
     <Navigation client:load />

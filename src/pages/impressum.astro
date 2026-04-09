@@ -4,10 +4,14 @@ import ImpressumPage from "../components/pages/ImpressumPage";
 ---
 
 <BaseLayout
-  title="Impressum | feyro.io"
-  description="Impressum und Angaben gemäß § 5 TMG für feyro.io."
+  title="Impressum – Angaben gemäß § 5 TMG | feyro.io"
+  description="Impressum von feyro.io – Angaben gemäß § 5 TMG, Kontaktdaten und rechtliche Hinweise."
   canonical="https://feyro.io/impressum"
   noindex={true}
+  breadcrumbs={[
+    { name: "Startseite", url: "https://feyro.io/" },
+    { name: "Impressum", url: "https://feyro.io/impressum" }
+  ]}
 >
   <ImpressumPage />
 </BaseLayout>

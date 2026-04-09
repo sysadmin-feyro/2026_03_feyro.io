@@ -5,7 +5,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import ScrollAnimation from "./ScrollAnimation";
-import SEOHead from "./SEOHead";
 
 const FAQSection = () => {
   const faqs = [
@@ -46,14 +45,8 @@ const FAQSection = () => {
     }
   ];
 
-  const seoFaqs = faqs.map(faq => ({
-    question: faq.question,
-    answer: faq.answer
-  }));
-
   return (
     <section id="faq" className="py-24 bg-background" aria-labelledby="faq-heading">
-      <SEOHead faqs={seoFaqs} />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

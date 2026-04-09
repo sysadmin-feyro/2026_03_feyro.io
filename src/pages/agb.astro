@@ -4,10 +4,14 @@ import AGBPage from "../components/pages/AGBPage";
 ---
 
 <BaseLayout
-  title="AGB | feyro.io"
-  description="Allgemeine Geschäftsbedingungen von feyro.io."
+  title="Allgemeine Geschäftsbedingungen (AGB) | feyro.io"
+  description="Allgemeine Geschäftsbedingungen von feyro.io für Website-Entwicklung, Relaunch und Beratungsleistungen."
   canonical="https://feyro.io/agb"
   noindex={true}
+  breadcrumbs={[
+    { name: "Startseite", url: "https://feyro.io/" },
+    { name: "AGB", url: "https://feyro.io/agb" }
+  ]}
 >
   <AGBPage />
 </BaseLayout>

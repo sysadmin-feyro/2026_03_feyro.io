@@ -10,15 +10,107 @@ interface Props {
   canonical?: string;
   ogImage?: string;
   noindex?: boolean;
+  faqSchema?: { question: string; answer: string }[];
+  breadcrumbs?: { name: string; url: string }[];
 }
 
 const {
   title = "Website-Modernisierung & Relaunch für KMU | feyro.io",
-  description = "Technisch saubere, rechtssichere Websites für mittelständische Unternehmen in Deutschland. Ohne Baukasten, ohne US-Cloud. Ein Ansprechpartner, klarer Ablauf.",
+  description = "Technisch saubere, rechtssichere Websites für mittelständische Unternehmen in Deutschland. Ohne Baukasten, ohne US-Cloud. Ein Ansprechpartner, klarer Ablauf, fertig.",
   canonical = "https://feyro.io/",
   ogImage = "https://feyro.io/og-image.jpg",
   noindex = false,
+  faqSchema,
+  breadcrumbs,
 } = Astro.props;
+
+const schemaWebSite = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://feyro.io/#website",
+  "url": "https://feyro.io",
+  "name": "feyro.io",
+  "description": "Website-Modernisierung & Relaunch für KMU – technisch sauber, DSGVO-konform, ohne US-Cloud.",
+  "inLanguage": "de-DE",
+  "publisher": { "@id": "https://feyro.io/#organization" }
+});
+
+const schemaOrganization = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://feyro.io/#organization",
+  "name": "feyro.io",
+  "url": "https://feyro.io",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://feyro.io/feyro-logo.svg",
+    "width": 200,
+    "height": 50
+  },
+  "description": "Website-Neuentwicklung, Website-Relaunch und KI-Beratung für mittelständische Unternehmen in Deutschland. DSGVO-konform, ohne US-Cloud.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "hi@feyro.io",
+    "availableLanguage": "German"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "DE"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Deutschland"
+  }
+});
+
+const schemaProfessionalService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://feyro.io/#service",
+  "name": "feyro.io",
+  "url": "https://feyro.io",
+  "email": "hi@feyro.io",
+  "description": "Website-Neuentwicklung, Website-Relaunch und KI-gestützte Prozessautomatisierung für Unternehmen in Deutschland. DSGVO-konform, kein US-Hosting.",
+  "areaServed": { "@type": "Country", "name": "Deutschland" },
+  "serviceType": ["Website-Neuentwicklung", "Website-Relaunch", "KI-Beratung", "Prozessautomatisierung"],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digitale Dienstleistungen für KMU",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Neuentwicklung", "description": "Individuelle Website-Entwicklung ohne Baukasten – technisch sauber, DSGVO-konform, vollständig in Ihrem Eigentum." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Relaunch", "description": "Modernisierung veralteter Unternehmenswebsites – schneller, sicherer, repräsentativer." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "KI-Beratung & Automatisierung", "description": "Einsatz von KI als messbares Werkzeug zur Prozessoptimierung für KMU." } }
+    ]
+  }
+});
+
+const schemaFAQ = faqSchema && faqSchema.length > 0 ? JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqSchema.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+  }))
+}) : null;
+
+const schemaBreadcrumb = breadcrumbs && breadcrumbs.length > 0 ? JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((crumb, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": crumb.name,
+    "item": crumb.url
+  }))
+}) : null;
 ---
 
 <!doctype html>
@@ -27,19 +119,36 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- DNS Prefetch & Preconnect -->
+    <link rel="preconnect" href="https://sjrbqhklcnrotbirqhxj.supabase.co" />
+    <link rel="dns-prefetch" href="https://analytics.feyro.io" />
+
+    <!-- Font Preload (kritische Schriften above-the-fold) -->
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+
     <!-- Primary Meta -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"} />
     <link rel="canonical" href={canonical} />
     <meta name="author" content="feyro.io" />
-    <meta name="keywords" content="Website-Modernisierung, Website-Relaunch, KMU, Mittelstand, Deutschland, DSGVO, Webentwicklung" />
+
+    <!-- hreflang (German market) -->
+    <link rel="alternate" hreflang="de" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="feyro.io – Website-Modernisierung für KMU" />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="de_DE" />
     <meta property="og:site_name" content="feyro.io" />
@@ -49,92 +158,23 @@ const {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="feyro.io – Website-Modernisierung für KMU" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="/favicon.png" sizes="512x512" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <meta name="theme-color" content="#6d28d9" />
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="/fonts/fonts.css" />
 
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <!-- Structured Data: Organization -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "feyro.io",
-        "url": "https://feyro.io",
-        "logo": "https://feyro.io/feyro-logo.svg",
-        "description": "Technisch saubere, rechtssichere Websites für mittelständische Unternehmen in Deutschland.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "email": "hi@feyro.io",
-          "availableLanguage": "German"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "DE"
-        }
-      }
-    </script>
-
-    <!-- Structured Data: LocalBusiness -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "feyro.io",
-        "url": "https://feyro.io",
-        "email": "hi@feyro.io",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "DE"
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          }
-        ],
-        "priceRange": "€€"
-      }
-    </script>
-
-    <!-- Structured Data: Service Offers -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Leistungen feyro.io",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Website-Neuentwicklung",
-            "description": "Individuelle Website-Entwicklung ohne Baukasten – technisch sauber, DSGVO-konform."
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Website-Relaunch",
-            "description": "Modernisierung veralteter Unternehmenswebsites – schneller, sicherer, repräsentativer."
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "KI-Beratung & Automatisierung",
-            "description": "Einsatz von KI als messbares Werkzeug zur Prozessoptimierung für KMU."
-          }
-        ]
-      }
-    </script>
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={schemaWebSite} />
+    <script type="application/ld+json" set:html={schemaOrganization} />
+    <script type="application/ld+json" set:html={schemaProfessionalService} />
+    {schemaFAQ && <script type="application/ld+json" set:html={schemaFAQ} />}
+    {schemaBreadcrumb && <script type="application/ld+json" set:html={schemaBreadcrumb} />}
   </head>
   <body>
     <slot />
