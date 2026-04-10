@@ -9,6 +9,10 @@ interface Props {
   description?: string;
   canonical?: string;
   ogImage?: string;
+  ogType?: string;
+  datePublished?: string;
+  dateModified?: string;
+  preloadImage?: string;
   noindex?: boolean;
   faqSchema?: { question: string; answer: string }[];
   breadcrumbs?: { name: string; url: string }[];
@@ -17,8 +21,12 @@ interface Props {
 const {
   title = "Website-Modernisierung & Relaunch für KMU | feyro.io",
   description = "Technisch saubere, rechtssichere Websites für mittelständische Unternehmen in Deutschland. Ohne Baukasten, ohne US-Cloud. Ein Ansprechpartner, klarer Ablauf, fertig.",
-  canonical = "https://feyro.io/",
+  canonical,
   ogImage = "https://feyro.io/og-image.jpg",
+  ogType = "website",
+  datePublished,
+  dateModified,
+  preloadImage,
   noindex = false,
   faqSchema,
   breadcrumbs,
@@ -127,6 +135,9 @@ const schemaBreadcrumb = breadcrumbs && breadcrumbs.length > 0 ? JSON.stringify(
     <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
 
+    <!-- Hero Image Preload (above-the-fold) -->
+    {preloadImage && <link rel="preload" href={preloadImage} as="image" />}
+
     <!-- Fonts -->
     <link rel="stylesheet" href="/fonts/fonts.css" />
 
@@ -134,24 +145,29 @@ const schemaBreadcrumb = breadcrumbs && breadcrumbs.length > 0 ? JSON.stringify(
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"} />
-    <link rel="canonical" href={canonical} />
+    {canonical && <link rel="canonical" href={canonical} />}
     <meta name="author" content="feyro.io" />
 
     <!-- hreflang (German market) -->
-    <link rel="alternate" hreflang="de" href={canonical} />
-    <link rel="alternate" hreflang="x-default" href={canonical} />
+    {canonical && <link rel="alternate" hreflang="de" href={canonical} />}
+    {canonical && <link rel="alternate" hreflang="x-default" href={canonical} />}
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="feyro.io – Website-Modernisierung für KMU" />
-    <meta property="og:url" content={canonical} />
+    {canonical && <meta property="og:url" content={canonical} />}
     <meta property="og:locale" content="de_DE" />
     <meta property="og:site_name" content="feyro.io" />
+    {ogType === "article" && datePublished && <meta property="article:published_time" content={datePublished} />}
+    {ogType === "article" && dateModified && <meta property="article:modified_time" content={dateModified} />}
+    {ogType === "article" && <meta property="article:author" content="feyro.io" />}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -164,7 +180,8 @@ const schemaBreadcrumb = breadcrumbs && breadcrumbs.length > 0 ? JSON.stringify(
     <link rel="icon" type="image/png" href="/favicon.png" sizes="512x512" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-    <meta name="theme-color" content="#6d28d9" />
+    <meta name="theme-color" content="#6d28d9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#4c1d95" media="(prefers-color-scheme: dark)" />
 
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
