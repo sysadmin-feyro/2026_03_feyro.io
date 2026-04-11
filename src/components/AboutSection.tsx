@@ -14,7 +14,7 @@ const AboutSection = () => {
     },
     {
       icon: Laptop,
-      title: "Remote-First, Deutschland-basiert",
+      title: "Remote-First, Berlin-basiert",
       description: "Kein Büro, kein Overhead. Schlanke Struktur mit einem festen Ansprechpartner und einem Netzwerk aus spezialisierten Freelancern – je nach Projektbedarf gezielt eingesetzt."
     }
   ];
@@ -56,7 +56,7 @@ const AboutSection = () => {
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                 <p className="text-muted-foreground">
-                  <span className="font-semibold text-foreground">Deutschland, 100%:</span>{" "}
+                  <span className="font-semibold text-foreground">Berlin, 100%:</span>{" "}
                   Entwicklung, Hosting, Kommunikation und rechtliche Grundlagen - alles findet
                   im deutschen und europäischen Rechtsraum statt.
                 </p>

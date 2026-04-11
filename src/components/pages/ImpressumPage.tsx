@@ -23,7 +23,7 @@ const Impressum = () => {
             <p className="text-muted-foreground">
               [Ihr vollständiger Name oder Firmenname]<br />
               [Straße und Hausnummer]<br />
-              [PLZ und Ort]<br />
+              [PLZ] Berlin<br />
               Deutschland
             </p>
           </section>

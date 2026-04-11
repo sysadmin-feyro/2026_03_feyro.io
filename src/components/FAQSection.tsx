@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: "Wer steckt hinter feyro.io?",
-    answer: "feyro.io ist ein Remote-First-Unternehmen mit Sitz in Deutschland. Ein erfahrener Entwickler und Digitalstratege als direkter Ansprechpartner – unterstützt durch ein Netzwerk aus spezialisierten Freelancern für Design, Copywriting und spezifische technische Anforderungen. Kein Callcenter, kein Overhead.",
+    answer: "feyro.io ist ein Remote-First-Unternehmen mit Sitz in Berlin. Ein erfahrener Entwickler und Digitalstratege als direkter Ansprechpartner – unterstützt durch ein Netzwerk aus spezialisierten Freelancern für Design, Copywriting und spezifische technische Anforderungen. Kein Callcenter, kein Overhead.",
     link: "#about"
   }
 ];

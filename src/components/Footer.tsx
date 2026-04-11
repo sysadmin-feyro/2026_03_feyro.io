@@ -38,7 +38,7 @@ const Footer = () => {
 
             <p className="text-background/80 mb-6 leading-relaxed text-sm">
               Website-Neuentwicklung, Website-Relaunch und Beratungsmandate für KI
-              sowie Prozessautomatisierung aus Deutschland.
+              sowie Prozessautomatisierung aus Berlin.
             </p>
 
             <address className="not-italic space-y-3">
@@ -50,7 +50,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-background/80">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0" aria-hidden="true" />
-                <span className="text-sm">Deutschland · Remote</span>
+                <span className="text-sm">Berlin · Remote</span>
               </div>
             </address>
           </div>

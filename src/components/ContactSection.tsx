@@ -150,7 +150,7 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Standort",
-      content: "Deutschland · Remote",
+      content: "Berlin · Remote",
       href: null
     }
   ];
