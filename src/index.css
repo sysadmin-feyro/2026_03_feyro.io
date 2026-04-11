@@ -2,99 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-  Design System — feyro.io
-  Aesthetic Direction: "German Engineering Authority"
-  Deep Navy + Electric Teal — trust, precision, competence
-  Replaces: generic purple/pink SaaS-template palette
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 210 30% 98%;
-    --foreground: 218 40% 10%;
+    --background: 210 33% 98%;
+    --foreground: 222 33% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 218 40% 10%;
+    --card-foreground: 222 33% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 218 40% 10%;
+    --popover-foreground: 222 33% 11%;
 
-    /* Deep navy-indigo — authority, trust */
-    --primary: 220 64% 30%;
+    --primary: 256 78% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 220 64% 48%;
+    --primary-glow: 263 88% 70%;
 
-    /* Electric teal — tech competence, clarity */
-    --accent: 192 80% 38%;
+    --accent: 330 86% 62%;
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 192 80% 54%;
+    --accent-glow: 323 92% 72%;
 
-    --secondary: 210 28% 94%;
-    --secondary-foreground: 218 40% 10%;
+    --secondary: 210 33% 95%;
+    --secondary-foreground: 222 33% 11%;
 
-    --muted: 210 22% 94%;
-    --muted-foreground: 215 18% 42%;
+    --muted: 210 25% 95%;
+    --muted-foreground: 217 16% 41%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 212 24% 88%;
-    --input: 212 24% 88%;
-    --ring: 220 64% 30%;
+    --border: 214 27% 88%;
+    --input: 214 27% 88%;
+    --ring: 256 78% 58%;
 
     --radius: 1rem;
 
-    /* Navy → Teal: authoritative, technical */
     --gradient-brand: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-subtle: radial-gradient(circle at top left, hsl(var(--primary) / 0.07), transparent 34%), radial-gradient(circle at top right, hsl(var(--accent) / 0.05), transparent 28%), linear-gradient(180deg, hsl(var(--background)), hsl(250 35% 97%));
+    --gradient-hero: radial-gradient(circle at 18% 18%, hsl(var(--accent-glow) / 0.24), transparent 24%), radial-gradient(circle at 82% 16%, hsl(var(--primary-glow) / 0.28), transparent 22%), linear-gradient(180deg, hsl(252 45% 99%) 0%, hsl(248 42% 97%) 100%);
+    --gradient-panel: linear-gradient(180deg, hsl(0 0% 100% / 0.92), hsl(210 30% 99% / 0.82));
 
-    /* Subtle tinted backgrounds */
-    --gradient-subtle:
-      radial-gradient(circle at top left, hsl(var(--primary) / 0.06), transparent 34%),
-      radial-gradient(circle at top right, hsl(var(--accent) / 0.05), transparent 28%),
-      linear-gradient(180deg, hsl(var(--background)), hsl(210 28% 97%));
-
-    /* Hero: cool precision, not soft startup */
-    --gradient-hero:
-      radial-gradient(ellipse at 15% 20%, hsl(var(--accent-glow) / 0.15), transparent 30%),
-      radial-gradient(ellipse at 85% 15%, hsl(var(--primary-glow) / 0.18), transparent 28%),
-      radial-gradient(ellipse at 50% 100%, hsl(var(--primary) / 0.06), transparent 50%),
-      linear-gradient(180deg, hsl(210 42% 99%) 0%, hsl(210 36% 97%) 100%);
-
-    --gradient-panel: linear-gradient(180deg, hsl(0 0% 100% / 0.95), hsl(210 28% 99% / 0.85));
-
-    /* Navy-toned shadows */
-    --shadow-brand: 0 22px 54px -24px hsl(220 64% 20% / 0.36);
-    --shadow-glow: 0 0 64px hsl(var(--accent-glow) / 0.22);
-    --shadow-card: 0 14px 34px hsl(218 28% 16% / 0.07);
+    --shadow-brand: 0 22px 54px -24px hsl(261 54% 33% / 0.32);
+    --shadow-glow: 0 0 64px hsl(var(--accent-glow) / 0.20);
+    --shadow-card: 0 14px 34px hsl(220 24% 18% / 0.07);
 
     --sidebar-background: 0 0% 98%;
+
     --sidebar-foreground: 240 5.3% 26.1%;
+
     --sidebar-primary: 240 5.9% 10%;
+
     --sidebar-primary-foreground: 0 0% 98%;
+
     --sidebar-accent: 240 4.8% 95.9%;
+
     --sidebar-accent-foreground: 240 5.9% 10%;
+
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 220 64% 48%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
+
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
+
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
+
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
+
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -118,22 +114,9 @@
     @apply bg-background text-foreground;
     font-family: "Manrope", system-ui, sans-serif;
     background-image:
-      radial-gradient(circle at top left, hsl(var(--primary) / 0.04), transparent 22%),
-      radial-gradient(circle at top right, hsl(var(--accent-glow) / 0.05), transparent 26%);
+      radial-gradient(circle at top left, hsl(var(--primary) / 0.05), transparent 20%),
+      radial-gradient(circle at top right, hsl(var(--accent-glow) / 0.06), transparent 24%);
     min-height: 100vh;
-  }
-
-  /* Subtle grain overlay for depth and premium feel */
-  body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: 9998;
-    pointer-events: none;
-    opacity: 0.018;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-size: 200px 200px;
   }
 
   h1,
@@ -161,26 +144,24 @@
     display: none;
   }
 
-  /* Teal-tinted text selection */
   ::selection {
-    background: hsl(var(--accent) / 0.18);
+    background: hsl(var(--primary) / 0.18);
     color: hsl(var(--foreground));
   }
 
   .hero-orb {
-    animation: hero-drift 16s ease-in-out infinite;
+    animation: hero-drift 14s ease-in-out infinite;
   }
 
   .hero-orb-delay {
-    animation-delay: -7s;
+    animation-delay: -6s;
   }
 
-  /* Precision grid — tighter, more technical feel */
   .hero-grid {
     background-image:
-      linear-gradient(to right, hsl(var(--primary) / 0.055) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--primary) / 0.045) 1px, transparent 1px);
-    background-size: 56px 56px;
+      linear-gradient(to right, hsl(var(--primary) / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 72px 72px;
     mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
   }
 }
@@ -189,10 +170,8 @@
   0%, 100% {
     transform: translate3d(0, 0, 0) scale(1);
   }
-  33% {
-    transform: translate3d(8px, -18px, 0) scale(1.03);
-  }
-  66% {
-    transform: translate3d(-6px, -10px, 0) scale(1.02);
+
+  50% {
+    transform: translate3d(0, -22px, 0) scale(1.04);
   }
 }
