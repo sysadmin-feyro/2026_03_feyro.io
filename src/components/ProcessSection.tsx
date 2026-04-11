@@ -1,4 +1,4 @@
-import { MessageSquare, Lightbulb, Code, Rocket } from "lucide-react";
+import { MessageSquare, Lightbulb, Code, Rocket, Clock } from "lucide-react";
 
 const ProcessSection = () => {
   const steps = [
@@ -97,7 +97,8 @@ const ProcessSection = () => {
                     <div className="bg-card rounded-xl border border-border p-6 shadow-card hover:shadow-brand transition-all duration-300 group-hover:-translate-y-1">
                       {/* Duration Badge */}
                       <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs font-semibold mb-4">
-                        ⏱ {step.duration}
+                        <Clock className="w-3 h-3" aria-hidden="true" />
+                        {step.duration}
                       </div>
 
                       {/* Title */}

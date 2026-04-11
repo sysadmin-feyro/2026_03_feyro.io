@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import useAnalytics from "@/hooks/useAnalytics";
 
 const HeroSection = () => {
@@ -35,8 +35,7 @@ const HeroSection = () => {
           transition={{ duration: 0.68, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-[4.35rem]"
         >
-          Eine Website, die wieder repräsentiert
-          <br />
+          Eine Website, die wieder repräsentiert{" "}
           <span className="bg-gradient-brand bg-clip-text text-transparent">
             wofür Sie stehen.
           </span>
@@ -78,7 +77,7 @@ const HeroSection = () => {
           <Button
             variant="outline"
             size="xl"
-            className="w-full rounded-full border-slate-200/90 bg-white/90 px-8 py-4 text-base font-semibold text-slate-700 hover:bg-white sm:w-auto sm:text-lg"
+            className="hidden w-full rounded-full border-slate-200/90 bg-white/90 px-8 py-4 text-base font-semibold text-slate-700 hover:bg-white sm:inline-flex sm:w-auto sm:text-lg"
             onClick={() => {
               trackCTAClick("hero_cta_secondary", "hero_section");
               document
@@ -89,6 +88,28 @@ const HeroSection = () => {
           >
             Ablauf ansehen
           </Button>
+        </motion.div>
+
+        {/* Trust Bar */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-slate-500"
+          aria-label="Vertrauenssignale"
+        >
+          <span className="flex items-center gap-2">
+            <CheckCircle className="h-4 w-4 text-primary" aria-hidden="true" />
+            DSGVO-konform · Hosting Deutschland
+          </span>
+          <span className="flex items-center gap-2">
+            <CheckCircle className="h-4 w-4 text-primary" aria-hidden="true" />
+            Seit 2022 · 40+ Projekte
+          </span>
+          <span className="flex items-center gap-2">
+            <CheckCircle className="h-4 w-4 text-primary" aria-hidden="true" />
+            Direkter Ansprechpartner · Berlin
+          </span>
         </motion.div>
       </div>
     </section>

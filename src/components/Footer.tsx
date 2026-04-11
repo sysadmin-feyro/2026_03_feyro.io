@@ -28,9 +28,9 @@ const Footer = () => {
     <footer className="bg-foreground text-background" role="contentinfo" aria-label="Website Footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="py-16 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="col-span-2 lg:col-span-1">
             <div className="mb-6">
               <span className="font-display text-2xl font-bold text-background">feyro</span>
               <p className="text-sm text-background/60 mt-1">feyro.io</p>

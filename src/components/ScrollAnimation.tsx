@@ -9,11 +9,16 @@ interface ScrollAnimationProps {
   direction?: "up" | "down" | "left" | "right" | "fade";
 }
 
-const ScrollAnimation = ({ 
-  children, 
-  className = "", 
+const prefersReducedMotion =
+  typeof window !== "undefined"
+    ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    : false;
+
+const ScrollAnimation = ({
+  children,
+  className = "",
   delay = 0,
-  direction = "up" 
+  direction = "up"
 }: ScrollAnimationProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -22,33 +27,22 @@ const ScrollAnimation = ({
     const baseHidden = { opacity: 0 };
     const baseVisible = { opacity: 1, x: 0, y: 0 };
 
+    if (prefersReducedMotion) {
+      return { hidden: { opacity: 0 }, visible: { opacity: 1 } };
+    }
+
     switch (direction) {
       case "up":
-        return {
-          hidden: { ...baseHidden, y: 60 },
-          visible: baseVisible
-        };
+        return { hidden: { ...baseHidden, y: 24 }, visible: baseVisible };
       case "down":
-        return {
-          hidden: { ...baseHidden, y: -60 },
-          visible: baseVisible
-        };
+        return { hidden: { ...baseHidden, y: -24 }, visible: baseVisible };
       case "left":
-        return {
-          hidden: { ...baseHidden, x: 60 },
-          visible: baseVisible
-        };
+        return { hidden: { ...baseHidden, x: 24 }, visible: baseVisible };
       case "right":
-        return {
-          hidden: { ...baseHidden, x: -60 },
-          visible: baseVisible
-        };
+        return { hidden: { ...baseHidden, x: -24 }, visible: baseVisible };
       case "fade":
       default:
-        return {
-          hidden: baseHidden,
-          visible: baseVisible
-        };
+        return { hidden: baseHidden, visible: baseVisible };
     }
   };
 
@@ -60,8 +54,8 @@ const ScrollAnimation = ({
       animate={isInView ? "visible" : "hidden"}
       variants={getVariants()}
       transition={{
-        duration: 0.6,
-        delay,
+        duration: prefersReducedMotion ? 0 : 0.45,
+        delay: prefersReducedMotion ? 0 : delay,
         ease: [0.25, 0.1, 0.25, 1]
       }}
     >

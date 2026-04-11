@@ -73,7 +73,7 @@ const ServicesSection = () => {
                 className="h-full"
               >
               <div
-                className={`h-full group relative p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-2 ${
+                className={`h-full group relative p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-2 active:scale-[0.99] ${
                   service.highlighted
                     ? 'bg-gradient-brand text-white border-transparent shadow-brand'
                     : 'bg-card border-border hover:border-primary/30 shadow-card hover:shadow-brand'

@@ -80,15 +80,6 @@ const FAQSection = () => {
                 </summary>
                 <div className="text-muted-foreground pb-6 leading-relaxed text-sm sm:text-base">
                   {faq.answer}
-                  {faq.link && (
-                    <a
-                      href={faq.link}
-                      className="block mt-3 text-primary font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
-                      aria-label={`Mehr erfahren: ${faq.question}`}
-                    >
-                      Mehr erfahren →
-                    </a>
-                  )}
                 </div>
               </details>
             ))}
