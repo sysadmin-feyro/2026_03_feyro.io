@@ -83,7 +83,7 @@ const FAQSection = () => {
                   {faq.link && (
                     <a
                       href={faq.link}
-                      className="inline-block mt-2 text-primary font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      className="block mt-3 text-primary font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label={`Mehr erfahren: ${faq.question}`}
                     >
                       Mehr erfahren →
