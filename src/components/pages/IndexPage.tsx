@@ -7,6 +7,8 @@ import MobileStickyCTA from "@/components/MobileStickyCTA";
 const WhyFeyroSection = lazy(() => import("@/components/WhyFeyroSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const ProcessSection = lazy(() => import("@/components/ProcessSection"));
+const FitSection = lazy(() => import("@/components/FitSection"));
+const TrustSection = lazy(() => import("@/components/TrustSection"));
 const FAQSection = lazy(() => import("@/components/FAQSection"));
 const AboutSection = lazy(() => import("@/components/AboutSection"));
 const ContactSection = lazy(() => import("@/components/ContactSection"));
@@ -34,6 +36,8 @@ const Index = () => {
       <Section><WhyFeyroSection /></Section>
       <Section><ServicesSection /></Section>
       <Section><ProcessSection /></Section>
+      <Section><FitSection /></Section>
+      <Section><TrustSection /></Section>
       <Section><FAQSection /></Section>
       <Section><AboutSection /></Section>
       <Section><ContactSection /></Section>

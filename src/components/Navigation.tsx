@@ -56,7 +56,7 @@ const Navigation = () => {
                   contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
               >
-                Projekt anfragen
+                Website-Analyse
               </Button>
             </div>
 
@@ -110,7 +110,7 @@ const Navigation = () => {
                       setIsOpen(false);
                     }}
                   >
-                    Projekt anfragen
+                    Website-Analyse
                   </Button>
                 </div>
               </div>

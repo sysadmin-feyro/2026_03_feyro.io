@@ -10,6 +10,7 @@ interface Props {
   canonical?: string;
   ogImage?: string;
   ogType?: string;
+  keywords?: string;
   datePublished?: string;
   dateModified?: string;
   preloadImage?: string;
@@ -19,11 +20,12 @@ interface Props {
 }
 
 const {
-  title = "Website-Modernisierung & Relaunch für KMU | feyro.io",
-  description = "Technisch saubere, rechtssichere Websites für mittelständische Unternehmen in Deutschland. Ohne Baukasten, ohne US-Cloud. Ein Ansprechpartner, klarer Ablauf, fertig.",
+  title = "Website-Relaunch & Modernisierung für KMU | feyro.io",
+  description = "feyro modernisiert veraltete Unternehmens-Websites für KMU in Deutschland: Relaunch, Hosting, Wartung und klare Betreuung ohne Agentur-Chaos.",
   canonical,
   ogImage = "https://feyro.io/og-image.jpg",
   ogType = "website",
+  keywords = "Website-Relaunch KMU, Website-Modernisierung Unternehmen, veraltete Website modernisieren, Unternehmenswebsite Relaunch, Webdesign Mittelstand Deutschland",
   datePublished,
   dateModified,
   preloadImage,
@@ -38,9 +40,27 @@ const schemaWebSite = JSON.stringify({
   "@id": "https://feyro.io/#website",
   "url": "https://feyro.io",
   "name": "feyro.io",
-  "description": "Website-Modernisierung & Relaunch für KMU – technisch sauber, DSGVO-konform, ohne US-Cloud.",
+  "description": "Website-Modernisierung und Relaunch für kleine und mittelständische Betriebe in Deutschland.",
   "inLanguage": "de-DE",
   "publisher": { "@id": "https://feyro.io/#organization" }
+});
+
+const schemaWebPage = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://feyro.io/#webpage",
+  "url": canonical || "https://feyro.io/",
+  "name": title,
+  "description": description,
+  "isPartOf": { "@id": "https://feyro.io/#website" },
+  "about": { "@id": "https://feyro.io/#service" },
+  "inLanguage": "de-DE",
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": ogImage,
+    "width": 1200,
+    "height": 630
+  }
 });
 
 const schemaOrganization = JSON.stringify({
@@ -55,7 +75,7 @@ const schemaOrganization = JSON.stringify({
     "width": 200,
     "height": 50
   },
-  "description": "Website-Neuentwicklung, Website-Relaunch und KI-Beratung für mittelständische Unternehmen in Deutschland. DSGVO-konform, ohne US-Cloud.",
+  "description": "feyro modernisiert veraltete Unternehmens-Websites für kleine und mittelständische Betriebe in Deutschland und begleitet Hosting, Wartung sowie technische Betreuung.",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -80,9 +100,9 @@ const schemaProfessionalService = JSON.stringify({
   "name": "feyro.io",
   "url": "https://feyro.io",
   "email": "hi@feyro.io",
-  "description": "Website-Neuentwicklung, Website-Relaunch und KI-gestützte Prozessautomatisierung für Unternehmen in Deutschland. DSGVO-konform, kein US-Hosting.",
+  "description": "Website-Modernisierung, Relaunch und laufende Betreuung für kleine und mittelständische Unternehmen in Deutschland.",
   "areaServed": { "@type": "Country", "name": "Deutschland" },
-  "serviceType": ["Website-Neuentwicklung", "Website-Relaunch", "KI-Beratung", "Prozessautomatisierung"],
+  "serviceType": ["Website-Relaunch", "Website-Modernisierung", "Unternehmenswebsite modernisieren", "Hosting und Wartung"],
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
@@ -91,11 +111,12 @@ const schemaProfessionalService = JSON.stringify({
   }],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Digitale Dienstleistungen für KMU",
+    "name": "Website-Modernisierung für KMU",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Neuentwicklung", "description": "Individuelle Website-Entwicklung ohne Baukasten – technisch sauber, DSGVO-konform, vollständig in Ihrem Eigentum." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Relaunch", "description": "Modernisierung veralteter Unternehmenswebsites – schneller, sicherer, repräsentativer." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "KI-Beratung & Automatisierung", "description": "Einsatz von KI als messbares Werkzeug zur Prozessoptimierung für KMU." } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Modernisierung und Relaunch", "description": "Veraltete Unternehmens-Websites in Struktur, Gestaltung und Technik modernisieren." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Neuentwicklung", "description": "Neue Unternehmens-Websites erstellen, wenn ein sauberer Neustart sinnvoller ist." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hosting, Wartung und Betreuung", "description": "Technische Betreuung, Hosting und laufende Pflege nach dem Livegang." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "KI und Automatisierung als Zusatzkompetenz", "description": "Sinnvolle Automatisierung und KI-Unterstützung ergänzend zur digitalen Modernisierung einordnen." } }
     ]
   }
 });
@@ -145,6 +166,7 @@ const schemaBreadcrumb = breadcrumbs && breadcrumbs.length > 0 ? JSON.stringify(
     <!-- Primary Meta -->
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"} />
     {canonical && <link rel="canonical" href={canonical} />}
     <meta name="author" content="feyro.io" />
@@ -189,6 +211,7 @@ const schemaBreadcrumb = breadcrumbs && breadcrumbs.length > 0 ? JSON.stringify(
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={schemaWebSite} />
+    <script type="application/ld+json" set:html={schemaWebPage} />
     <script type="application/ld+json" set:html={schemaOrganization} />
     <script type="application/ld+json" set:html={schemaProfessionalService} />
     {schemaFAQ && <script type="application/ld+json" set:html={schemaFAQ} />}

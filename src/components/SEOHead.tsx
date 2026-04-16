@@ -15,24 +15,25 @@ const professionalServiceSchema = {
   "name": "feyro.io",
   "url": "https://feyro.io",
   "email": "hi@feyro.io",
-  "description": "Website-Neuentwicklung, Website-Relaunch und KI-gestützte Prozessautomatisierung für Unternehmen in Deutschland. DSGVO-konform, kein US-Hosting.",
+  "description": "Website-Modernisierung und Relaunch für kleine und mittelständische Unternehmen in Deutschland. Klarer Ablauf, Hosting, Wartung und persönliche Betreuung.",
   "areaServed": {
     "@type": "Country",
     "name": "Deutschland"
   },
   "serviceType": [
-    "Website-Neuentwicklung",
+    "Website-Modernisierung",
     "Website-Relaunch",
-    "KI-Beratung",
-    "Prozessautomatisierung"
+    "Website-Neuentwicklung",
+    "Hosting und Wartung"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Digitale Dienstleistungen",
+    "name": "Website-Modernisierung für KMU",
     "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Modernisierung und Relaunch" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Neuentwicklung" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Relaunch" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "KI-Beratung & Automatisierung" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hosting, Wartung und Betreuung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "KI und Automatisierung als Zusatzkompetenz" } }
     ]
   }
 };

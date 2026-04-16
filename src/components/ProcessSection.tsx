@@ -1,49 +1,60 @@
-import { MessageSquare, Lightbulb, Code, Rocket, Clock } from "lucide-react";
+import { MessageSquare, Search, Code, SlidersHorizontal, Rocket, Clock } from "lucide-react";
 
 const ProcessSection = () => {
   const steps = [
     {
       icon: MessageSquare,
-      title: "Erstgespräch & Analyse",
+      title: "Kostenloses Erstgespräch",
       duration: "Schritt 1",
-      description: "Wir erfassen Ihr Vorhaben, sichten den Status quo und geben eine fachliche Empfehlung zum weiteren Vorgehen.",
+      description: "Wir klären, wo Sie stehen, was Sie erreichen möchten und ob feyro für Ihr Vorhaben passend ist.",
       details: [
-        "Ziele, Kontext und Rahmenbedingungen",
-        "Sichtung bestehender Systeme oder Prozesse",
-        "Empfehlung: Neuentwicklung, Relaunch oder Mandat"
+        "Kurz, konkret und unverbindlich",
+        "Keine Verkaufspräsentation",
+        "Klare Einordnung der nächsten Schritte"
       ]
     },
     {
-      icon: Lightbulb,
-      title: "Konzept & Priorisierung",
+      icon: Search,
+      title: "Analyse der bestehenden Website",
       duration: "Schritt 2",
-      description: "Wir definieren Struktur, Schwerpunkte und eine realistische Umsetzungslogik mit klarem Leistungsumfang.",
+      description: "Wir prüfen Inhalte, Technik, Struktur, mobile Nutzung und rechtliche Grundlagen.",
       details: [
-        "Informationsarchitektur oder Prozessbild",
-        "Design- oder Automatisierungskonzept",
-        "Klare Abgrenzung des Leistungsumfangs"
+        "Was bleibt sinnvoll erhalten?",
+        "Was sollte neu aufgebaut werden?",
+        "Welche Risiken oder Lücken gibt es?"
       ]
     },
     {
       icon: Code,
-      title: "Entwicklung & Qualitätssicherung",
+      title: "Erstellung der neuen Seite",
       duration: "Schritt 3",
-      description: "Strukturierte Umsetzung mit dokumentierten Entscheidungen, regelmäßiger Abstimmung und finaler Qualitätsprüfung.",
+      description: "Wir bauen die neue Website strukturiert auf: verständlich, mobil optimiert und technisch sauber.",
       details: [
-        "Saubere technische Entwicklung",
-        "DSGVO-konforme Basis und Integrationen",
-        "Performance, Responsiveness und Feedbackschleife"
+        "Neue Struktur und Gestaltung",
+        "Technische Umsetzung ohne Baukasten",
+        "Hosting, Datenschutz und Formulare"
+      ]
+    },
+    {
+      icon: SlidersHorizontal,
+      title: "Abstimmung und Anpassungen",
+      duration: "Schritt 4",
+      description: "Sie prüfen die neue Seite in Ruhe. Wir arbeiten Feedback ein und erklären Entscheidungen verständlich.",
+      details: [
+        "Klare Feedbackrunde",
+        "Feinschliff an Texten und Darstellung",
+        "Vorbereitung des Livegangs"
       ]
     },
     {
       icon: Rocket,
-      title: "Go-Live & Begleitung",
-      duration: "Schritt 4",
-      description: "Nach Auslieferung begleiten wir Go-Live, Übergabe und nächste Ausbaustufen verlässlich weiter.",
+      title: "Livegang und Betreuung",
+      duration: "Schritt 5",
+      description: "Wir bringen die Website live und bleiben auf Wunsch für Wartung, Technik und kleinere Änderungen zuständig.",
       details: [
-        "Go-Live, Übergabe oder Mandatsfortsetzung",
-        "Dokumentation für den laufenden Betrieb",
-        "Begleitung bei kommenden Entscheidungen"
+        "Domain, Hosting und SSL",
+        "Technische Wartung nach dem Start",
+        "Fester Ansprechpartner"
       ]
     }
   ];
@@ -57,8 +68,8 @@ const ProcessSection = () => {
             So läuft die <span className="text-primary">Zusammenarbeit</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            Ein klarer Ablauf für neue Websites, Relaunches und Beratungsmandate für KI
-            sowie Prozessautomatisierung.
+            Fünf einfache Schritte, damit die Modernisierung planbar bleibt und im Tagesgeschäft
+            nicht zur Dauerbaustelle wird.
           </p>
         </div>
 
@@ -68,7 +79,7 @@ const ProcessSection = () => {
           <div className="hidden lg:block absolute left-0 right-0 top-20 h-1 bg-gradient-brand opacity-15"></div>
 
           {/* Steps */}
-          <div className="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-8" role="list" aria-label="Prozessschritte">
+          <div className="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-5 lg:gap-6" role="list" aria-label="Prozessschritte">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -131,11 +142,11 @@ const ProcessSection = () => {
         {/* Bottom CTA */}
         <div className="mt-16 rounded-2xl border border-border bg-gradient-panel p-8 text-center shadow-card">
           <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 px-2">
-            Klare Schritte statt unklarer Projektphasen
+            Wenig Aufwand auf Ihrer Seite, klare Verantwortung auf unserer.
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Umfang und Dauer richten sich nach Aufgabe und Tiefe des Vorhabens. Entscheidend ist,
-            dass Sie jederzeit wissen, woran gearbeitet wird und was als Nächstes folgt.
+            Die Zusammenarbeit ist bewusst einfach gehalten: Sie wissen jederzeit, was passiert,
+            was wir brauchen und wann der nächste Schritt ansteht.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">

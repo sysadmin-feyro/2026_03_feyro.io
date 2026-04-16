@@ -74,7 +74,7 @@ const ContactSection = () => {
       });
 
       if (error) {
-        console.error('Submission error:', error);
+        if (import.meta.env.DEV) console.error('Submission error:', error);
         if (error.message?.includes('Rate limit') || error.message?.includes('429')) {
           toast({ title: "Zu viele Anfragen", description: "Bitte warte eine Stunde, bevor du erneut eine Nachricht sendest.", variant: "destructive" });
         } else if (error.message?.includes('Validation')) {
@@ -111,7 +111,7 @@ const ContactSection = () => {
         toast({ title: "Bitte alle Pflichtfelder ausfüllen", description: "Einige Felder sind noch nicht korrekt ausgefüllt.", variant: "destructive" });
       } else {
         const msg = error instanceof Error ? error.message : "Unbekannter Fehler";
-        console.error('Unexpected error:', error);
+        if (import.meta.env.DEV) console.error('Unexpected error:', error);
         toast({ title: "Fehler beim Senden", description: msg, variant: "destructive" });
       }
     } finally {

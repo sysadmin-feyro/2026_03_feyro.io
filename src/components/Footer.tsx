@@ -17,10 +17,10 @@ const Footer = () => {
       { name: "Cookie-Einstellungen", href: "#" }
     ],
     services: [
-      { name: "Website-Neuentwicklung", href: "#services" },
+      { name: "Website-Modernisierung", href: "#services" },
       { name: "Website-Relaunch", href: "#services" },
-      { name: "KI-Beratung & Automatisierung", href: "#services" },
-      { name: "Projekt anfragen", href: "#contact" }
+      { name: "Website-Neuentwicklung", href: "#services" },
+      { name: "Website-Analyse anfordern", href: "#contact" }
     ]
   };
 
@@ -37,8 +37,8 @@ const Footer = () => {
             </div>
 
             <p className="text-background/80 mb-6 leading-relaxed text-sm">
-              Website-Neuentwicklung, Website-Relaunch und Beratungsmandate für KI
-              sowie Prozessautomatisierung aus Berlin.
+              Website-Modernisierung und Relaunch für kleine und mittelständische
+              Unternehmen in Deutschland. Klar, technisch sauber und persönlich betreut.
             </p>
 
             <address className="not-italic space-y-3">
