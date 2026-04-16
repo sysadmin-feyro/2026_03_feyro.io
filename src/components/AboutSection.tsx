@@ -4,18 +4,18 @@ const AboutSection = () => {
   const values = [
     {
       icon: Target,
-      title: "Direkt & ergebnisorientiert",
-      description: "Kein Fachchinesisch, keine aufgeblähten Konzeptpapiere. Wir analysieren, priorisieren und liefern – mit klarer Kommunikation auf jedem Schritt."
+      title: "Klarer Ablauf statt Agentur-Chaos",
+      description: "Sie wissen, was passiert, was benötigt wird und welcher Schritt als Nächstes folgt. Ohne Fachchinesisch und ohne aufgeblähte Konzeptphasen."
     },
     {
       icon: Award,
-      title: "Qualität ohne Kompromisse",
-      description: "Rechtssicher, performant, wartbar. Wir setzen keine Standards, die wir selbst nicht erfüllen würden."
+      title: "Technisch sauber und wartbar",
+      description: "Die Website soll nicht nur gut aussehen, sondern zuverlässig laufen: schnell, mobil, rechtlich sauber und langfristig betreubar."
     },
     {
       icon: Laptop,
-      title: "Remote-First, Berlin-basiert",
-      description: "Kein Büro, kein Overhead. Schlanke Struktur mit einem festen Ansprechpartner und einem Netzwerk aus spezialisierten Freelancern – je nach Projektbedarf gezielt eingesetzt."
+      title: "Fester Ansprechpartner",
+      description: "Sie sprechen direkt mit der Person, die Ihr Vorhaben versteht und verantwortet. Kein Callcenter, kein Weiterreichen durch Abteilungen."
     }
   ];
 
@@ -26,39 +26,38 @@ const AboutSection = () => {
           {/* Content */}
           <div>
             <h2 id="about-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Über <span className="text-primary">feyro.io</span>
+              Wer hinter <span className="text-primary">feyro.io</span> steht
             </h2>
 
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              feyro.io ist kein klassisches Webdesign-Studio.
-              Wir sind ein{" "}
-              <span className="text-primary font-semibold">digitaler Infrastrukturpartner</span>{" "}
-              für Unternehmen, die ihren Online-Auftritt professionell erneuern und digitale Prozesse sauber aufstellen wollen.
+              Ich bin David, Gründer von feyro. Ich modernisiere veraltete Websites für kleine
+              und mittelständische Betriebe – mit klarem Ablauf, ehrlicher Kommunikation
+              und sauberer Technik.
             </p>
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                 <p className="text-muted-foreground">
-                  <span className="font-semibold text-foreground">Ein Ansprechpartner:</span>{" "}
-                  Hinter feyro.io steht ein erfahrener Entwickler und Digitalstratege mit einem
-                  kleinen Netzwerk aus spezialisierten Freelancern - je nach Projektanforderung gezielt ergänzt.
+                  <span className="font-semibold text-foreground">Fokussierter Spezialist:</span>{" "}
+                  feyro ist bewusst auf moderne Unternehmens-Websites für KMU ausgerichtet.
+                  Keine Werbeagentur, die alles anbietet.
                 </p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-accent rounded-full mt-3 flex-shrink-0"></div>
                 <p className="text-muted-foreground">
-                  <span className="font-semibold text-foreground">Kein Agentur-Overhead:</span>{" "}
-                  Remote-First bedeutet für uns: schlanke Strukturen, klare Kommunikation und maximale
-                  Fokussierung auf das Projektergebnis statt auf Selbstvermarktung.
+                  <span className="font-semibold text-foreground">Pragmatische Umsetzung:</span>{" "}
+                  Wir arbeiten strukturiert, aber nicht kompliziert. Das Ziel ist ein professioneller
+                  Auftritt, der im Alltag funktioniert.
                 </p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                 <p className="text-muted-foreground">
-                  <span className="font-semibold text-foreground">Berlin, 100%:</span>{" "}
-                  Entwicklung, Hosting, Kommunikation und rechtliche Grundlagen - alles findet
-                  im deutschen und europäischen Rechtsraum statt.
+                  <span className="font-semibold text-foreground">Technik aus einer Hand:</span>{" "}
+                  Relaunch, Hosting, Wartung und spätere Anpassungen bleiben übersichtlich
+                  und verantwortbar.
                 </p>
               </div>
             </div>
@@ -66,11 +65,11 @@ const AboutSection = () => {
             <div className="rounded-xl border border-border bg-gradient-panel p-6 shadow-card">
               <h3 className="text-lg font-semibold text-primary mb-3 flex items-center gap-2">
                 <Users className="w-5 h-5" aria-hidden="true" />
-                Lean by Design
+                Bewusst spezialisiert
               </h3>
               <p className="text-muted-foreground">
-                Kurze Wege, klare Verantwortung und keine unnötigen Schleifen:
-                So bleibt die Umsetzung schnell, nachvollziehbar und wirtschaftlich sinnvoll.
+                feyro ist passend für Betriebe, die keinen lauten Agenturauftritt suchen,
+                sondern eine ruhige, zuverlässige Modernisierung ihrer Website.
               </p>
             </div>
           </div>
@@ -114,8 +113,9 @@ const AboutSection = () => {
                 Was uns unterscheidet
               </h3>
               <p className="opacity-90 leading-relaxed">
-                Wir verkaufen keine Paket-Show. Wir entwickeln konkrete Ergebnisse:
-                eine tragfähige Website, eine saubere technische Basis oder ein Mandat, das Prozesse wirklich verbessert.
+                Wir verkaufen keine große Show. Wir lösen ein konkretes Problem:
+                Ihre Website wirkt wieder professionell, läuft technisch sauber
+                und wird langfristig betreut.
               </p>
             </div>
           </div>

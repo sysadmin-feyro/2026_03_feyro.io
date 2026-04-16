@@ -35,9 +35,9 @@ const MobileStickyCTA = () => {
       <button
         onClick={handleClick}
         className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-base font-semibold text-white shadow-brand"
-        aria-label="Erstgespräch vereinbaren"
+        aria-label="Website jetzt analysieren lassen"
       >
-        Erstgespräch vereinbaren
+        Website jetzt analysieren lassen
         <ArrowRight className="h-5 w-5" aria-hidden="true" />
       </button>
     </div>

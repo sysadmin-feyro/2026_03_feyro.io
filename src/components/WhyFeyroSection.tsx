@@ -1,41 +1,41 @@
-import { Shield, Bot, Globe, Ban, Users, Zap } from "lucide-react";
+import { AlertTriangle, Smartphone, Clock, ShieldQuestion, Users, Wrench } from "lucide-react";
 
 const WhyFeyroSection = () => {
   const features = [
     {
-      icon: Globe,
-      title: "Individuelle Entwicklung",
-      description: "Keine Templates, keine Baukästen. Jede Website wird technisch sauber von Grund auf entwickelt – mit modernen Web-Standards, die langfristig tragen.",
+      icon: AlertTriangle,
+      title: "Der erste Eindruck passt nicht mehr",
+      description: "Die Website wirkt älter als Ihr Unternehmen heute ist. Das kostet Vertrauen, noch bevor jemand anruft oder ein Angebot anfragt.",
       color: "text-primary"
     },
     {
-      icon: Bot,
-      title: "KI als Werkzeug, nicht als Buzzword",
-      description: "Wir setzen KI dort ein, wo sie messbar Mehrwert schafft: bei der Analyse, der Prozessautomatisierung und der Optimierung von Inhalten und Abläufen.",
+      icon: Smartphone,
+      title: "Mobil nicht mehr überzeugend",
+      description: "Viele Interessenten kommen über das Smartphone. Wenn Bedienung, Ladezeit oder Darstellung nicht passen, springen passende Anfragen ab.",
       color: "text-accent"
     },
     {
-      icon: Shield,
-      title: "Rechtssicherheit by Default",
-      description: "DSGVO-Konformität ist keine Add-on-Option, sondern Teil jedes Projekts. Cookie-Consent, Datenschutz und Impressum werden strukturiert und dokumentiert umgesetzt.",
+      icon: Wrench,
+      title: "Technisch fühlt sich niemand zuständig",
+      description: "Updates, Hosting, Formulare, Datenschutz und kleine Änderungen bleiben liegen, weil intern Zeit und klare Verantwortung fehlen.",
       color: "text-primary"
     },
     {
-      icon: Ban,
-      title: "Keine US-Cloud-Abhängigkeiten",
-      description: "Hosting, Analytics, E-Mail und Tooling laufen ausschließlich auf deutschen oder europäischen Infrastrukturen. Volle Datensouveränität ohne Kompromisse.",
+      icon: ShieldQuestion,
+      title: "Rechtliche Unsicherheit bleibt im Kopf",
+      description: "Cookie-Banner, Datenschutz, Impressum und eingebundene Dienste wurden über Jahre zusammengestückelt. Das erzeugt Unsicherheit und unnötiges Risiko.",
       color: "text-accent"
     },
     {
       icon: Users,
-      title: "Lean by Design",
-      description: "Ein direkter Ansprechpartner, ein Netzwerk aus spezialisierten Freelancern. Kein Overhead, kein Callcenter, kein aufgeblähtes Agenturmodell – nur Ergebnis.",
+      title: "Klassische Agenturprozesse wirken zu groß",
+      description: "Viele Betriebe wollen kein monatelanges Strategieprojekt, sondern einen verlässlichen Ansprechpartner und eine Website, die wieder funktioniert.",
       color: "text-primary"
     },
     {
-      icon: Zap,
-      title: "Performance als Standard",
-      description: "Core Web Vitals, Ladezeiten und technische Sauberkeit sind keine Extras. Jede Auslieferung wird auf Performance, Barrierefreiheit und SEO geprüft.",
+      icon: Clock,
+      title: "Im Alltag fehlt die Zeit",
+      description: "Das Tagesgeschäft läuft weiter. Deshalb muss die Modernisierung klar geführt sein, mit wenig Aufwand auf Ihrer Seite.",
       color: "text-accent"
     }
   ];
@@ -46,16 +46,16 @@ const WhyFeyroSection = () => {
         <div className="mb-12 grid gap-6 sm:mb-16 sm:gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.34em] text-primary">
-              Warum feyro.io
+              Typische Ausgangslage
             </p>
             <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
-              Digitale Infrastruktur, die hält was sie verspricht.
+              Eine veraltete Website ist selten nur ein Designproblem.
             </h2>
           </div>
           <p className="text-base leading-relaxed text-muted-foreground sm:text-xl">
-            Wir bauen keine Websites um der Websites willen. Wir strukturieren digitale Prozesse,
-            schaffen rechtssichere Grundlagen und setzen KI dort ein, wo sie echten Nutzen bringt –
-            nicht als Marketingversprechen, sondern als Arbeitsmittel.
+            Für viele kleine und mittelständische Betriebe ist die Website mitgewachsen:
+            etwas Inhalt hier, ein altes Plugin dort, niemand fühlt sich richtig zuständig.
+            Genau dort setzt feyro an.
           </p>
         </div>
 
@@ -85,12 +85,11 @@ const WhyFeyroSection = () => {
           <div className="mx-auto max-w-5xl rounded-[1.5rem] bg-gradient-brand p-6 text-white shadow-brand sm:rounded-[2rem] sm:p-10">
             <div className="grid gap-5 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <h3 className="font-display text-xl font-bold sm:text-3xl">
-                Für Unternehmen, die digital eigenständig sein wollen.
+                Nach dem Relaunch wissen Sie, wo alles steht – und wer sich darum kümmert.
               </h3>
               <p className="text-sm leading-relaxed text-white/80 sm:text-lg">
-                Sie behalten Code, Inhalte und Infrastruktur in eigener Hand. Keine Plattform-Abos,
-                keine Vendor-Lock-ins, keine Datenabflüsse Richtung USA. Eine Website, die Ihrem
-                Unternehmen gehört – nicht einem Anbieter.
+                Wir sortieren Inhalte und Technik, bauen sauber auf und bleiben ansprechbar.
+                Kein Projekt, das nach dem Livegang ins Leere fällt.
               </p>
             </div>
           </div>
