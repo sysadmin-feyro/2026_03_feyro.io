@@ -93,7 +93,7 @@ const ContactSection = () => {
       }
 
       trackFormSubmission("contact_form", true);
-      toast({ title: "Nachricht gesendet! ✓", description: "Wir melden uns innerhalb von 24 Stunden bei Ihnen." });
+      toast({ title: "Anfrage gesendet! ✓", description: "Wir melden uns in der Regel am selben Werktag bei Ihnen." });
 
       setFormData({ name: "", email: "", company: "", website: "", message: "", privacy: false, _hp: "" });
       setFieldErrors({});
@@ -130,18 +130,18 @@ const ContactSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 px-2">
-            Lassen Sie uns über Ihr <span className="text-primary">Vorhaben</span> sprechen
+            Erste Einschätzung – <span className="text-primary">kostenlos und ohne Verkaufsdruck</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            Sie erhalten eine erste fachliche Einordnung, eine klare Empfehlung zum weiteren Vorgehen
-            und einen direkten Austausch ohne Agentur-Umwege.
+            Hinterlassen Sie Ihre Website-URL und kurz, was Sie stört. Wir melden uns am
+            selben Werktag mit einer klaren Einschätzung – was sinnvoll ist, was nicht und warum.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div className="bg-card rounded-2xl p-8 shadow-card">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Projekt anfragen</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6">Website prüfen lassen</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               {/* Honeypot */}
@@ -210,7 +210,7 @@ const ContactSection = () => {
                   <Input
                     id="website"
                     type="text"
-                    placeholder="z.B. https://example.com oder 'keine vorhanden'"
+                    placeholder="z. B. https://ihre-domain.de oder 'keine vorhanden'"
                     value={formData.website}
                     onChange={(e) => setFormData(prev => ({ ...prev, website: e.target.value }))}
                     className="mt-1"
@@ -224,7 +224,7 @@ const ContactSection = () => {
                 <Textarea
                   id="message"
                   rows={5}
-                  placeholder="Beschreiben Sie kurz, ob es um eine neue Website, einen Relaunch oder KI- und Automatisierungsthemen geht..."
+                  placeholder="Was stört Sie aktuell an Ihrer Website? Zum Beispiel: wirkt veraltet, mobil schlecht nutzbar, technisch unklar, zu wenig Anfragen..."
                   value={formData.message}
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                   onBlur={() => validateField("message", formData.message)}
@@ -265,7 +265,7 @@ const ContactSection = () => {
               <Button type="submit" variant="hero" size="lg" className="w-full group" disabled={isSubmitting}>
                 {isSubmitting ? "Wird gesendet..." : (
                   <>
-                    Anfrage senden
+                    Website-Analyse anfordern
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </>
                 )}
@@ -306,9 +306,9 @@ const ContactSection = () => {
               <div className="space-y-4">
                 {[
                   "Antwort in der Regel am selben Werktag",
-                  "Kein Angebot ohne Gespräch – kein Verkaufsdruck",
-                  "Ihre Daten bleiben in Deutschland",
-                  "Einmalige Anfrage, kein Newsletter-Opt-in",
+                  "Erste Einschätzung ohne Verkaufsdruck",
+                  "Konkrete Empfehlung statt unklarer Fachsprache",
+                  "Keine Newsletter-Anmeldung",
                   "Direkter Ansprechpartner ohne Callcenter"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">

@@ -11,38 +11,38 @@ import ScrollAnimation from "./ScrollAnimation";
 const ServicesSection = () => {
   const services = [
     {
-      icon: Globe,
-      title: "Website-Neuentwicklung",
-      description: "Individuelle Webpräsenzen von Grund auf: klar strukturiert, technisch sauber entwickelt und auf Ihr Unternehmen zugeschnitten.",
-      features: [
-        "Individuelle Konzeption und Gestaltung",
-        "Saubere technische Entwicklung ohne Baukasten",
-        "Mobile-First, Performance und SEO-Basis",
-        "DSGVO-konforme Umsetzung mit Hosting in Europa"
-      ],
-      highlighted: false
-    },
-    {
       icon: RefreshCw,
-      title: "Website-Relaunch",
-      description: "Bestehende Websites neu denken und technisch neu aufsetzen: Inhalte, Struktur und digitale Wirkung werden gezielt überarbeitet.",
+      title: "Website-Relaunch & Modernisierung",
+      description: "Aus einer veralteten Website wird ein klarer, mobiler Auftritt – mit sauberer Technik, neuer Struktur und einem Design, das zum Unternehmen passt.",
       features: [
         "Analyse der bestehenden Website und Inhalte",
-        "Neue Struktur, neue Gestaltung, neue technische Basis",
-        "Migration bestehender Inhalte und Domains",
-        "Sauberer Go-Live mit klarer Begleitung"
+        "Neue Struktur, Gestaltung und technische Basis",
+        "Mobile-optimiert, schnell und verständlich",
+        "Go-Live, Hosting, Wartung und Betreuung"
       ],
       highlighted: true
     },
     {
-      icon: Bot,
-      title: "Beratungsmandat für KI & Automatisierung",
-      description: "Wir analysieren Prozesse, identifizieren sinnvolle Automatisierungspotenziale und begleiten Unternehmen bei der Einführung praxistauglicher KI-Lösungen.",
+      icon: Globe,
+      title: "Website-Neuentwicklung",
+      description: "Wenn die alte Basis nicht mehr trägt, entsteht eine neue Unternehmens-Website von Grund auf: sauber geplant, schlank umgesetzt und langfristig betreut.",
       features: [
-        "Analyse bestehender Prozesse und Engpässe",
-        "Einordnung von KI-Anwendungsfällen für Ihr Unternehmen",
-        "Roadmap für Automatisierung und Einführung",
-        "Begleitung bei Umsetzung, Tool-Auswahl und Schulung"
+        "Klare Seitenstruktur und Nutzerführung",
+        "Professionelles Design ohne Baukasten",
+        "Technische SEO-Basis und Performance",
+        "DSGVO-konforme Formulare und Infrastruktur"
+      ],
+      highlighted: false
+    },
+    {
+      icon: Bot,
+      title: "KI & Automatisierung als Zusatz",
+      description: "Ergänzend prüfen wir, wo einfache Automatisierung oder KI-Unterstützung wirklich Arbeit spart. Sachlich, praxisnah und ohne Buzzword-Show.",
+      features: [
+        "Einordnung sinnvoller Anwendungsfälle",
+        "Automatisierung wiederkehrender Aufgaben",
+        "Tool-Auswahl mit Blick auf Datenschutz",
+        "Begleitung bei Einführung und Schulung"
       ],
       highlighted: false
     }
@@ -54,11 +54,11 @@ const ServicesSection = () => {
         {/* Header */}
         <ScrollAnimation className="text-center mb-16">
           <h2 id="services-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Unsere <span className="bg-gradient-brand bg-clip-text text-transparent">Leistungen</span>
+            Drei Leistungen – <span className="bg-gradient-brand bg-clip-text text-transparent">ein Ansprechpartner</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            Drei klare Leistungsbereiche: neue Websites, Relaunches bestehender Auftritte
-            und Beratungsmandate für KI sowie Prozessautomatisierung.
+            Ein klarer Weg zur modernen Unternehmens-Website: erst ordnen, dann sauber
+            neu aufbauen, anschließend zuverlässig betreuen.
           </p>
         </ScrollAnimation>
 
@@ -130,11 +130,11 @@ const ServicesSection = () => {
         <ScrollAnimation delay={0.5}>
           <div className="text-center rounded-2xl border border-border bg-gradient-panel p-12 shadow-card">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Lassen Sie uns Ihr Vorhaben einordnen
+              In 30 Minuten wissen Sie, was Ihre Website braucht.
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Im Erstgespräch klären wir, ob für Sie eher eine Neuentwicklung, ein Relaunch
-              oder ein Beratungsmandat für KI und Automatisierung sinnvoll ist.
+              Im kostenlosen Erstgespräch prüfen wir Ihre Website, schätzen den Aufwand
+              realistisch ein und sagen, was sinnvoll ist – und was nicht. Ohne Verkaufsdruck.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -146,7 +146,7 @@ const ServicesSection = () => {
                   contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
               >
-                Projekt anfragen
+                Kostenloses Erstgespräch anfragen
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
@@ -157,7 +157,7 @@ const ServicesSection = () => {
                   processSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
               >
-                Arbeitsweise ansehen
+                Ablauf ansehen
               </Button>
             </div>
           </div>

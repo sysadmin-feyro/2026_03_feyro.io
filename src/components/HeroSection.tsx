@@ -25,7 +25,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mb-6 inline-flex items-center rounded-full border border-primary/15 bg-white/82 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-primary shadow-card backdrop-blur-sm"
         >
-          Ohne Baukasten · Ohne US-Cloud
+          Website-Modernisierung für KMU
         </motion.div>
 
         <motion.h1
@@ -35,9 +35,9 @@ const HeroSection = () => {
           transition={{ duration: 0.68, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-[4.35rem]"
         >
-          Eine Website, die wieder repräsentiert{" "}
+          Website-Relaunch für KMU, deren Auftritt nicht mehr überzeugt.{" "}
           <span className="bg-gradient-brand bg-clip-text text-transparent">
-            wofür Sie stehen.
+            Modern. Mobil. Fertig – ohne Agentur-Chaos.
           </span>
         </motion.h1>
 
@@ -47,8 +47,9 @@ const HeroSection = () => {
           transition={{ duration: 0.68, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg lg:text-xl"
         >
-          Für mittelständische Unternehmen in Deutschland: technisch sauber, rechtssicher
-          und ohne Baukasten. Ein Ansprechpartner, klarer Ablauf, fertig.
+          Wir modernisieren Ihre Website, bevor sie weiter Kunden verliert. Kein langes
+          Briefing, keine Agentur-Rundreise – ein fester Ansprechpartner von der ersten
+          Analyse bis zum Livegang und danach.
         </motion.p>
 
         <motion.div
@@ -69,9 +70,9 @@ const HeroSection = () => {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            aria-label="Erstgespräch vereinbaren"
+            aria-label="Jetzt Website analysieren lassen"
           >
-            Erstgespräch vereinbaren
+            Jetzt Website analysieren lassen
             <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
           </Button>
           <Button
@@ -84,9 +85,9 @@ const HeroSection = () => {
                 .getElementById("process")
                 ?.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            aria-label="Ablauf ansehen"
+            aria-label="Wie das läuft"
           >
-            Ablauf ansehen
+            Wie das läuft
           </Button>
         </motion.div>
 
@@ -100,15 +101,15 @@ const HeroSection = () => {
         >
           <span className="flex items-center gap-2">
             <CheckCircle className="h-4 w-4 text-primary" aria-hidden="true" />
-            DSGVO-konform · Hosting Deutschland
+            DSGVO-konform · Hosting in Deutschland
           </span>
           <span className="flex items-center gap-2">
             <CheckCircle className="h-4 w-4 text-primary" aria-hidden="true" />
-            Seit 2022 · 40+ Projekte
+            Fester Ansprechpartner statt Agentur-Chaos
           </span>
           <span className="flex items-center gap-2">
             <CheckCircle className="h-4 w-4 text-primary" aria-hidden="true" />
-            Direkter Ansprechpartner · Berlin
+            Relaunch, Technik und Betreuung aus einer Hand
           </span>
         </motion.div>
       </div>
