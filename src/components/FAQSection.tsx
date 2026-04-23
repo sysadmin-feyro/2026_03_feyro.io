@@ -96,7 +96,7 @@ const FAQSection = () => {
               const contactSection = document.getElementById('contact');
               contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }}
-            className="text-primary font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded px-2 py-1"
+            className="text-primary font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded inline-flex items-center min-h-[44px] px-3"
             aria-label="Zum Kontaktformular navigieren"
           >
             Website-Analyse anfordern →

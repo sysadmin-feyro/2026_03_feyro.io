@@ -63,7 +63,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-background/80 hover:text-background transition-colors text-sm"
+                    className="text-background/80 hover:text-background transition-colors text-sm inline-block py-2 -my-2"
                   >
                     {link.name}
                   </a>
@@ -80,7 +80,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-background/80 hover:text-background transition-colors text-sm"
+                    className="text-background/80 hover:text-background transition-colors text-sm inline-block py-2 -my-2"
                   >
                     {link.name}
                   </a>
@@ -97,7 +97,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-background/80 hover:text-background transition-colors text-sm"
+                    className="text-background/80 hover:text-background transition-colors text-sm inline-block py-2 -my-2"
                   >
                     {link.name}
                   </a>
