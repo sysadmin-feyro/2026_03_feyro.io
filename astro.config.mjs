@@ -8,7 +8,12 @@ export default defineConfig({
   integrations: [
     react(),
     tailwind({ applyBaseStyles: false }),
-    sitemap(),
+    sitemap({
+      filter: (page) =>
+        !page.includes('/impressum') &&
+        !page.includes('/datenschutz') &&
+        !page.includes('/agb'),
+    }),
   ],
   output: 'static',
   vite: {
