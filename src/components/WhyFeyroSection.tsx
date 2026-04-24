@@ -1,4 +1,4 @@
-import { AlertTriangle, Smartphone, Clock, ShieldQuestion, Users, Wrench } from "lucide-react";
+import { AlertTriangle, Smartphone, Clock, ShieldQuestion, Users, Wrench } from "@/components/EvaIcons";
 
 const WhyFeyroSection = () => {
   const features = [

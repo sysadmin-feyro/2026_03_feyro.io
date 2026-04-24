@@ -1,4 +1,4 @@
-import { Target, Award, Users, Laptop } from "lucide-react";
+import { Target, Award, Users, Laptop } from "@/components/EvaIcons";
 
 const AboutSection = () => {
   const values = [

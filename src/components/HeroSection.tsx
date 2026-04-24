@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle } from "@/components/EvaIcons";
 import useAnalytics from "@/hooks/useAnalytics";
 
 const HeroSection = () => {

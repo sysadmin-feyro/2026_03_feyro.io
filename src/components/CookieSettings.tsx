@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { Shield, TrendingUp } from "lucide-react";
+import { Shield, TrendingUp } from "@/components/EvaIcons";
 import {
   applyConsentPreferences,
   readConsentPreferences,

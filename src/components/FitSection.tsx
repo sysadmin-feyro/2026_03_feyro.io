@@ -1,4 +1,4 @@
-import { CheckCircle, XCircle } from "lucide-react";
+import { CheckCircle, XCircle } from "@/components/EvaIcons";
 
 const goodFitItems = [
   "Ihre Website wirkt sichtbar älter als Ihr Unternehmen heute ist.",

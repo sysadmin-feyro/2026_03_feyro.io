@@ -1,4 +1,4 @@
-import { MessageSquare, Search, Code, SlidersHorizontal, Rocket, Clock } from "lucide-react";
+import { MessageSquare, Search, Code, SlidersHorizontal, Rocket, Clock } from "@/components/EvaIcons";
 
 const ProcessSection = () => {
   const steps = [

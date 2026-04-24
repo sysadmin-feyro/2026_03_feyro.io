@@ -5,7 +5,7 @@ import {
   Bot,
   ArrowRight,
   CheckCircle
-} from "lucide-react";
+} from "@/components/EvaIcons";
 import ScrollAnimation from "./ScrollAnimation";
 
 const ServicesSection = () => {

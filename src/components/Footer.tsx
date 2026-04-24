@@ -1,4 +1,4 @@
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "@/components/EvaIcons";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

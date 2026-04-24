@@ -1,4 +1,4 @@
-import { BadgeCheck, Database, Handshake, Lock, MessagesSquare, Wrench } from "lucide-react";
+import { BadgeCheck, Database, Handshake, Lock, MessagesSquare, Wrench } from "@/components/EvaIcons";
 
 const trustPoints = [
   {
